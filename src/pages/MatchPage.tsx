@@ -42,6 +42,12 @@ export function MatchPage() {
     updateAnswers({ uploadedImage: file, uploadedImagePreview: URL.createObjectURL(file) })
   }
 
+  function findDirectly() {
+    if (answers.uploadedImagePreview) URL.revokeObjectURL(answers.uploadedImagePreview)
+    updateAnswers({ uploadedImage: undefined, uploadedImagePreview: undefined })
+    navigate('/recommendations')
+  }
+
   const canContinue = !requiredQuestions.includes(question.id) || isAnswered(question.id)
 
   return <section className="flex min-h-dvh flex-col px-6 pb-7 pt-7">
@@ -64,13 +70,17 @@ export function MatchPage() {
         {question.id === 'image' && <div>
           <input ref={fileInput} className="hidden" type="file" accept="image/*" onChange={(event) => chooseImage(event.target.files?.[0])} />
           {answers.uploadedImagePreview ? <div className="overflow-hidden rounded-3xl border border-champagne-100 bg-white"><img className="aspect-video w-full object-cover" src={answers.uploadedImagePreview} alt="已選擇的參考珠寶" /><button type="button" onClick={() => fileInput.current?.click()} className="min-h-12 w-full text-sm text-champagne-700">換一張照片</button></div> : <button type="button" onClick={() => fileInput.current?.click()} className="flex aspect-video w-full flex-col items-center justify-center rounded-3xl border border-dashed border-champagne-300 bg-white/60 text-champagne-700"><span className="text-2xl">＋</span><span className="mt-2 text-sm">上傳喜歡的珠寶照片</span><span className="mt-1 text-xs text-ink/40">JPG、PNG 皆可</span></button>}
+          <button type="button" onClick={findDirectly} className="mt-4 flex min-h-24 w-full items-center justify-between gap-4 rounded-3xl border border-champagne-300 bg-white px-5 py-5 text-left text-champagne-700 transition hover:bg-champagne-100">
+            <span><span className="block font-medium">直接找尋</span><span className="mt-1 block text-xs leading-5 text-ink/50">不上傳照片，依照前面的偏好為我推薦</span></span>
+            <span aria-hidden="true" className="text-xl">→</span>
+          </button>
         </div>}
       </div>
     </div>
 
-    <button type="button" disabled={!canContinue} onClick={next} className="min-h-14 w-full rounded-2xl bg-champagne-700 px-5 font-medium text-white shadow-jewel transition enabled:hover:bg-champagne-500 disabled:cursor-not-allowed disabled:bg-champagne-300">
+    <button type="button" disabled={!canContinue} onClick={next} className="mt-6 min-h-14 w-full rounded-2xl bg-champagne-700 px-5 font-medium text-white shadow-jewel transition enabled:hover:bg-champagne-500 disabled:cursor-not-allowed disabled:bg-champagne-300">
       {isLastStep ? '為我精選珠寶' : '繼續'}
     </button>
-    {isLastStep && <button type="button" onClick={next} className="mt-3 min-h-10 w-full text-sm text-ink/55">直接找尋</button>}
   </section>
 }
+
