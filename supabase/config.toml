@@ -1,0 +1,2 @@
+[functions.submit-viewing]
+verify_jwt = true

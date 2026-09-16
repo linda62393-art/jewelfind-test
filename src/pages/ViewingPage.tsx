@@ -2,6 +2,7 @@ import { useRef, useState, type FormEvent } from 'react'
 import { Link, useNavigate, useParams } from 'react-router'
 import { mockProducts } from '../configs/products'
 import { useViewing } from '../hooks/useViewing'
+import { useMatchAnswers } from '../hooks/useMatchAnswers'
 import { viewingService, type MatchRequestInput } from '../services/viewingService'
 import { MissingProduct } from './ProductDetailPage'
 
@@ -9,6 +10,7 @@ export function ViewingPage() {
   const { productId } = useParams()
   const product = mockProducts.find(item => item.id === productId)
   const { drafts, setDraft, complete } = useViewing()
+  const { answers } = useMatchAnswers()
   const navigate = useNavigate()
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
@@ -25,7 +27,7 @@ export function ViewingPage() {
     setBusy(true)
     setError('')
     try {
-      const receipt = await viewingService.submit({ ...draft, preferredTime: value('preferredTime'), customer: { name: value('name'), phone: value('phone').replace(/[\s-]/g, ''), line: value('line'), region: value('region') } })
+      const receipt = await viewingService.submit({ ...draft, preferredTime: value('preferredTime'), customer: { name: value('name'), phone: value('phone').replace(/[\s-]/g, ''), line: value('line'), region: value('region') } }, answers)
       complete(receipt)
       navigate(`/viewing/success/${receipt.id}`, { replace: true })
     } catch (reason) { setError(reason instanceof Error ? reason.message : '暫時無法送出，請再試一次。') }
@@ -39,7 +41,7 @@ export function ViewingPage() {
     <form onSubmit={submit} className="space-y-5">
       {([{ key: 'name', label: '姓名', autoComplete: 'name', placeholder: '怎麼稱呼你', required: true }, { key: 'phone', label: '手機', autoComplete: 'tel', placeholder: '09xxxxxxxx', required: true }, { key: 'line', label: 'LINE ID（選填）', autoComplete: 'off', placeholder: '你的 LINE ID', required: false }, { key: 'region', label: '所在地區', autoComplete: 'address-level1', placeholder: '例如：新北市板橋區', required: true }] as const).map(field => <label key={field.key} className="block text-sm">{field.label}{field.required && ' *'}<input name={field.key} type={field.key === 'phone' ? 'tel' : 'text'} autoComplete={field.autoComplete} required={field.required} maxLength={field.key === 'phone' ? 20 : 100} value={draft.customer[field.key]} onChange={event => update(field.key, event.target.value)} placeholder={field.placeholder} className="mt-2 min-h-14 w-full rounded-xl border border-champagne-300 bg-white px-4" /></label>)}
       <label className="block text-sm">希望看貨時間 *<input name="preferredTime" type="datetime-local" required min={localMin} value={draft.preferredTime} onChange={event => setDraft({ ...draft, preferredTime: event.target.value })} className="mt-2 min-h-14 w-full min-w-0 rounded-xl border border-champagne-300 bg-white px-4" /></label>
-      <p className="text-xs leading-6 text-ink/55">此為展示流程，資料僅暫存於本次瀏覽，尚未傳送給店家。希望時間不代表已完成預約。</p>
+      <p className="text-xs leading-6 text-ink/55">送出後將保存你的聯絡資料、珠寶偏好與參考照片，用於確認商品及聯繫看貨安排。希望時間不代表已完成預約。</p>
       {error && <p role="alert" className="rounded-xl bg-rose-50 p-3 text-sm text-red-700">{error}</p>}
       <button disabled={busy} className="min-h-14 w-full rounded-2xl bg-champagne-700 text-white disabled:opacity-50">{busy ? '送出中…' : '送出看貨需求'}</button>
     </form></section>
@@ -50,6 +52,7 @@ export function ViewingSuccessPage() {
   const { receipts } = useViewing()
   const receipt = receipts.find(item => item.id === requestId)
   const product = mockProducts.find(item => item.id === receipt?.productId)
-  if (!receipt) return <section className="px-5 py-16 text-center"><h1 className="font-serif text-2xl">此筆展示紀錄已結束</h1><p className="mt-4 text-sm text-ink/60">重新整理後，本次瀏覽的暫存紀錄會清除。</p><Link to="/recommendations" className="mt-6 inline-block text-champagne-700">返回推薦 →</Link></section>
-  return <section className="px-6 py-16 text-center"><div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-rose-50 text-3xl text-rose-400">✓</div><p className="mt-7 text-xs tracking-[0.2em] text-rose-400">ONE STEP CLOSER</p><h1 className="mt-3 font-serif text-3xl">需求已送出</h1><p className="mt-4 text-sm leading-7 text-ink/60">已完成本次看貨需求展示。<br />這是本機模擬紀錄，尚未通知店家或成立預約。</p><div className="my-8 rounded-3xl bg-white p-6 text-left"><p className="font-serif text-xl">{product?.name}</p><p className="mt-3 text-sm text-ink/60">希望看貨時間：{receipt.preferredTime.replace('T', ' ')}</p><p className="mt-3 break-all text-xs text-ink/40">需求編號：{receipt.id}</p></div><Link to="/recommendations" className="block rounded-2xl bg-champagne-700 px-5 py-4 text-white">繼續探索推薦</Link><Link to={`/products/${receipt.productId}`} className="mt-5 inline-block text-sm text-champagne-700">返回這件商品</Link></section>
+  if (!receipt) return <section className="px-5 py-16 text-center"><h1 className="font-serif text-2xl">目前無法顯示這筆需求摘要</h1><p className="mt-4 text-sm text-ink/60">本頁摘要已清除，不代表已送出的需求被刪除；請勿因此重複送出。</p><Link to="/recommendations" className="mt-6 inline-block text-champagne-700">返回推薦 →</Link></section>
+  return <section className="px-6 py-16 text-center"><div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-rose-50 text-3xl text-rose-400">✓</div><p className="mt-7 text-xs tracking-[0.2em] text-rose-400">ONE STEP CLOSER</p><h1 className="mt-3 font-serif text-3xl">需求已送出</h1><p className="mt-4 text-sm leading-7 text-ink/60">{receipt.isNewCustomer ? '已為你建立專屬帳號' : '已加入你的最新看貨需求'}<br />我們正在確認商品與適合的看貨地點，確認後會通知你。</p><div className="my-8 rounded-3xl bg-white p-6 text-left"><p className="font-serif text-xl">{product?.name}</p><p className="mt-3 text-sm text-ink/60">希望看貨時間：{new Date(receipt.preferredTime).toLocaleString('zh-TW', { timeZone: 'Asia/Taipei', hour12: false })}</p><p className="mt-3 break-all text-xs text-ink/40">需求編號：{receipt.id}</p></div><Link to="/recommendations" className="block rounded-2xl bg-champagne-700 px-5 py-4 text-white">繼續探索推薦</Link><Link to={`/products/${receipt.productId}`} className="mt-5 inline-block text-sm text-champagne-700">返回這件商品</Link></section>
 }
+
