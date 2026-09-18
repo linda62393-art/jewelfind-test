@@ -1,6 +1,6 @@
 import type { JewelryProduct } from '../types/product'
 
-const image = (folder: string, name: string) => `/assets/missdiamond/${encodeURIComponent(folder)}/${encodeURIComponent(name)}`
+const image = (folder: string, name: string) => `${import.meta.env.BASE_URL}assets/missdiamond/${encodeURIComponent(folder)}/${encodeURIComponent(name)}`
 const locations = ['台北', '台中', '高雄']
 
 export const mockProducts: JewelryProduct[] = [

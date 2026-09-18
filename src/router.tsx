@@ -1,6 +1,6 @@
 import { ProductDetailPage } from './pages/ProductDetailPage'
 import { ViewingPage, ViewingSuccessPage } from './pages/ViewingPage'
-import { createBrowserRouter } from 'react-router'
+import { createBrowserRouter, createHashRouter } from 'react-router'
 import { AppShell } from './components/layout/AppShell'
 import { HomePage } from './pages/HomePage'
 import { MatchPage } from './pages/MatchPage'
@@ -8,7 +8,8 @@ import { RecommendationsPage } from './pages/RecommendationsPage'
 import { AdminPage } from './pages/AdminPage'
 import { RequestPage, RequestsPage } from './pages/RequestsPage'
 
-export const router = createBrowserRouter([
+const createRouter = import.meta.env.MODE === 'pages' ? createHashRouter : createBrowserRouter
+export const router = createRouter([
   { path: '/admin', element: <AdminPage /> },
   {
     element: <AppShell />,
