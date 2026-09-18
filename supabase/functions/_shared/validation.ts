@@ -35,7 +35,7 @@ export function validateSubmission(raw: unknown, catalog: Record<string, string>
       budget: choice(answers.budget, ['under-10000', '10000-30000', '30000-60000', '60000-100000', '100000-200000', '200000-500000', 'over-500000'], '預算'),
       style: choice(answers.style, ['sweet', 'refined', 'bold', 'neutral', 'designer', 'minimal', 'glamorous', 'unsure'], '風格'),
       selected_product_id: productId, selected_product_name: catalog[productId],
-      viewing_region: text(customer.region, '所在地區'), preferred_viewing_time: new Date(time).toISOString(),
+      viewing_region: text(data.viewingRegion ?? customer.region, '看貨地區'), preferred_viewing_time: new Date(time).toISOString(),
     },
   }
 }

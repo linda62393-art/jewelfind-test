@@ -1,0 +1,50 @@
+-- Run as project postgres in SQL Editor. All fixture rows are rolled back.
+begin;
+do $$
+declare
+  admin_id uuid;
+  token text := encode(extensions.gen_random_bytes(32),'hex');
+  payload jsonb := jsonb_build_object('name','Phase6 transaction verification','phone','0991662699','line_id','test','region','台中市','purpose','self','category','ring','material_preferences',jsonb_build_array('diamond'),'budget','60000-100000','style','minimal','selected_product_id','r-01','selected_product_name','晨曦單鑽戒','viewing_region','台北市','preferred_viewing_time',now()+interval '20 days','reference_photo_url',null);
+  receipt jsonb; rid uuid; original jsonb; safe jsonb; arrival uuid; old_arrival uuid; detail jsonb;
+begin
+  select a.user_id into admin_id from public.admin_users a join auth.users u on u.id=a.user_id where lower(u.email)='linda62393@gmail.com';
+  if admin_id is null then raise exception 'test_admin_missing'; end if;
+  receipt := public.submit_viewing_request_v6(gen_random_uuid(),payload,token);
+  rid := (receipt->>'id')::uuid;
+  select to_jsonb(m) into original from public.match_requests m where id=rid;
+  perform set_config('request.jwt.claim.sub',gen_random_uuid()::text,true);
+  begin perform public.admin_request(rid); raise exception 'UNAUTHORIZED_ADMIN_ALLOWED'; exception when insufficient_privilege then null; end;
+  perform set_config('request.jwt.claim.sub',admin_id::text,true);
+  perform public.admin_process_request(rid,0,'checking','{}','確認商品與店家');
+  begin perform public.admin_process_request(rid,0,'transferring','{"partner_store":"測試店"}',''); raise exception 'STALE_VERSION_ALLOWED'; exception when others then if sqlerrm <> 'version_conflict' then raise; end if; end;
+  perform public.admin_process_request(rid,1,'unavailable','{"failure_code":"precious","failure_detail":"INTERNAL_SECRET：高價玉石原店家不借出"}','INTERNAL_NOTE');
+  safe := public.customer_request(rid,token);
+  if safe::text like '%INTERNAL%' or safe::text like '%failure_detail%' then raise exception 'PRIVATE_REASON_LEAKED'; end if;
+  if jsonb_array_length(safe->'notifications')<>1 then raise exception 'UNAVAILABLE_NOTICE_MISSING'; end if;
+  perform public.admin_process_request(rid,2,'checking','{}','改找合作店家');
+  perform public.admin_process_request(rid,3,'transferring','{"partner_store":"測試來源店"}','');
+  perform public.admin_process_request(rid,4,'in_transit','{}','');
+  perform public.admin_process_request(rid,5,'arrived',jsonb_build_object('arrived_on',(now() at time zone 'Asia/Taipei')::date,'viewing_store','台北測試店','store_address','測試地址，不實際營業'),'');
+  select arrival_notification_id into arrival from public.request_fulfillments where request_id=rid;
+  if not exists(select 1 from public.request_fulfillments where request_id=rid and viewing_deadline=arrived_on+6) then raise exception 'DEADLINE_NOT_SEVEN_DAYS'; end if;
+  perform public.customer_read_notification(rid,token,arrival);
+  perform public.customer_reply(rid,token,arrival,'reschedule',(now() at time zone 'Asia/Taipei')::date+10,'週末才能前往');
+  detail := public.admin_request(rid);
+  if not (detail->'responses' @> '[{"choice":"reschedule","note":"週末才能前往"}]'::jsonb) then raise exception 'REPLY_NOT_VISIBLE_TO_ADMIN'; end if;
+  perform public.customer_reply(rid,token,arrival,'declined',null,'');
+  perform public.customer_reply(rid,token,arrival,'yes',null,'');
+  if not exists(select 1 from public.viewing_responses where notification_id=arrival and choice='yes' and proposed_date is null and note='') then raise exception 'REPLY_FIELDS_NOT_SEPARATE'; end if;
+  if original is distinct from (select to_jsonb(m) from public.match_requests m where id=rid) then raise exception 'ORIGINAL_REQUEST_CHANGED'; end if;
+  old_arrival := arrival;
+  perform public.admin_process_request(rid,6,'checking','{}','重新安排');
+  begin perform public.customer_reply(rid,token,old_arrival,'yes'); raise exception 'STALE_ARRIVAL_ALLOWED'; exception when others then if sqlerrm<>'stale_arrival' then raise; end if; end;
+  perform public.admin_process_request(rid,7,'transferring','{"partner_store":"測試來源店二"}','');
+  perform public.admin_process_request(rid,8,'in_transit','{}','');
+  perform public.admin_process_request(rid,9,'arrived',jsonb_build_object('arrived_on',(now() at time zone 'Asia/Taipei')::date-10,'viewing_store','測試店二','store_address','另一測試地址'),'');
+  select arrival_notification_id into arrival from public.request_fulfillments where request_id=rid;
+  begin perform public.customer_reply(rid,token,arrival,'yes'); raise exception 'EXPIRED_YES_ALLOWED'; exception when others then if sqlerrm<>'deadline_passed' then raise; end if; end;
+  if not exists(select 1 from public.viewing_responses where notification_id=old_arrival) then raise exception 'OLD_REPLY_LOST'; end if;
+  begin perform public.customer_request(rid,repeat('0',64)); raise exception 'WRONG_TOKEN_ALLOWED'; exception when insufficient_privilege then null; end;
+end $$;
+select 'PASS: administrator authorization, status transitions, optimistic concurrency, safe notices, arrival deadline, all three replies, private original data, historical reply retention, expired/stale reply rejection' as phase6_test_result;
+rollback;

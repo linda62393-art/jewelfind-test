@@ -29,6 +29,9 @@ test('uncertain retries retain key; next deliberate submission gets a new key; i
     await client.submit(input, { ...answers, uploadedImage: photo })
     await client.submit(input, { ...answers, uploadedImage: photo })
     assert.equal(requests[0].submissionKey, requests[1].submissionKey)
+    assert.match(requests[0].accessToken, /^[a-f0-9]{64}$/)
+    assert.equal(requests[0].accessToken, requests[1].accessToken)
+    assert.notEqual(requests[1].accessToken, requests[2].accessToken)
     assert.notEqual(requests[1].submissionKey, requests[2].submissionKey)
     assert.deepEqual(requests[1].answers, answers)
   } finally { globalThis.fetch = original }

@@ -42,6 +42,8 @@ Deno.serve(async (request: Request) => {
     try { validated = validateSubmission(JSON.parse(raw), productNames) }
     catch (error) { return respond({ error: error instanceof Error && !(error instanceof SyntaxError) ? error.message : '需求格式不正確。' }, 400) }
     const { submissionKey, payload } = validated
+    const accessToken = JSON.parse(raw).accessToken
+    if (accessToken !== undefined && (typeof accessToken !== 'string' || !/^[a-f0-9]{64}$/.test(accessToken))) return respond({ error: '需求存取憑證格式不正確。' }, 400)
     let referencePhotoUrl: string | null = null
     const photo = form.get('photo')
     if (photo instanceof File && photo.size > 0) {
@@ -57,8 +59,9 @@ Deno.serve(async (request: Request) => {
       // Stable PRIVATE authenticated URL, never a public bucket or expiring signed URL.
       referencePhotoUrl = `${url}/storage/v1/object/authenticated/reference-photos/${path}`
     }
-    const { data, error } = await admin.rpc('submit_viewing_request', { p_submission_key: submissionKey, p_payload: { ...payload, reference_photo_url: referencePhotoUrl } })
+    const { data, error } = await admin.rpc(accessToken ? 'submit_viewing_request_v6' : 'submit_viewing_request', { p_submission_key: submissionKey, p_payload: { ...payload, reference_photo_url: referencePhotoUrl }, ...(accessToken ? { p_access_token: accessToken } : {}) })
     if (error) {
+      if (error.message.includes('unsupported_viewing_region')) return respond({ error: '雙北試營運目前僅提供台北市、新北市看貨媒合，請重新選擇看貨地區。' }, 400)
       if (error.message.includes('rate_limited')) return respond({ error: '送出過於頻繁，請稍後再試。' }, 429)
       if (error.message.includes('invalid_time')) return respond({ error: '請選擇未來的看貨時間。' }, 400)
       if (error.message.includes('submission_conflict')) return respond({ error: '這筆需求已處理，請返回商品後重新建立需求。' }, 409)
