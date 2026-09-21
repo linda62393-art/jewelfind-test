@@ -8,8 +8,8 @@ void i18n.use(initReactI18next).init({
     'zh-TW': {
       translation: {
         home: {
-          title: '找到那件，剛好像你的珠寶。',
-          subtitle: '告訴我們一些心意與偏好，讓私人珠寶顧問為你精選值得相遇的作品。',
+          title: '找到最適合你的珠寶',
+          subtitle: '告訴我們你的需求與喜好，為你推薦適合的珠寶。',
           cta: '幫我找珠寶',
         },
       },

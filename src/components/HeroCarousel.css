@@ -1,0 +1,20 @@
+.hero-carousel {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border-radius: 1.5rem;
+  background: #fff;
+  border: 1px solid #e9dac0;
+  -webkit-overflow-scrolling: touch;
+}
+.hero-carousel::-webkit-scrollbar { display: none; }
+.hero-carousel:focus-visible { outline: 2px solid #947344; outline-offset: 4px; }
+.hero-carousel-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  aspect-ratio: 3 / 2;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
