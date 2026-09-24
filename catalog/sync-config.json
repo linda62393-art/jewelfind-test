@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "legacyIds": {
+    "DR00002-PD394": "r-01",
+    "DR00004-LN09": "r-02",
+    "DR00014-PD804": "r-03",
+    "ER00001-ER149": "e-01",
+    "ER00002-H4": "e-02",
+    "BR00009-PB225": "b-02",
+    "MR00001-DM00614": "m-01",
+    "MR00002-DM00616": "m-02",
+    "DR00001-PD520": "c-01",
+    "DR00003-DR464L": "c-02",
+    "DR00007-DSR01": "c-03",
+    "DR00010-PD636": "c-04"
+  },
+  "pendingMappings": {
+    "DP00005-DP331": "n-01 同時使用兩個 SKU 照片，等待確認舊 ID 歸屬",
+    "DP00006-DP339": "n-01 同時使用兩個 SKU 照片，等待確認舊 ID 歸屬",
+    "DP00009-DP220R": "n-02 同時使用兩個 SKU 照片，等待確認舊 ID 歸屬",
+    "DP00011-DP221R": "n-02 同時使用兩個 SKU 照片，等待確認舊 ID 歸屬",
+    "BR00005-BR98": "b-01 混圖，等待確認舊 ID 歸屬",
+    "BR00005-BR102": "b-01 混圖，且 SKU 與圖片 BR00006-BR102 編號不同"
+  },
+  "categories": {
+    "DR": "ring",
+    "MR": "mens-ring",
+    "ER": "earrings",
+    "DP": "necklace",
+    "BR": "bracelet",
+    "SP": "necklace"
+  },
+  "availableStatuses": [
+    "上架中",
+    "寄店家"
+  ],
+  "styleTags": {
+    "DR00002-PD394": [
+      "refined",
+      "minimal"
+    ],
+    "DR00004-LN09": [
+      "sweet",
+      "designer"
+    ],
+    "DR00014-PD804": [
+      "bold",
+      "glamorous"
+    ],
+    "ER00001-ER149": [
+      "minimal",
+      "refined"
+    ],
+    "ER00002-H4": [
+      "sweet",
+      "glamorous"
+    ],
+    "BR00009-PB225": [
+      "refined",
+      "glamorous"
+    ],
+    "MR00001-DM00614": [
+      "neutral",
+      "minimal"
+    ],
+    "MR00002-DM00616": [
+      "bold",
+      "designer"
+    ],
+    "DR00001-PD520": [
+      "minimal",
+      "neutral"
+    ],
+    "DR00003-DR464L": [
+      "sweet",
+      "refined"
+    ],
+    "DR00007-DSR01": [
+      "designer",
+      "neutral"
+    ],
+    "DR00010-PD636": [
+      "glamorous",
+      "refined"
+    ]
+  },
+  "imageOverrides": {}
+}

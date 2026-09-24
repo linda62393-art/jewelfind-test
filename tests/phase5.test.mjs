@@ -18,7 +18,7 @@ test('all five-answer fields and trusted product name are preserved', () => {
   const { payload } = validateSubmission(value, productNames)
   assert.equal(payload.phone, '0912345678')
   assert.equal(payload.name, '測試')
-  assert.equal(payload.selected_product_name, '晨曦單鑽戒')
+  assert.equal(payload.selected_product_name, productNames['r-01'])
   assert.equal(payload.purpose, 'self')
   assert.equal(payload.category, 'ring')
   assert.equal(payload.budget, '60000-100000')
@@ -37,8 +37,12 @@ test('image signatures, type and actual size are enforced', () => {
   assert.throws(() => imageExtension(new TextEncoder().encode('<svg>malicious</svg>'), 'image/png'))
   assert.throws(() => imageExtension(new Uint8Array(5 * 1024 * 1024 + 1), 'image/jpeg'))
 })
-test('server product catalog matches every current frontend product', () => {
-  const source = readFileSync(new URL('../src/configs/products.ts', import.meta.url), 'utf8')
-  const pairs = [...source.matchAll(/id: '([^']+)', name: '([^']+)'/g)].map(match => [match[1], match[2]])
-  assert.deepEqual(productNames, Object.fromEntries(pairs))
+test('server catalog accepts exactly the available SKU snapshot products', () => {
+  const snapshot = JSON.parse(readFileSync(new URL('../catalog/snapshot.json', import.meta.url), 'utf8'))
+  const products = Object.values(snapshot).map(r => r.product)
+  assert.deepEqual(productNames, Object.fromEntries(products.filter(p => p.available).map(p => [p.id, p.name])))
+  for (const p of products.filter(p => !p.available)) {
+    const value = input(); value.productId = p.id
+    assert.throws(() => validateSubmission(value, productNames))
+  }
 })

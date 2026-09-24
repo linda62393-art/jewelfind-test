@@ -7,3 +7,7 @@ dist/
 supabase/.temp/
 work/
 outputs/
+*.xlsx
+*.xlsm
+*.sync-tmp
+__pycache__/

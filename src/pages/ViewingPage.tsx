@@ -17,6 +17,7 @@ export function ViewingPage() {
   const [busy, setBusy] = useState(false)
   const submitting = useRef(false)
   if (!product) return <MissingProduct />
+  if (!product.available) return <section className="p-6"><h1 className="font-serif text-2xl">此商品目前暫不提供看貨媒合</h1><Link to="/recommendations" className="mt-4 inline-block text-champagne-700">返回推薦</Link></section>
   const draft: MatchRequestInput = drafts[product.id] ?? { productId: product.id, customer: { name: '', phone: '', line: '', region: '' }, preferredTime: '' }
   function update(field: keyof MatchRequestInput['customer'], value: string) { setDraft({ ...draft, customer: { ...draft.customer, [field]: value } }) }
   async function submit(event: FormEvent) {
