@@ -33,6 +33,7 @@ export function AdminPage() {
 }
 
 function AdminWorkspace() {
+  const [notice, setNotice] = useState('')
   const [query, setQuery] = useState({ search: '', stage: '', region: '', page: 0 })
   const [rows, setRows] = useState<RequestRow[]>([])
   const [total, setTotal] = useState(0)
@@ -52,15 +53,17 @@ function AdminWorkspace() {
   async function refresh() { await Promise.all([load(), loadDetail()]) }
   return <><form onSubmit={e => { e.preventDefault(); detailGeneration.current++; setSelected(''); setDetail(null); const f = new FormData(e.currentTarget); setQuery({ search: String(f.get('search')), stage: String(f.get('stage')), region: String(f.get('region')), page: 0 }) }} className="mb-6 grid gap-4 rounded-2xl bg-white p-5 sm:grid-cols-4"><label>姓名或手機<input name="search" maxLength={100} className={input} /></label><label>處理狀態<select name="stage" className={input}><option value="">全部狀態</option>{Object.entries(stages).map(([v, label]) => <option key={v} value={v}>{label}</option>)}</select></label><label>看貨地區<input name="region" maxLength={100} placeholder="例如：台北市" className={input} /></label><button className={`${button} self-end`} disabled={loading}>搜尋／重新整理</button></form>
     {error && <p role="alert" className="my-4 text-red-700">{error}</p>}
-    <div className="grid items-start gap-6 lg:grid-cols-[340px_1fr]"><section><p className="mb-3 text-sm text-ink/60">共 {total} 筆需求（每筆獨立處理）{loading && ' · 讀取中…'}</p><div className="space-y-3">{rows.map(row => <button key={row.id} onClick={() => setSelected(row.id)} className={`w-full rounded-2xl border p-4 text-left ${selected === row.id ? 'border-champagne-700 bg-champagne-100' : 'border-champagne-300 bg-white'}`}><p className="flex justify-between gap-2"><b>{row.name}</b><span className="text-sm text-champagne-700">{row.reply === 'yes' && row.stage === 'arrived' ? '待看貨' : stages[row.stage]}</span></p><p className="mt-2 text-sm">{row.phone} · {row.viewing_region}</p><p className="mt-2 font-serif">{row.selected_product_name}</p><p className="mt-2 text-xs text-ink/60">{time(row.created_at)}</p>{row.reply && <p className="mt-2 text-sm text-rose-400">客戶：{choices[row.reply]}</p>}</button>)}</div><div className="mt-4 flex justify-between"><button disabled={!query.page} onClick={() => setQuery({ ...query, page: query.page - 1 })}>上一頁</button><span>{query.page + 1}</span><button disabled={(query.page + 1) * 30 >= total} onClick={() => setQuery({ ...query, page: query.page + 1 })}>下一頁</button></div></section>
-      {detail ? <Detail key={`${detail.request.id}:${detail.fulfillment.version}`} data={detail} refresh={refresh} /> : <p className="rounded-2xl bg-white p-8">{selected ? '讀取需求中…' : '選擇一筆需求開始處理。'}</p>}
+    {notice && <p role="status" className="my-4 rounded-xl bg-champagne-100 p-3 text-sm">{notice}</p>}
+    <div className="grid items-start gap-6 lg:grid-cols-[340px_1fr]"><section><p className="mb-3 text-sm text-ink/60">共 {total} 筆需求（每筆獨立處理）{loading && ' · 讀取中…'}</p><div className="space-y-3">{rows.map(row => <button key={row.id} onClick={() => { setNotice(''); setSelected(row.id) }} className={`w-full rounded-2xl border p-4 text-left ${selected === row.id ? 'border-champagne-700 bg-champagne-100' : 'border-champagne-300 bg-white'}`}><p className="flex justify-between gap-2"><b>{row.name}</b><span className="text-sm text-champagne-700">{row.reply === 'yes' && row.stage === 'arrived' ? '待看貨' : stages[row.stage]}</span></p><p className="mt-2 text-sm">{row.phone} · {row.viewing_region}</p><p className="mt-2 font-serif">{row.selected_product_name}</p><p className="mt-2 text-xs text-ink/60">{time(row.created_at)}</p>{row.reply && <p className="mt-2 text-sm text-rose-400">客戶：{choices[row.reply]}</p>}</button>)}</div><div className="mt-4 flex justify-between"><button disabled={!query.page} onClick={() => setQuery({ ...query, page: query.page - 1 })}>上一頁</button><span>{query.page + 1}</span><button disabled={(query.page + 1) * 30 >= total} onClick={() => setQuery({ ...query, page: query.page + 1 })}>下一頁</button></div></section>
+      {detail ? <Detail key={`${detail.request.id}:${detail.fulfillment.version}`} data={detail} refresh={refresh} setNotice={setNotice} /> : <p className="rounded-2xl bg-white p-8">{selected ? '讀取需求中…' : '選擇一筆需求開始處理。'}</p>}
     </div></>
 }
 
-function Detail({ data, refresh }: { data: AdminDetail; refresh: () => Promise<void> }) {
+function Detail({ data, refresh, setNotice }: { data: AdminDetail; refresh: () => Promise<void>; setNotice: (message: string) => void }) {
   const { request: r, fulfillment: f } = data
   const original = r.submission_fingerprint
   const [stage, setStage] = useState(f.stage)
+  const [message, setMessage] = useState('')
   const [arrivalDate, setArrivalDate] = useState(today())
   const [endDate, setEndDate] = useState(deadline(today()))
   const [photo, setPhoto] = useState('')
@@ -75,9 +78,18 @@ function Detail({ data, refresh }: { data: AdminDetail; refresh: () => Promise<v
   }
   async function process(event: FormEvent<HTMLFormElement>) {
     event.preventDefault(); if (busy) return
-    setBusy(true); setError(''); const fields = new FormData(event.currentTarget)
-    try { await rpc(true, 'admin_process_request', { p_id: r.id, p_version: f.version, p_stage: stage, p_fields: Object.fromEntries(fields), p_note: fields.get('note') || '' }); await refresh() }
+    setBusy(true); setError(''); setNotice(''); const fields = new FormData(event.currentTarget)
+    try { await rpc(true, 'admin_process_request', { p_id: r.id, p_version: f.version, p_stage: stage, p_fields: Object.fromEntries(fields), p_note: fields.get('note') || '' }); setNotice('處理結果已儲存；通知紀錄請見下方。'); await refresh() }
     catch (e) { setError((e as Error).message) } finally { setBusy(false) }
+  }
+  async function publish(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault(); if (busy) return
+    setBusy(true); setError(''); setNotice('')
+    try {
+      await rpc(true, 'admin_publish_notification', { p_id: r.id, p_version: f.version, p_message: message.trim() })
+      setMessage(''); setNotice('App 通知已發佈，客戶開啟看貨進度頁即可查看。')
+      await refresh()
+    } catch (e) { setError((e as Error).message) } finally { setBusy(false) }
   }
   return <section className="space-y-6 rounded-3xl bg-white p-5 sm:p-7"><div className="flex items-start justify-between gap-3"><div><h2 className="font-serif text-2xl">{r.selected_product_name}</h2><p className="mt-2 break-all text-xs text-ink/50">{r.id}</p></div><button onClick={() => void refresh()} className="text-sm text-champagne-700">重新整理</button></div>
     <section className="rounded-2xl bg-ivory p-4 text-sm leading-7"><h3 className="font-medium">客戶原始需求（唯讀）</h3><p>提交：{time(r.created_at)}</p><p>姓名：{original.name} / 手機：{original.phone}</p><p>LINE：{original.line_id || '未提供'} / 所在地：{original.region}</p><p>希望看貨地區：{r.viewing_region}</p><p>原始希望時間：{time(r.preferred_viewing_time)}</p><p>用途：{answerLabel(purposeOptions, r.purpose)} / 類別：{answerLabel(categoryOptions, r.category)}</p><p>材質：{r.material_preferences.map(v => answerLabel(materialOptions, v)).join('、') || '不限'}</p><p>預算：{answerLabel(budgetOptions, r.budget)} / 風格：{answerLabel(styleOptions, r.style)}</p><p>第 5 題：{r.reference_photo_url ? '已上傳參考照片' : '未上傳照片／直接找尋'}</p><p className="mt-2 text-ink/60">客戶目前聯絡資料：{data.customer.name}／{data.customer.phone}／{data.customer.line_id || '未提供 LINE'}／{data.customer.region}</p>{r.reference_photo_url && <button type="button" onClick={() => void showPhoto()} className="mt-3 text-champagne-700">載入／重新載入私人參考照片（5 分鐘有效）</button>}{photoError && <p role="alert">{photoError}</p>}{photo && <img src={photo} alt="客戶上傳的私人珠寶參考照片" className="mt-3 max-h-80 rounded-xl object-contain" />}</section>
@@ -88,7 +100,7 @@ function Detail({ data, refresh }: { data: AdminDetail; refresh: () => Promise<v
       {stage === 'arrived' && stage !== f.stage && <><label className="block text-sm">實際到店日期 *<input name="arrived_on" type="date" max={today()} value={arrivalDate} onChange={e => { setArrivalDate(e.target.value); if (e.target.value) setEndDate(deadline(e.target.value)) }} required className={input} /></label><label className="block text-sm">看貨店家 *<input name="viewing_store" required maxLength={200} className={input} /></label><label className="block text-sm">店家地址 *<input name="store_address" required maxLength={500} className={input} /></label><label className="block text-sm">最後看貨期限 *<input name="viewing_deadline" type="date" min={arrivalDate} max={arrivalDate ? deadline(arrivalDate) : undefined} value={endDate} onChange={e => setEndDate(e.target.value)} required className={input} /></label><p className="text-xs text-ink/60">到店日算第 1 天，第 7 天 23:59 截止（台灣時間）。儲存時同步發佈 App 到店通知。</p></>}
       <label className="block text-sm">內部備註{stage === f.stage || (stage === 'checking' && ['arrived', 'unavailable'].includes(f.stage)) ? ' *' : ''}<textarea name="note" maxLength={2000} required={stage === f.stage || (stage === 'checking' && ['arrived', 'unavailable'].includes(f.stage))} className={input} /></label>{error && <p role="alert" className="text-red-700">{error}</p>}<button disabled={busy} className={button}>{busy ? '儲存中…' : '儲存處理結果'}</button>
     </form>
-    <section className="border-t border-champagne-300 pt-5"><h3 className="font-serif text-xl">App 通知與客戶回覆</h3>{!data.notifications.length && <p className="mt-3 text-sm">尚無通知</p>}{data.notifications.map(n => { const reply = data.responses.find(v => v.notification_id === n.id); return <div className="mt-3 rounded-xl bg-ivory p-4 text-sm leading-7" key={n.id}><p>{n.message}</p><p className="text-xs text-ink/60">App 已發佈：{time(n.published_at)} · {n.read_at ? `已讀：${time(n.read_at)}` : '客戶尚未讀取'}</p>{reply && <p className="mt-2 text-champagne-700">客戶回覆：{choices[reply.choice]}<br />預計日期：{reply.proposed_date || '未填寫'}<br />說明：{reply.note || '無'}<br />回覆時間：{time(reply.updated_at)}{n.id !== f.arrival_notification_id && <><br />（先前安排的回覆）</>}</p>}</div> })}</section>
+    <section className="border-t border-champagne-300 pt-5"><h3 className="font-serif text-xl">App 通知與客戶回覆</h3><p className="mt-3 text-sm leading-7 text-ink/60">客戶開啟「我的看貨需求」的進度頁可查看通知。運送中、到店、無法安排及重新安排會自動發佈通知；到店後客戶才會看到看貨意願回覆選項。</p><form onSubmit={publish} className="mt-4 space-y-3"><label className="block text-sm">給客戶的通知內容 *<textarea name="customer_message" value={message} onChange={e => setMessage(e.target.value)} required maxLength={1000} placeholder="例如：我們已收到您的需求，正在確認附近的合作店家。" className={input} /></label><p className="text-xs text-ink/60">此內容會向客戶公開，請勿填寫內部備註或其他客戶資料。通知發佈於 App 內，不會自動寄送 LINE、簡訊或手機推播。</p><button disabled={busy || !message.trim()} className={button}>{busy ? '處理中…' : '發佈 App 通知'}</button></form>{!data.notifications.length && <p className="mt-3 text-sm">尚無通知</p>}{data.notifications.map(n => { const reply = data.responses.find(v => v.notification_id === n.id); return <div className="mt-3 rounded-xl bg-ivory p-4 text-sm leading-7" key={n.id}><p>{n.message}</p><p className="text-xs text-ink/60">App 已發佈：{time(n.published_at)} · {n.read_at ? `已讀：${time(n.read_at)}` : '客戶尚未讀取'}</p>{reply && <p className="mt-2 text-champagne-700">客戶回覆：{choices[reply.choice]}<br />預計日期：{reply.proposed_date || '未填寫'}<br />說明：{reply.note || '無'}<br />回覆時間：{time(reply.updated_at)}{n.id !== f.arrival_notification_id && <><br />（先前安排的回覆）</>}</p>}</div> })}</section>
     <details><summary className="cursor-pointer text-champagne-700">內部處理紀錄（{data.activity.length}）</summary>{data.activity.map(a => <div key={a.id} className="mt-3 whitespace-pre-wrap border-t border-champagne-100 py-3 text-sm"><p>{time(a.created_at)} · {stages[a.from_stage]} → {stages[a.to_stage]}</p><p className="mt-2">{a.note || '狀態已更新'}</p></div>)}</details>
   </section>
 }
