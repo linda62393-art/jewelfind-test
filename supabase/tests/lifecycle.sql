@@ -18,7 +18,7 @@ begin
  begin perform public.admin_requests_v8(); raise exception 'UNAUTHORIZED_LIST'; exception when insufficient_privilege then null; end;
  perform set_config('request.jwt.claim.sub',a::text,true);
  begin perform public.admin_process_request(rid,0,'cancelled','{}',''); raise exception 'CANCEL_NOTE_MISSING_ALLOWED'; exception when others then if sqlerrm<>'note_required' then raise; end if; end;
- begin perform public.admin_process_request(rid,0,'purchased','{}','incorrect'); raise exception 'PRE_VIEW_PURCHASE_ALLOWED'; exception when others then if sqlerrm<>'invalid_transition' then raise; end if; end;
+ begin perform public.admin_process_request(rid,0,'purchased','{}','incorrect'); raise exception 'PRE_VIEW_PURCHASE_ALLOWED'; exception when others then if sqlerrm<>'arrival_fields_required' then raise; end if; end;
  foreach s in array array['cancelled','checking','notified','transferring','cancelled','checking','sold','checking','unavailable','checking','transferring','in_transit','arrived','no_show','viewed','not_purchased','purchased','checking','transferring','in_transit','arrived','cancelled'] loop
   select version into v from public.request_fulfillments where request_id=rid;
   fields:=case when s='unavailable' then '{"failure_code":"price_high","failure_detail":"INTERNAL_HIGH_PRICE"}'::jsonb when s='arrived' then jsonb_build_object('arrived_on',(now() at time zone 'Asia/Taipei')::date,'viewing_store','流程測試店','store_address','測試地址') else '{"partner_store":"流程測試店"}'::jsonb end;
