@@ -15,7 +15,7 @@ export function feedbackFields(form: FormData): FeedbackFields {
   return { viewed_on: String(form.get('viewed_on') || ''), outcome, reasons: outcome === 'purchased' ? [] : selected ? selected.reasons : form.getAll('reasons').map(String), budget_min: form.get('budget_min') ? Number(form.get('budget_min')) : null, budget_max: form.get('budget_max') ? Number(form.get('budget_max')) : null, contact_preference: String(form.get('contact_preference') || (form.get('allow_recommend') === 'on' ? 'recommend' : 'none')), note: String(form.get('feedback_note') || '').trim(), wanted_product: String(form.get('wanted_product') || '').trim() }
 }
 
-export const requestColors: Record<string, string> = { new: 'bg-slate-50', checking: 'bg-blue-50', transferring: 'bg-amber-50', in_transit: 'bg-purple-50', arrived: 'bg-emerald-50', unavailable: 'bg-red-50' }
+export const requestColors: Record<string, string> = { new: 'bg-slate-50', checking: 'bg-blue-50', transferring: 'bg-amber-50', in_transit: 'bg-amber-50', arrived: 'bg-emerald-50', unavailable: 'bg-red-50', notified: 'bg-blue-50', cancelled: 'bg-slate-100', sold: 'bg-rose-50', viewed: 'bg-teal-50', purchased: 'bg-green-100', not_purchased: 'bg-orange-50', no_show: 'bg-rose-50' }
 
 export const feedbackOptions = [
   { value: 'purchased', label: '已購買', outcome: 'purchased', reasons: [] },
