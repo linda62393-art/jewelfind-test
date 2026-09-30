@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import type { ProgressEvent } from './requestOrganizer'
 import type { ViewingReceipt } from './viewingService'
 
 const url = import.meta.env.VITE_SUPABASE_URL || 'https://unconfigured.supabase.co'
@@ -14,7 +15,7 @@ export const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ta
 export const deadline = (date: string) => { const d = new Date(`${date}T00:00:00Z`); d.setUTCDate(d.getUTCDate() + 6); return d.toISOString().slice(0, 10) }
 export interface Notice { id: string; kind: string; message: string; published_at: string; read_at: string | null; details: { store?: string; address?: string; arrivedOn?: string; deadline?: string } }
 export interface Reply { notification_id: string; choice: string; proposed_date: string | null; note: string; updated_at: string }
-export interface CustomerRequest { id: string; productId: string; productName: string; preferredTime: string; createdAt: string; stage: string; arrivalNotificationId: string | null; notifications: Notice[]; responses: Reply[] }
+export interface CustomerRequest { timeline?: ProgressEvent[]; id: string; productId: string; productName: string; preferredTime: string; createdAt: string; stage: string; arrivalNotificationId: string | null; notifications: Notice[]; responses: Reply[] }
 export interface RequestRow { display_label?: string; is_test?: boolean; id: string; created_at: string; selected_product_name: string; viewing_region: string; name: string; phone: string; line_id: string | null; region: string; stage: string; reply: string | null }
 export interface AdminDetail {
   request: { id: string; created_at: string; selected_product_id: string; selected_product_name: string; purpose: string; category: string; material_preferences: string[]; budget: string; style: string; reference_photo_url: string | null; preferred_viewing_time: string; viewing_region: string; submission_fingerprint: { name: string; phone: string; line_id: string; region: string } }
