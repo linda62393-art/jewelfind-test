@@ -34,6 +34,8 @@ export const viewingService: ViewingService = {
     if (!backend || !anonKey) throw new Error('看貨服務尚未完成連線設定，資料尚未送出。')
     if (!input.customer.name.trim() || !input.customer.region.trim()) throw new Error('請確認姓名與所在地區。')
     if (!Number.isFinite(Date.parse(input.preferredTime)) || Date.parse(input.preferredTime) <= Date.now()) throw new Error('請選擇未來的看貨時間。')
+    const appointment = new Date(input.preferredTime)
+    if (![0, 30].includes(appointment.getMinutes()) || appointment.getSeconds() !== 0) throw new Error('看貨時間的分鐘請選擇 00 或 30。')
     if (!answers.purpose || !answers.category || !answers.budget || !answers.style) throw new Error('請先返回問答頁完成前面的偏好選擇。')
     const payload = { ...input, preferredTime: new Date(input.preferredTime).toISOString(), answers: { purpose: answers.purpose, category: answers.category, materials: answers.materials, budget: answers.budget, style: answers.style } }
     const signature = JSON.stringify(payload)
