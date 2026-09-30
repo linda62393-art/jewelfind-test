@@ -4,13 +4,22 @@ do $$
 declare
   admin_id uuid;
   token text := encode(extensions.gen_random_bytes(32),'hex');
-  payload jsonb := jsonb_build_object('name','Phase6 transaction verification','phone','0991662699','line_id','test','region','台中市','purpose','self','category','ring','material_preferences',jsonb_build_array('diamond'),'budget','60000-100000','style','minimal','selected_product_id','r-01','selected_product_name','晨曦單鑽戒','viewing_region','台北市','preferred_viewing_time',now()+interval '20 days','reference_photo_url',null);
+  payload jsonb := jsonb_build_object('name','Phase6 transaction verification','phone','0991662699','line_id','test','region','台中市','purpose','self','category','ring','material_preferences',jsonb_build_array('diamond'),'budget','60000-100000','style','minimal','selected_product_id','r-01','selected_product_name','晨曦單鑽戒','viewing_region','新北市三重區','preferred_viewing_time',now()+interval '20 days','reference_photo_url',null);
   receipt jsonb; rid uuid; original jsonb; safe jsonb; arrival uuid; old_arrival uuid; detail jsonb;
 begin
   select a.user_id into admin_id from public.admin_users a join auth.users u on u.id=a.user_id where lower(u.email)='linda62393@gmail.com';
   if admin_id is null then raise exception 'test_admin_missing'; end if;
   receipt := public.submit_viewing_request_v6(gen_random_uuid(),payload,token);
   rid := (receipt->>'id')::uuid;
+  perform set_config('request.jwt.claim.sub',gen_random_uuid()::text,true);
+  begin perform public.admin_publish_notification(rid,0,'未授權'); raise exception 'UNAUTHORIZED_PUBLISH_ALLOWED'; exception when insufficient_privilege then null; end;
+  perform set_config('request.jwt.claim.sub',admin_id::text,true);
+  begin perform public.admin_publish_notification(rid,99,'過期版本'); raise exception 'STALE_PUBLISH_ALLOWED'; exception when others then if sqlerrm <> 'version_conflict' then raise; end if; end;
+  begin perform public.admin_publish_notification(rid,0,'  '); raise exception 'EMPTY_PUBLISH_ALLOWED'; exception when others then if sqlerrm <> 'notification_message_required' then raise; end if; end;
+  perform public.admin_publish_notification(rid,0,'已收到您的需求，正在確認店家。');
+  safe := public.customer_request(rid,token);
+  if not (safe->'notifications' @> '[{"kind":"update","message":"已收到您的需求，正在確認店家。"}]'::jsonb) then raise exception 'MANUAL_NOTICE_MISSING'; end if;
+  if (select version from public.request_fulfillments where request_id=rid) <> 0 then raise exception 'MANUAL_PUBLISH_CHANGED_STAGE_VERSION'; end if;
   select to_jsonb(m) into original from public.match_requests m where id=rid;
   perform set_config('request.jwt.claim.sub',gen_random_uuid()::text,true);
   begin perform public.admin_request(rid); raise exception 'UNAUTHORIZED_ADMIN_ALLOWED'; exception when insufficient_privilege then null; end;
@@ -20,7 +29,7 @@ begin
   perform public.admin_process_request(rid,1,'unavailable','{"failure_code":"precious","failure_detail":"INTERNAL_SECRET：高價玉石原店家不借出"}','INTERNAL_NOTE');
   safe := public.customer_request(rid,token);
   if safe::text like '%INTERNAL%' or safe::text like '%failure_detail%' then raise exception 'PRIVATE_REASON_LEAKED'; end if;
-  if jsonb_array_length(safe->'notifications')<>1 then raise exception 'UNAVAILABLE_NOTICE_MISSING'; end if;
+  if jsonb_array_length(safe->'notifications')<>2 then raise exception 'UNAVAILABLE_NOTICE_MISSING'; end if;
   perform public.admin_process_request(rid,2,'checking','{}','改找合作店家');
   perform public.admin_process_request(rid,3,'transferring','{"partner_store":"測試來源店"}','');
   perform public.admin_process_request(rid,4,'in_transit','{}','');

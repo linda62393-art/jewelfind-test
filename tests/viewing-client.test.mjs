@@ -43,3 +43,15 @@ test('backend failure is surfaced instead of showing success', async () => {
   finally { globalThis.fetch = original }
 })
 
+
+test('appointment minutes allow half-hour slots and reject arbitrary minutes', async () => {
+  const original = globalThis.fetch
+  let calls = 0
+  globalThis.fetch = async () => { calls++; return Response.json({ error: 'test server reached' }, { status: 503 }) }
+  try {
+    const client = await service('https://test.invalid')
+    for (const minutes of ['00', '30']) await assert.rejects(client.submit({ ...input, preferredTime: `2030-01-01T14:${minutes}` }, answers), /test server reached/)
+    for (const minutes of ['01', '15', '45', '59']) await assert.rejects(client.submit({ ...input, preferredTime: `2030-01-01T14:${minutes}` }, answers), /00 或 30/)
+    assert.equal(calls, 2)
+  } finally { globalThis.fetch = original }
+})
