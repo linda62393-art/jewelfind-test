@@ -16,10 +16,13 @@ begin
  begin perform public.admin_save_feedback(rid,null,f); raise exception 'UNAUTHORIZED_WRITE_ALLOWED'; exception when insufficient_privilege then null; end;
  begin perform public.admin_save_request_meta(rid,-1,true,'test',false); raise exception 'UNAUTHORIZED_META_ALLOWED'; exception when insufficient_privilege then null; end;
  perform set_config('request.jwt.claim.sub',a::text,true);
- perform public.admin_process_request(rid,0,'checking','{}','fixture');
+ perform public.admin_process_request(rid,0,'checking','{}','INTERNAL_PRIVATE_PROCESS');
  perform public.admin_process_request(rid,1,'transferring','{"partner_store":"測試店"}','');
  perform public.admin_process_request(rid,2,'in_transit','{}','');
  perform public.admin_process_request(rid,3,'arrived',jsonb_build_object('arrived_on',(now() at time zone 'Asia/Taipei')::date,'viewing_store','測試店','store_address','測試地址'),'');
+ d:=public.customer_request_v7(rid,token);
+ if jsonb_array_length(d->'timeline')<>4 or d::text like '%INTERNAL_PRIVATE_PROCESS%' or not (d->'timeline' @> '[{"kind":"checking"},{"kind":"transferring"},{"kind":"arrived"}]'::jsonb) then raise exception 'COMPACT_TIMELINE_BROKEN'; end if;
+ begin perform public.customer_request_v7(rid,repeat('0',64)); raise exception 'TIMELINE_WRONG_TOKEN_ALLOWED'; exception when insufficient_privilege then null; end;
  perform public.admin_invite_feedback(rid); perform public.admin_invite_feedback(rid);
  if (select count(*) from public.request_notifications where request_id=rid and details->>'purpose'='viewing_feedback')<>1 then raise exception 'DUPLICATE_INVITE'; end if;
  begin perform public.customer_save_feedback(rid,token,null,f||'{"budget_max":5000}'); raise exception 'BAD_BUDGET_ALLOWED'; exception when others then if sqlerrm<>'invalid_feedback' then raise; end if; end;
