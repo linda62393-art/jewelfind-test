@@ -7,6 +7,7 @@ import { ProgressBar } from '../components/matching/ProgressBar'
 import { useMatchAnswers } from '../hooks/useMatchAnswers'
 import type { JewelryCategory, MatchQuestionId } from '../types/matching'
 import { photoFeatureOptions } from '../services/matchingService'
+import { analyzeJewelryPhoto } from '../services/photoAnalysisService'
 
 const requiredQuestions: MatchQuestionId[] = ['purpose', 'product', 'budget', 'style']
 
@@ -15,6 +16,9 @@ export function MatchPage() {
   const { answers, updateAnswers } = useMatchAnswers()
   const navigate = useNavigate()
   const fileInput = useRef<HTMLInputElement>(null)
+  const [analyzing, setAnalyzing] = useState(false)
+  const [photoMessage, setPhotoMessage] = useState('')
+  const analysisRequest = useRef(0)
   const question = matchQuestions[step]
   const isLastStep = step === matchQuestions.length - 1
 
@@ -38,15 +42,31 @@ export function MatchPage() {
     setStep((current) => current + 1)
   }
 
-  function chooseImage(file?: File) {
+  async function chooseImage(file?: File) {
     if (!file) return
+    const request = ++analysisRequest.current
     if (answers.uploadedImagePreview) URL.revokeObjectURL(answers.uploadedImagePreview)
-    updateAnswers({ uploadedImage: file, uploadedImagePreview: URL.createObjectURL(file), photoFeatures: [] })
+    updateAnswers({ uploadedImage: file, uploadedImagePreview: URL.createObjectURL(file), photoFeatures: [], photoAnalysis: undefined })
+    setAnalyzing(true)
+    setPhotoMessage('正在辨識照片中的設計…')
+    try {
+      const features = await analyzeJewelryPhoto(file, answers.category)
+      if (request !== analysisRequest.current) return
+      updateAnswers({ photoFeatures: features, photoAnalysis: 'complete' })
+      setPhotoMessage(features.length ? '已辨識設計特徵，可自行調整下方選項。' : '照片中沒有足夠清楚的設計特徵，仍可參考相近類別商品。')
+    } catch {
+      if (request !== analysisRequest.current) return
+      updateAnswers({ photoAnalysis: 'failed' })
+      setPhotoMessage('暫時無法自動辨識；可選擇下方特徵，或直接看參考款式。')
+    } finally {
+      if (request === analysisRequest.current) setAnalyzing(false)
+    }
   }
 
   function findDirectly() {
+    ++analysisRequest.current
     if (answers.uploadedImagePreview) URL.revokeObjectURL(answers.uploadedImagePreview)
-    updateAnswers({ uploadedImage: undefined, uploadedImagePreview: undefined, photoFeatures: [] })
+    updateAnswers({ uploadedImage: undefined, uploadedImagePreview: undefined, photoFeatures: [], photoAnalysis: undefined })
     navigate('/recommendations')
   }
 
@@ -71,7 +91,7 @@ export function MatchPage() {
         {question.id === 'product' && <MaterialPicker choices={materialOptions} values={answers.materials} onChange={(materials) => updateAnswers({ materials })} />}
         {question.id === 'image' && <div>
           <input ref={fileInput} className="hidden" type="file" accept="image/*" onChange={(event) => chooseImage(event.target.files?.[0])} />
-          {answers.uploadedImagePreview ? <><div className="overflow-hidden rounded-3xl border border-champagne-100 bg-white"><img className="aspect-video w-full object-cover" src={answers.uploadedImagePreview} alt="已選擇的參考珠寶" /><button type="button" onClick={() => fileInput.current?.click()} className="min-h-12 w-full text-sm text-champagne-700">換一張照片</button></div><p className="mt-4 text-sm leading-6 text-ink/60">請點選照片中看得出的設計特徵，幫你找相近款式；也可以略過，先看參考商品。</p>{(answers.category === 'ring' || answers.category === 'mens-ring' || answers.category === 'couple-ring' ? [['主石鑲法', photoFeatureOptions.stone], ['戒台形狀', photoFeatureOptions.band], ['設計', photoFeatureOptions.design]] as const : [['設計', photoFeatureOptions.design]] as const).map(([title, options]) => <fieldset key={title} className="mt-4"><legend className="text-sm font-medium">{title}（可複選）</legend><div className="mt-2 flex flex-wrap gap-2">{options.map(option => { const checked = answers.photoFeatures?.includes(option.value) ?? false; return <button type="button" key={option.value} aria-pressed={checked} onClick={() => updateAnswers({ photoFeatures: checked ? answers.photoFeatures?.filter(value => value !== option.value) : [...(answers.photoFeatures ?? []), option.value] })} className={`min-h-11 rounded-xl border px-3 text-sm ${checked ? 'border-champagne-700 bg-champagne-100 text-champagne-700' : 'border-champagne-300 bg-white text-ink/70'}`}>{option.label}</button> })}</div></fieldset>)}</> : <button type="button" onClick={() => fileInput.current?.click()} className="flex aspect-video w-full flex-col items-center justify-center rounded-3xl border border-dashed border-champagne-300 bg-white/60 text-champagne-700"><span className="text-2xl">＋</span><span className="mt-2 text-sm">上傳喜歡的珠寶照片</span><span className="mt-1 text-xs text-ink/40">JPG、PNG 皆可</span></button>}
+          {answers.uploadedImagePreview ? <><div className="overflow-hidden rounded-3xl border border-champagne-100 bg-white"><img className="aspect-video w-full object-cover" src={answers.uploadedImagePreview} alt="已選擇的參考珠寶" /><button type="button" onClick={() => fileInput.current?.click()} className="min-h-12 w-full text-sm text-champagne-700">換一張照片</button></div><p role="status" className="mt-4 text-sm leading-6 text-ink/60">{photoMessage || '可以調整設計特徵，幫你找相近款式。'}</p>{(answers.category === 'ring' || answers.category === 'mens-ring' || answers.category === 'couple-ring' ? [['主石鑲法', photoFeatureOptions.stone], ['戒台形狀', photoFeatureOptions.band], ['設計', photoFeatureOptions.design]] as const : [['設計', photoFeatureOptions.design]] as const).map(([title, options]) => <fieldset key={title} className="mt-4"><legend className="text-sm font-medium">{title}（可複選）</legend><div className="mt-2 flex flex-wrap gap-2">{options.map(option => { const checked = answers.photoFeatures?.includes(option.value) ?? false; return <button type="button" key={option.value} aria-pressed={checked} onClick={() => updateAnswers({ photoFeatures: checked ? answers.photoFeatures?.filter(value => value !== option.value) : [...(answers.photoFeatures ?? []), option.value] })} className={`min-h-11 rounded-xl border px-3 text-sm ${checked ? 'border-champagne-700 bg-champagne-100 text-champagne-700' : 'border-champagne-300 bg-white text-ink/70'}`}>{option.label}</button> })}</div></fieldset>)}</> : <button type="button" onClick={() => fileInput.current?.click()} className="flex aspect-video w-full flex-col items-center justify-center rounded-3xl border border-dashed border-champagne-300 bg-white/60 text-champagne-700"><span className="text-2xl">＋</span><span className="mt-2 text-sm">上傳喜歡的珠寶照片</span><span className="mt-1 text-xs text-ink/40">JPG、PNG 皆可</span></button>}
           <button type="button" onClick={findDirectly} className="mt-4 flex min-h-24 w-full items-center justify-between gap-4 rounded-3xl border border-champagne-300 bg-white px-5 py-5 text-left text-champagne-700 transition hover:bg-champagne-100">
             <span><span className="block font-medium">直接找尋</span><span className="mt-1 block text-xs leading-5 text-ink/50">不上傳照片，依照前面的偏好為我推薦</span></span>
             <span aria-hidden="true" className="text-xl">→</span>
@@ -80,8 +100,8 @@ export function MatchPage() {
       </div>
     </div>
 
-    <button type="button" disabled={!canContinue} onClick={next} className="mt-6 min-h-14 w-full rounded-2xl bg-champagne-700 px-5 font-medium text-white shadow-jewel transition enabled:hover:bg-champagne-500 disabled:cursor-not-allowed disabled:bg-champagne-300">
-      {isLastStep ? '為我精選珠寶' : '繼續'}
+    <button type="button" disabled={!canContinue || analyzing} onClick={next} className="mt-6 min-h-14 w-full rounded-2xl bg-champagne-700 px-5 font-medium text-white shadow-jewel transition enabled:hover:bg-champagne-500 disabled:cursor-not-allowed disabled:bg-champagne-300">
+      {analyzing ? '正在辨識照片…' : isLastStep ? '為我精選珠寶' : '繼續'}
     </button>
   </section>
 }
