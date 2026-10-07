@@ -8,6 +8,7 @@ export interface MatchAnswers {
   style?: string
   uploadedImage?: File
   uploadedImagePreview?: string
+  photoFeatures?: string[]
 }
 
 export type MatchQuestionId = 'purpose' | 'product' | 'budget' | 'style' | 'image'

@@ -6,6 +6,7 @@ import { MaterialPicker } from '../components/matching/MaterialPicker'
 import { ProgressBar } from '../components/matching/ProgressBar'
 import { useMatchAnswers } from '../hooks/useMatchAnswers'
 import type { JewelryCategory, MatchQuestionId } from '../types/matching'
+import { photoFeatureOptions } from '../services/matchingService'
 
 const requiredQuestions: MatchQuestionId[] = ['purpose', 'product', 'budget', 'style']
 
@@ -39,12 +40,13 @@ export function MatchPage() {
 
   function chooseImage(file?: File) {
     if (!file) return
-    updateAnswers({ uploadedImage: file, uploadedImagePreview: URL.createObjectURL(file) })
+    if (answers.uploadedImagePreview) URL.revokeObjectURL(answers.uploadedImagePreview)
+    updateAnswers({ uploadedImage: file, uploadedImagePreview: URL.createObjectURL(file), photoFeatures: [] })
   }
 
   function findDirectly() {
     if (answers.uploadedImagePreview) URL.revokeObjectURL(answers.uploadedImagePreview)
-    updateAnswers({ uploadedImage: undefined, uploadedImagePreview: undefined })
+    updateAnswers({ uploadedImage: undefined, uploadedImagePreview: undefined, photoFeatures: [] })
     navigate('/recommendations')
   }
 
@@ -69,7 +71,7 @@ export function MatchPage() {
         {question.id === 'product' && <MaterialPicker choices={materialOptions} values={answers.materials} onChange={(materials) => updateAnswers({ materials })} />}
         {question.id === 'image' && <div>
           <input ref={fileInput} className="hidden" type="file" accept="image/*" onChange={(event) => chooseImage(event.target.files?.[0])} />
-          {answers.uploadedImagePreview ? <div className="overflow-hidden rounded-3xl border border-champagne-100 bg-white"><img className="aspect-video w-full object-cover" src={answers.uploadedImagePreview} alt="已選擇的參考珠寶" /><button type="button" onClick={() => fileInput.current?.click()} className="min-h-12 w-full text-sm text-champagne-700">換一張照片</button></div> : <button type="button" onClick={() => fileInput.current?.click()} className="flex aspect-video w-full flex-col items-center justify-center rounded-3xl border border-dashed border-champagne-300 bg-white/60 text-champagne-700"><span className="text-2xl">＋</span><span className="mt-2 text-sm">上傳喜歡的珠寶照片</span><span className="mt-1 text-xs text-ink/40">JPG、PNG 皆可</span></button>}
+          {answers.uploadedImagePreview ? <><div className="overflow-hidden rounded-3xl border border-champagne-100 bg-white"><img className="aspect-video w-full object-cover" src={answers.uploadedImagePreview} alt="已選擇的參考珠寶" /><button type="button" onClick={() => fileInput.current?.click()} className="min-h-12 w-full text-sm text-champagne-700">換一張照片</button></div><p className="mt-4 text-sm leading-6 text-ink/60">請點選照片中看得出的設計特徵，幫你找相近款式；也可以略過，先看參考商品。</p>{(answers.category === 'ring' || answers.category === 'mens-ring' || answers.category === 'couple-ring' ? [['主石鑲法', photoFeatureOptions.stone], ['戒台形狀', photoFeatureOptions.band], ['設計', photoFeatureOptions.design]] as const : [['設計', photoFeatureOptions.design]] as const).map(([title, options]) => <fieldset key={title} className="mt-4"><legend className="text-sm font-medium">{title}（可複選）</legend><div className="mt-2 flex flex-wrap gap-2">{options.map(option => { const checked = answers.photoFeatures?.includes(option.value) ?? false; return <button type="button" key={option.value} aria-pressed={checked} onClick={() => updateAnswers({ photoFeatures: checked ? answers.photoFeatures?.filter(value => value !== option.value) : [...(answers.photoFeatures ?? []), option.value] })} className={`min-h-11 rounded-xl border px-3 text-sm ${checked ? 'border-champagne-700 bg-champagne-100 text-champagne-700' : 'border-champagne-300 bg-white text-ink/70'}`}>{option.label}</button> })}</div></fieldset>)}</> : <button type="button" onClick={() => fileInput.current?.click()} className="flex aspect-video w-full flex-col items-center justify-center rounded-3xl border border-dashed border-champagne-300 bg-white/60 text-champagne-700"><span className="text-2xl">＋</span><span className="mt-2 text-sm">上傳喜歡的珠寶照片</span><span className="mt-1 text-xs text-ink/40">JPG、PNG 皆可</span></button>}
           <button type="button" onClick={findDirectly} className="mt-4 flex min-h-24 w-full items-center justify-between gap-4 rounded-3xl border border-champagne-300 bg-white px-5 py-5 text-left text-champagne-700 transition hover:bg-champagne-100">
             <span><span className="block font-medium">直接找尋</span><span className="mt-1 block text-xs leading-5 text-ink/50">不上傳照片，依照前面的偏好為我推薦</span></span>
             <span aria-hidden="true" className="text-xl">→</span>
@@ -83,4 +85,3 @@ export function MatchPage() {
     </button>
   </section>
 }
-
