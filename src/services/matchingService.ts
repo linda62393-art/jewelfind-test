@@ -43,13 +43,15 @@ export const photoFeatureOptions = {
 export function getDesignMatches(products: JewelryProduct[], answers: MatchAnswers): JewelryProduct[] {
   const selected = (answers.photoFeatures ?? []).flatMap(feature => Object.values(photoFeatureOptions).flat().filter(option => option.value === feature))
   if (!answers.uploadedImage || !selected.length) return []
+  // Distinctive shapes must match; generic small stones or a thin band are insufficient.
+  const distinctive = selected.filter(option => !['pave', 'slim', 'simple'].includes(option.value))
   return products.filter(product => product.available && (!answers.category || answers.category === 'other' || product.category === answers.category))
     .map(product => {
       const copy = [product.name, product.description, product.specifications, ...product.featureTags].join(' ')
       const matches = selected.filter(option => option.pattern.test(copy)).length
-      return { product, matches, preferenceScore: score(product, answers) }
+      return { product, matches, shapeMatches: distinctive.every(option => option.pattern.test(copy)), preferenceScore: score(product, answers) }
     })
-    .filter(result => result.matches > 0)
+    .filter(result => result.matches > 0 && result.shapeMatches)
     .sort((a, b) => b.matches - a.matches || b.preferenceScore - a.preferenceScore)
     .slice(0, 5)
     .map(result => result.product)
