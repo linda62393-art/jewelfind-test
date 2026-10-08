@@ -8,6 +8,8 @@ export interface MatchAnswers {
   style?: string
   uploadedImage?: File
   uploadedImagePreview?: string
+  photoFeatures?: string[]
+  photoAnalysis?: 'complete' | 'failed'
 }
 
 export type MatchQuestionId = 'purpose' | 'product' | 'budget' | 'style' | 'image'
