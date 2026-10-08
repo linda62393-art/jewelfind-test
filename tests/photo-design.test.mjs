@@ -20,3 +20,12 @@ test('no design match still offers reference products rather than an empty resul
   assert.ok(getRecommendations(products, noMatch).length > 0)
   assert.deepEqual(getDesignMatches(products, { ...answers, uploadedImage: undefined }), [])
 })
+
+
+test('a cross band cannot match only generic pave or slim clues', () => {
+  const bands = [product('v-band', 'V形纖細排鑽線戒'), product('cross-band', '交叉纖細排鑽戒指')]
+  const photo = { ...answers, photoFeatures: ['cross', 'pave', 'slim', 'simple'] }
+  assert.deepEqual(getDesignMatches(bands, photo).map(item => item.id), ['cross-band'])
+  assert.deepEqual(getDesignMatches(bands.slice(0, 1), photo), [])
+  assert.ok(getRecommendations(bands.slice(0, 1), photo).length > 0)
+})
