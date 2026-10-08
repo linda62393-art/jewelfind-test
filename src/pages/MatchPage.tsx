@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { useNavigate } from 'react-router'
+import { useNavigate, useSearchParams } from 'react-router'
 import { matchQuestions, materialOptions } from '../configs/matching'
 import { ChoiceGrid } from '../components/matching/ChoiceGrid'
 import { MaterialPicker } from '../components/matching/MaterialPicker'
@@ -12,7 +12,16 @@ import { analyzeJewelryPhoto } from '../services/photoAnalysisService'
 const requiredQuestions: MatchQuestionId[] = ['purpose', 'product', 'budget', 'style']
 
 export function MatchPage() {
-  const [step, setStep] = useState(0)
+  const [searchParams, setSearchParams] = useSearchParams()
+  const requestedStep = Number(searchParams.get('step') ?? 0)
+  const step = Number.isInteger(requestedStep) ? Math.max(0, Math.min(requestedStep, matchQuestions.length - 1)) : 0
+  function setStep(value: number) {
+    setSearchParams(current => {
+      const next = new URLSearchParams(current)
+      next.set('step', String(value))
+      return next
+    }, { replace: true })
+  }
   const { answers, updateAnswers } = useMatchAnswers()
   const navigate = useNavigate()
   const fileInput = useRef<HTMLInputElement>(null)
@@ -39,7 +48,7 @@ export function MatchPage() {
 
   function next() {
     if (isLastStep) { navigate('/recommendations'); return }
-    setStep((current) => current + 1)
+    setStep(step + 1)
   }
 
   async function chooseImage(file?: File) {
@@ -75,7 +84,7 @@ export function MatchPage() {
   return <section className="flex min-h-dvh flex-col px-6 pb-7 pt-7">
     <header>
       <div className="mb-7 flex items-center justify-between">
-        <button type="button" onClick={() => step === 0 ? navigate('/') : setStep((current) => current - 1)} className="-ml-2 min-h-11 px-2 text-sm text-ink/60">← 返回</button>
+        <button type="button" onClick={() => step === 0 ? navigate('/') : setStep(step - 1)} className="-ml-2 min-h-11 px-2 text-sm text-ink/60">← 返回</button>
         <p className="font-serif tracking-[0.14em] text-champagne-700">蘊選</p>
       </div>
       <ProgressBar current={step + 1} total={matchQuestions.length} />
