@@ -3,6 +3,7 @@ import type { JewelryProduct } from '../types/product'
 import { useState } from 'react'
 import { Link } from 'react-router'
 import { ProductCard } from '../components/products/ProductCard'
+import { matchQuestions } from '../configs/matching'
 import { mockProducts } from '../configs/products'
 import { useMatchAnswers } from '../hooks/useMatchAnswers'
 import { getDesignMatches, getRecommendations } from '../services/matchingService'
@@ -27,7 +28,7 @@ export function RecommendationsPage() {
     setBatches(next)
   }
   return <section className="min-h-dvh px-5 pb-8 pt-7">
-    <header className="flex items-center justify-between"><Link to="/match" className="min-h-11 py-2 text-sm text-ink/60">← 修改偏好</Link><p className="font-serif tracking-[0.14em] text-champagne-700">蘊選</p></header>
+    <header className="flex items-center justify-between"><Link to={`/match?step=${matchQuestions.length - 1}`} className="min-h-11 py-2 text-sm text-ink/60">← 修改偏好</Link><p className="font-serif tracking-[0.14em] text-champagne-700">蘊選</p></header>
     <p className="mt-7 text-sm tracking-[0.18em] text-rose-400">CURATED FOR YOU</p><h1 className="mt-2 font-serif text-3xl">看看適合你的珠寶</h1>
     {answers.uploadedImage && <p className="mt-3 text-sm leading-6 text-ink/60">{matched.length ? '依照片辨識或你調整的主石、戒台與設計特徵，找到以下可參考的款式。' : '目前沒有明確符合照片特徵的現貨款式，先看看同類別與預算接近的參考商品。'}照片會在送出看貨需求時提供給我們。</p>}
     {matched.length > 0 && refreshCount === 0 && <><h2 className="mt-6 font-serif text-xl">設計特徵相近</h2><div className="mt-4 space-y-5">{matched.map(product => <ProductCard key={product.id} product={product} saved={saved.includes(product.id)} onToggleSave={() => toggleSave(product.id)} />)}</div></>}
