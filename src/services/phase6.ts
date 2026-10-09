@@ -26,7 +26,7 @@ export interface AdminDetail {
 export async function rpc<T>(admin: boolean, name: string, params: Record<string, unknown> = {}): Promise<T> {
   const { data, error } = await (admin ? adminClient : customerClient).rpc(name, params)
   if (error) {
-    const messages: Record<string, string> = { invalid_inventory_search: '請輸入 100 字以內的 SKU 或型號，並重新查詢。', feedback_conflict: '回饋已被更新，請重新整理回饋後再儲存。', feedback_not_ready: '請先完成商品到店安排，再填寫看貨回饋。', invalid_feedback: '請確認看貨日期、結果、未購買原因及預算範圍。', invalid_followup: '請填寫追蹤說明並確認聯絡日期。', invalid_request_meta: '請確認需求名稱與測試標記。', notification_message_required: '請填寫 1 至 1000 字的客戶通知。', admin_required: '此帳號尚未獲得管理員授權。', access_denied: '無法驗證這筆需求的存取連結。', version_conflict: '其他管理員已更新此需求，請重新整理後再操作。', stale_arrival: '看貨安排已更新，請重新整理。', deadline_passed: '看貨期限已過，請選擇時間無法配合以便重新安排。', invalid_transition: '無法進行此狀態變更，請重新整理。', note_required: '請填寫內部備註。', rearrange_note_required: '請說明重新安排原因。', failure_reason_required: '請選擇並填寫完整內部原因。', partner_required: '請填寫合作店家。', arrival_fields_required: '請確認到店資料及七天內的期限。' }
+    const messages: Record<string, string> = { viewing_request_limit: '此客人已有 3 筆處理中的看貨需求，請先完成或取消現有需求，再重新安排調貨。', invalid_inventory_search: '請輸入 100 字以內的 SKU 或型號，並重新查詢。', feedback_conflict: '回饋已被更新，請重新整理回饋後再儲存。', feedback_not_ready: '請先完成商品到店安排，再填寫看貨回饋。', invalid_feedback: '請確認看貨日期、結果、未購買原因及預算範圍。', invalid_followup: '請填寫追蹤說明並確認聯絡日期。', invalid_request_meta: '請確認需求名稱與測試標記。', notification_message_required: '請填寫 1 至 1000 字的客戶通知。', admin_required: '此帳號尚未獲得管理員授權。', access_denied: '無法驗證這筆需求的存取連結。', version_conflict: '其他管理員已更新此需求，請重新整理後再操作。', stale_arrival: '看貨安排已更新，請重新整理。', deadline_passed: '看貨期限已過，請選擇時間無法配合以便重新安排。', invalid_transition: '無法進行此狀態變更，請重新整理。', note_required: '請填寫內部備註。', rearrange_note_required: '請說明重新安排原因。', failure_reason_required: '請選擇並填寫完整內部原因。', partner_required: '請填寫合作店家。', arrival_fields_required: '請確認到店資料及七天內的期限。' }
     throw new Error(messages[error.message] || '暫時無法完成操作，請檢查連線或登入狀態後重試。')
   }
   return data as T
@@ -43,4 +43,3 @@ export function saveRequest(receipt: ViewingReceipt): boolean {
   try { localStorage.setItem(vaultKey, JSON.stringify(savedRequests())); return true } catch { return false }
 }
 export function requestLink(receipt: ViewingReceipt) { return `/my-requests/${receipt.id}#key=${receipt.accessToken}` }
-
