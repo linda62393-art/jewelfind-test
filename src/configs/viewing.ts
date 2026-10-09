@@ -47,3 +47,17 @@ export const viewingDistricts: Record<string, string[]> = {
 }
 
 export const viewingMinutes = ['00', '30'] as const
+
+// Temporary consumer-facing availability only. Keep the complete district list
+// above for existing requests, validation and administration records.
+const hiddenNewTaipeiViewingDistricts = new Set([
+  '瑞芳區', '深坑區', '石碇區', '坪林區', '三芝區', '石門區', '八里區',
+  '平溪區', '雙溪區', '貢寮區', '金山區', '萬里區', '烏來區',
+])
+
+export const consumerViewingDistricts: Record<string, string[]> = Object.fromEntries(
+  Object.entries(viewingDistricts).map(([city, districts]) => [
+    city,
+    districts.filter(district => city !== '新北市' || !hiddenNewTaipeiViewingDistricts.has(district)),
+  ]),
+)
