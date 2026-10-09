@@ -20,7 +20,6 @@ export function ProductDetailPage() {
     <p className="mt-7 text-xs tracking-[0.2em] text-rose-400">A CLOSER LOOK</p>
     <h1 className="mt-2 font-serif text-3xl">{product.name}</h1>
     {product.featureTags.length > 0 && <ul aria-label="商品特色" className="mt-3 flex flex-wrap gap-x-3 gap-y-2 text-sm leading-7 text-ink/60">{product.featureTags.map(tag => <li key={tag}>#{tag}</li>)}</ul>}
-    <p className="mt-2 text-xs text-ink/50">SKU：{product.sku}</p>
     <p className="mt-5 text-2xl text-champagne-700">{product.price === null ? '價格待確認' : `NT$ ${product.price.toLocaleString('zh-TW')}`}</p>
     <p className="mt-2 text-xs text-ink/50">展示商品資料與參考價格，實際規格及報價以確認為準。</p>
     <dl className="my-6 divide-y divide-champagne-100 rounded-2xl bg-white px-5">{[['主石', product.mainStone === '無' ? '' : product.mainStone ?? ''], ['主石重量', product.mainStoneWeight === '無' ? '' : product.mainStoneWeight ?? ''], ['材質', product.metal ?? '資料待補'], ['配鑽', product.accentStone === '無' ? '' : product.accentStone ?? ''], ['配鑽重量', product.accentStoneWeight === '無' ? '' : product.accentStoneWeight ?? ''], ['規格', product.specifications], ['試營運看貨地區', '台北市、新北市（實際店家與調貨安排待確認）']].map(([title, value]) => <div key={title} className="py-4"><dt className="text-xs text-ink/50">{title}</dt><dd className="mt-1 whitespace-pre-line text-sm leading-6">{value}</dd></div>)}</dl>
