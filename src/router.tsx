@@ -6,6 +6,7 @@ import { HomePage } from './pages/HomePage'
 import { MatchPage } from './pages/MatchPage'
 import { RecommendationsPage } from './pages/RecommendationsPage'
 import { AdminPage } from './pages/AdminPage'
+import { ContactPage } from './pages/ContactPage'
 import { RequestPage, RequestsPage } from './pages/RequestsPage'
 
 const createRouter = import.meta.env.MODE === 'pages' ? createHashRouter : createBrowserRouter
@@ -15,6 +16,7 @@ export const router = createRouter([
     element: <AppShell />,
     children: [
       { index: true, element: <HomePage /> },
+      { path: 'contact', element: <ContactPage /> },
       { path: 'match', element: <MatchPage /> },
       { path: 'recommendations', element: <RecommendationsPage /> },
       { path: 'products/:productId', element: <ProductDetailPage /> },
@@ -25,4 +27,3 @@ export const router = createRouter([
     ],
   },
 ])
-

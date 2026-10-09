@@ -1,2 +1,5 @@
 [functions.submit-viewing]
 verify_jwt = true
+
+[functions.submit-contact]
+verify_jwt = true

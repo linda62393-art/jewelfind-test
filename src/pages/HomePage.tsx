@@ -28,6 +28,11 @@ export function HomePage() {
       </button>
       <div className="relative mt-5 rounded-2xl border border-champagne-300 bg-white/70 p-4 text-sm leading-7"><h2 className="font-medium text-champagne-700">JEWELFIND 雙北試營運中</h2><p>目前提供台北、新北地區珠寶找品與合作店家看貨媒合服務。</p><p className="mt-2 text-ink/65">告訴我們你正在找什麼，我們幫你尋找適合的珠寶，並安排合適的看貨地點。</p></div>
       <div className="relative mt-4 flex justify-between text-sm text-champagne-700"><button onClick={() => navigate('/my-requests')}>我的看貨需求與通知</button><button onClick={() => navigate('/admin')}>管理員入口</button></div>
+      <button type="button" onClick={() => navigate('/contact')} className="relative mt-5 w-full rounded-2xl border border-champagne-300 bg-white/70 p-5 text-left leading-7 transition hover:bg-champagne-100">
+        <span className="block font-medium text-champagne-700">店家合作／聯繫我們 →</span>
+        <span className="mt-1 block text-sm text-ink/65">想與 JEWELFIND 合作？歡迎留下訊息。</span>
+        <span className="mt-1 block text-xs text-ink/55">Partner with JEWELFIND / Contact us</span>
+      </button>
     </section>
   )
 }
