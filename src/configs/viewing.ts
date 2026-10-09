@@ -61,3 +61,5 @@ export const consumerViewingDistricts: Record<string, string[]> = Object.fromEnt
     districts.filter(district => city !== '新北市' || !hiddenNewTaipeiViewingDistricts.has(district)),
   ]),
 )
+
+export const viewingHours = Array.from({ length: 15 }, (_, index) => String(index + 9).padStart(2, '0'))
