@@ -39,3 +39,15 @@ test('similar products prioritize the source shape and never offer sold or wrong
   assert.equal(fallback.matched,false);assert.deepEqual(fallback.products.map(p=>p.id),['generic'])
  })
 })
+
+
+test('V-shaped reference does not label a costly three-row band as a matching V shape',()=>{
+ return import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`).then(({getSimilarProducts})=>{
+  const source={...product('source','V型鑽石線戒','ring',false),price:20000}
+  const costly={...product('three-row','三排排鑽戒指'),price:134200}
+  const close={...product('line-band','經典排鑽線戒'),price:25000}
+  const result=getSimilarProducts([source,costly,close],source)
+  assert.equal(result.matched,false)
+  assert.deepEqual(result.products.map(p=>p.id),['line-band','three-row'])
+ })
+})
