@@ -1018,9 +1018,9 @@ const products: JewelryProduct[] = [
     "metal": "14KW",
     "chainMetal": null,
     "stock": 1,
-    "sourceStatus": "寄店家",
-    "available": true,
-    "unavailableReason": null
+    "sourceStatus": "售出",
+    "available": false,
+    "unavailableReason": "已售出"
   },
   {
     "id": "DR00008-RG92290",

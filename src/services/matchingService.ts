@@ -30,7 +30,7 @@ export const photoFeatureOptions = {
     { value: 'slim', label: '細戒台', pattern: /纖細|細戒|細緻線條/iu },
     { value: 'wide', label: '寬戒台', pattern: /寬版|寬戒/iu },
     { value: 'cross', label: '交叉戒台', pattern: /交叉|交織/iu },
-    { value: 'layered', label: '多排／V 形', pattern: /雙排|三排|多排|V\s*形|波浪/iu },
+    { value: 'layered', label: '多排／V 形', pattern: /雙排|三排|多排|V\s*[形型]|波浪/iu },
   ],
   design: [
     { value: 'flower', label: '花朵', pattern: /花形|花朵|花語|花瓣|花簇/iu },
@@ -55,4 +55,26 @@ export function getDesignMatches(products: JewelryProduct[], answers: MatchAnswe
     .sort((a, b) => b.matches - a.matches || b.preferenceScore - a.preferenceScore)
     .slice(0, 5)
     .map(result => result.product)
+}
+
+
+export function getSimilarProducts(products: JewelryProduct[], reference: JewelryProduct) {
+  const copy = (product: JewelryProduct) => [product.name, product.description, product.specifications, ...product.featureTags].join(' ')
+  const features = Object.values(photoFeatureOptions).flat().filter(option => option.pattern.test(copy(reference)))
+  const distinctive = features.filter(option => !['pave', 'slim', 'simple'].includes(option.value))
+  const candidates = products.filter(p => p.available && p.id !== reference.id && p.category === reference.category)
+  const ranked = candidates.map(product => {
+    const design = features.filter(option => option.pattern.test(copy(product))).length
+    const shape = distinctive.every(option => option.pattern.test(copy(product)))
+    const material = product.materials.filter(value => reference.materials.includes(value)).length
+    const priceDistance = product.price === null || reference.price === null ? Infinity : Math.abs(product.price - reference.price)
+    return { product, design, shape, material, priceDistance }
+  }).sort((a,b) => b.design - a.design || b.material - a.material || a.priceDistance - b.priceDistance)
+  const matching = ranked.filter(r => r.design > 0 && r.shape)
+  return { matched: matching.length > 0, products: (matching.length ? matching : ranked).slice(0,5).map(r => r.product) }
+}
+
+export function getSoldReferences(products: JewelryProduct[], answers: MatchAnswers) {
+  return products.filter(p => !p.available && p.unavailableReason?.includes('售出') && (!answers.category || answers.category === 'other' || p.category === answers.category))
+    .sort((a,b) => score(b,answers) - score(a,answers)).slice(0,3)
 }

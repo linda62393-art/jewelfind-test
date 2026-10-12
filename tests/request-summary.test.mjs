@@ -15,3 +15,11 @@ test('a missing completion event does not invent a viewing or cancellation times
  assert.equal(requestSummary({stage:'viewed',notifications:[],timeline:[]},date).occurredAt,null)
  assert.equal(requestSummary(null,date).occurredAt,date)
 })
+
+test('finished and cancelled statuses move out of the active bucket while arranged viewing remains active',()=>{
+ const completed=['cancelled','viewed','purchased','not_purchased','no_show','sold','unavailable']
+ return import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`).then(({isCompletedRequest})=>{
+  for(const stage of completed) assert.equal(isCompletedRequest(stage),true)
+  for(const stage of ['new','checking','notified','transferring','in_transit','arrived',undefined]) assert.equal(isCompletedRequest(stage),false)
+ })
+})

@@ -7,13 +7,14 @@ import { ViewingLimitNotice } from '../components/ViewingLimitNotice'
 import { matchQuestions } from '../configs/matching'
 import { mockProducts } from '../configs/products'
 import { useMatchAnswers } from '../hooks/useMatchAnswers'
-import { getDesignMatches, getRecommendations } from '../services/matchingService'
+import { getDesignMatches, getRecommendations, getSoldReferences } from '../services/matchingService'
 
 const cachedBatches = new Map<string, JewelryProduct[][]>()
 
 export function RecommendationsPage() {
   const { answers } = useMatchAnswers()
   const cacheKey = JSON.stringify(answers)
+  const soldReferences = getSoldReferences(mockProducts, answers)
   const matched = getDesignMatches(mockProducts, answers)
   const [batches, setBatches] = useState(() => cachedBatches.get(cacheKey) ?? [getRecommendations(mockProducts, answers, matched.map(item => item.id))])
   const { saved, toggleSave } = useViewing()
@@ -37,5 +38,6 @@ export function RecommendationsPage() {
     <h2 className="mt-7 font-serif text-xl">{matched.length && refreshCount === 0 ? '其他參考款式' : '可以參考的款式'}</h2>
     {batch.length ? <div className="mt-4 space-y-5">{batch.map(product => <ProductCard key={product.id} product={product} saved={saved.includes(product.id)} onToggleSave={() => toggleSave(product.id)} />)}</div> : <p className="mt-4 rounded-2xl bg-rose-50 p-5 text-sm leading-6">目前沒有可安排看貨的商品，歡迎重新選擇偏好。</p>}
     {hasMore ? <button type="button" onClick={refresh} className="mt-7 min-h-14 w-full rounded-2xl border border-champagne-300 bg-white text-champagne-700">換一批參考款式</button> : <div className="mt-7 rounded-3xl bg-rose-50 p-5 text-center"><p className="font-serif text-xl">已看完目前可提供的款式</p><Link to="/match" className="mt-4 inline-block rounded-xl bg-champagne-700 px-5 py-3 text-sm text-white">重新選擇偏好</Link></div>}
+    {soldReferences.length > 0 && <details className="mt-7 rounded-2xl border border-champagne-300 bg-white/60 p-4"><summary className="min-h-11 cursor-pointer font-serif text-lg">已售出款式參考（可找相似款）</summary><p className="mt-2 text-sm leading-6 text-ink/60">以下原件已售出，可查看款式，再選「幫我找相似款」。</p><div className="mt-4 space-y-5">{soldReferences.map(product => <ProductCard key={product.id} product={product} saved={saved.includes(product.id)} onToggleSave={() => toggleSave(product.id)} />)}</div></details>}
   </section>
 }

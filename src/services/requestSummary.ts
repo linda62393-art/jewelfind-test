@@ -2,6 +2,8 @@ import type { CustomerRequest } from './phase6'
 
 const completed: Record<string, string> = { cancelled: '已取消', viewed: '已看貨', purchased: '已看貨・已購買', not_purchased: '已看貨・未購買', no_show: '未赴店', sold: '商品已售出', unavailable: '無法安排看貨' }
 
+export function isCompletedRequest(stage?: string) { return Boolean(stage && completed[stage]) }
+
 export function requestSummary(data: CustomerRequest | null, createdAt: string) {
   if (!data) return { label: '讀取進度中', occurredAt: createdAt, dateLabel: '需求時間' }
   const stage = data.stage
