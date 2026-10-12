@@ -62,16 +62,18 @@ export function getSimilarProducts(products: JewelryProduct[], reference: Jewelr
   const copy = (product: JewelryProduct) => [product.name, product.description, product.specifications, ...product.featureTags].join(' ')
   const features = Object.values(photoFeatureOptions).flat().filter(option => option.pattern.test(copy(reference)))
   const distinctive = features.filter(option => !['pave', 'slim', 'simple'].includes(option.value))
+  const vShape = /[VＶ]\s*[形型]/iu.test(copy(reference))
   const candidates = products.filter(p => p.available && p.id !== reference.id && p.category === reference.category)
   const ranked = candidates.map(product => {
     const design = features.filter(option => option.pattern.test(copy(product))).length
-    const shape = distinctive.every(option => option.pattern.test(copy(product)))
+    const shape = distinctive.every(option => option.pattern.test(copy(product))) && (!vShape || /[VＶ]\s*[形型]/iu.test(copy(product)))
     const material = product.materials.filter(value => reference.materials.includes(value)).length
     const priceDistance = product.price === null || reference.price === null ? Infinity : Math.abs(product.price - reference.price)
     return { product, design, shape, material, priceDistance }
   }).sort((a,b) => b.design - a.design || b.material - a.material || a.priceDistance - b.priceDistance)
   const matching = ranked.filter(r => r.design > 0 && r.shape)
-  return { matched: matching.length > 0, products: (matching.length ? matching : ranked).slice(0,5).map(r => r.product) }
+  const references = [...ranked].sort((a,b) => b.material - a.material || a.priceDistance - b.priceDistance || b.design - a.design)
+  return { matched: matching.length > 0, products: (matching.length ? matching : references).slice(0,5).map(r => r.product) }
 }
 
 export function getSoldReferences(products: JewelryProduct[], answers: MatchAnswers) {
