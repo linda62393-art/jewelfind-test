@@ -9,8 +9,8 @@ test('rename, pin and reversible hiding preserve original receipt and capability
  const receipts=[{id:'a',createdAt:'2026-09-29T00:00:00Z',accessToken:'secret-a'},{id:'b',createdAt:'2026-09-30T00:00:00Z',accessToken:'secret-b'}]; const original=structuredClone(receipts);
  assert.equal(organizeRequest('a',{title:'  週年禮物  ',pinned:true}),true);
  assert.deepEqual(organizedRequests(receipts,organizations(),false).map(r=>r.id),['a','b']);
- organizeRequest('a',{hidden:true}); assert.deepEqual(organizedRequests(receipts,organizations(),false).map(r=>r.id),['b']); assert.deepEqual(organizedRequests(receipts,organizations(),true).map(r=>r.id),['a']);
- organizeRequest('a',{hidden:false}); assert.equal(organizations().a.title,'週年禮物'); assert.equal(organizations().a.pinned,true); assert.deepEqual(receipts,original); assert.ok(!JSON.stringify([...storage.values()]).includes('secret'));
+ organizeRequest('a',{hidden:true}); assert.ok(Number.isFinite(Date.parse(organizations().a.deletedAt))); assert.deepEqual(organizedRequests(receipts,organizations(),false).map(r=>r.id),['b']); assert.deepEqual(organizedRequests(receipts,organizations(),true).map(r=>r.id),['a']);
+ organizeRequest('a',{hidden:false}); assert.equal(organizations().a.deletedAt,undefined); assert.equal(organizations().a.title,'週年禮物'); assert.equal(organizations().a.pinned,true); assert.deepEqual(receipts,original); assert.ok(!JSON.stringify([...storage.values()]).includes('secret'));
 })
 test('same-request timeline has one submission and sorts newest updates before older ones',()=>{
  const events=[{id:'early',message:'調貨處理',kind:'transferring',occurred_at:'2026-09-30T02:00:00Z'},{id:'late',message:'商品到店',kind:'arrived',occurred_at:'2026-09-30T03:00:00Z'}];

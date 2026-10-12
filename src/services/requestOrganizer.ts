@@ -1,4 +1,4 @@
-export interface Organization { title: string; pinned: boolean; hidden: boolean }
+export interface Organization { title: string; pinned: boolean; hidden: boolean; deletedAt?: string }
 const key = 'jewelfind-request-organization-v1'
 let memory: Record<string, Organization> = {}
 export function organizations(): Record<string, Organization> {
@@ -8,7 +8,7 @@ export function organizations(): Record<string, Organization> {
       for (const [id, value] of Object.entries(stored)) {
         if (value && typeof value === 'object') {
           const row = value as Record<string, unknown>
-          if (!memory[id]) memory[id] = { title: typeof row.title === 'string' ? row.title.slice(0, 100) : '', pinned: row.pinned === true, hidden: row.hidden === true }
+          if (!memory[id]) memory[id] = { title: typeof row.title === 'string' ? row.title.slice(0, 100) : '', pinned: row.pinned === true, hidden: row.hidden === true, deletedAt: typeof row.deletedAt === 'string' && Number.isFinite(Date.parse(row.deletedAt)) ? row.deletedAt : undefined }
         }
       }
     }
@@ -19,6 +19,8 @@ export function organizeRequest(id: string, update: Partial<Organization>): bool
   const stored = organizations()
   const previous = stored[id] || { title: '', pinned: false, hidden: false }
   memory = { ...stored, [id]: { ...previous, ...update } }
+  if (update.hidden === true && !previous.hidden) memory[id].deletedAt = new Date().toISOString()
+  if (update.hidden === false) delete memory[id].deletedAt
   memory[id].title = memory[id].title.trim().slice(0, 100)
   try { localStorage.setItem(key, JSON.stringify(memory)); return true } catch { return false }
 }
