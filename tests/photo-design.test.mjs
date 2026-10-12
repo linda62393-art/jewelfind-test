@@ -29,3 +29,13 @@ test('a cross band cannot match only generic pave or slim clues', () => {
   assert.deepEqual(getDesignMatches(bands.slice(0, 1), photo), [])
   assert.ok(getRecommendations(bands.slice(0, 1), photo).length > 0)
 })
+
+test('similar products prioritize the source shape and never offer sold or wrong-category items',()=>{
+ return import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`).then(({getSimilarProducts})=>{
+  const source=product('source','V型鑽石線戒','ring',false)
+  const candidates=[source,product('v','V型鑽石線戒'),product('generic','經典排鑽線戒'),product('sold-v','V型鑽石線戒','ring',false),product('ear','V型耳環','earrings')]
+  assert.deepEqual(getSimilarProducts(candidates,source).products.map(p=>p.id),['v'])
+  const fallback=getSimilarProducts(candidates.filter(p=>p.id!=='v'),source)
+  assert.equal(fallback.matched,false);assert.deepEqual(fallback.products.map(p=>p.id),['generic'])
+ })
+})

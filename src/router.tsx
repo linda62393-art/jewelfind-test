@@ -1,3 +1,4 @@
+import { SimilarProductsPage } from './pages/SimilarProductsPage'
 import { ProductDetailPage } from './pages/ProductDetailPage'
 import { ViewingPage, ViewingSuccessPage } from './pages/ViewingPage'
 import { createBrowserRouter, createHashRouter } from 'react-router'
@@ -20,6 +21,7 @@ export const router = createRouter([
       { path: 'match', element: <MatchPage /> },
       { path: 'recommendations', element: <RecommendationsPage /> },
       { path: 'products/:productId', element: <ProductDetailPage /> },
+      { path: 'products/:productId/similar', element: <SimilarProductsPage /> },
       { path: 'products/:productId/viewing', element: <ViewingPage /> },
       { path: 'viewing/success/:requestId', element: <ViewingSuccessPage /> },
       { path: 'my-requests', element: <RequestsPage /> },

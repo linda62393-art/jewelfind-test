@@ -19,7 +19,6 @@ export const productNames: Record<string, string> = {
   "r-02": "流光鑽石戒指\n(Flow Diamond Ring)",
   "DR00005-DR590": "綻放花語鑽石戒指\n(Blooming Flower Diamond Ring)",
   "DR00006-DR588": "心語三重奏鑽石戒指\n(Triple Heart Diamond Ring)",
-  "c-03": "V型鑽石線戒\n(V Diamond Band)",
   "DR00008-RG92290": "星光鑽石排戒",
   "DR00009-DG1200": "璀璨鋪鑽寬版戒指",
   "c-04": "璀璨40分線戒",
