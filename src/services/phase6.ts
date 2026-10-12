@@ -13,7 +13,7 @@ export const transitions: Record<string, string[]> = { new: ['checking', 'notifi
 export const time = (value?: string | null) => value ? new Date(value).toLocaleString('zh-TW', { timeZone: 'Asia/Taipei', hour12: false }) : '—'
 export const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date())
 export const deadline = (date: string) => { const d = new Date(`${date}T00:00:00Z`); d.setUTCDate(d.getUTCDate() + 6); return d.toISOString().slice(0, 10) }
-export interface Notice { id: string; kind: string; message: string; published_at: string; read_at: string | null; details: { store?: string; address?: string; arrivedOn?: string; deadline?: string } }
+export interface Notice { id: string; kind: string; message: string; published_at: string; read_at: string | null; details: { stage?: string; action?: string; store?: string; address?: string; arrivedOn?: string; deadline?: string } }
 export interface Reply { notification_id: string; choice: string; proposed_date: string | null; note: string; updated_at: string }
 export interface AppointmentState { version: number; rescheduleCount: number; limit: number; requestedTime: string | null; pending: boolean; canChange: boolean }
 export interface CustomerRequest { appointment?: AppointmentState; timeline?: ProgressEvent[]; id: string; productId: string; productName: string; preferredTime: string; createdAt: string; stage: string; arrivalNotificationId: string | null; notifications: Notice[]; responses: Reply[] }
