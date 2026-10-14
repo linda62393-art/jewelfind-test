@@ -63,6 +63,7 @@ export function ViewingPage() {
       <h2 className="font-serif text-xl">加入 JEWELFIND LINE</h2>
       <p className="mt-3 text-sm leading-7 text-ink/65">可進一步回覆與接收看貨通知。送出需求後，請在 LINE 傳送需求編號或商品截圖，方便我們核對並聯繫你。</p>
       <a href={officialLineUrl} target="_blank" rel="noopener noreferrer" className="mt-4 flex min-h-14 items-center justify-center rounded-xl bg-[#06C755] px-4 font-medium text-white">加入 JEWELFIND LINE ↗</a>
+      <div className="mt-4 flex items-center gap-4"><img src={`${import.meta.env.BASE_URL}assets/line/jewelfind-add-friend.png`} alt="加入 JEWELFIND 官方 LINE 的 QR Code" width={128} height={128} loading="lazy" className="h-32 w-32 shrink-0 rounded-lg bg-white" /><p className="text-sm leading-7 text-ink/60">也可以用手機掃碼<br />加入官方 LINE</p></div>
     </aside>
   </section>
 }
