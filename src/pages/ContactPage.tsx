@@ -1,3 +1,4 @@
+import { OfficialLine } from '../components/OfficialLine'
 import { useRef, useState, type FormEvent } from 'react'
 import { Link } from 'react-router'
 import { submitContact } from '../services/contactService'
@@ -30,6 +31,7 @@ export function ContactPage() {
     <p className="mt-6 text-xs tracking-[0.15em] text-rose-400">PARTNER WITH JEWELFIND</p>
     <h1 className="mt-3 font-serif text-3xl">店家合作／聯繫我們</h1>
     <p className="mt-2 text-sm text-ink/60">Partnership inquiries / Contact us</p>
+    <OfficialLine />
     {sent ? <div role="status" className="mt-8 rounded-2xl bg-white p-6 leading-7"><h2 className="font-medium">訊息已送出</h2><p>Your message has been sent.</p><p className="mt-3 text-sm text-ink/60">謝謝妳／你的合作意願！我們會依留下的聯絡方式回覆。<br />Thank you for your interest. We will reply using the contact details you provided.</p><Link to="/" className="mt-5 inline-flex min-h-11 items-center text-champagne-700">返回首頁 / Back to home →</Link></div> : <>
       <p className="mt-6 text-sm leading-7 text-ink/65">想讓店裡的珠寶被更多人看見，或了解合作方式？歡迎留下訊息。<br />Interested in showcasing your jewelry or partnering with us? Send us a message.</p>
       <form onSubmit={submit} className="mt-7 space-y-5">
