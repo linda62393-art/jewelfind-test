@@ -1,4 +1,4 @@
-import { OfficialLine } from '../components/OfficialLine'
+import { OfficialLine, officialLineUrl } from '../components/OfficialLine'
 import { consumerViewingDistricts, viewingMinutes, viewingHours } from '../configs/viewing'
 import { useRef, useState, type FormEvent } from 'react'
 import { Link, useNavigate, useParams } from 'react-router'
@@ -58,7 +58,14 @@ export function ViewingPage() {
       <p className="text-xs leading-6 text-ink/55">送出後將保存你的聯絡資料、珠寶偏好與參考照片，用於確認商品及聯繫看貨安排。希望時間不代表已完成預約。</p>
       {error && <div role="alert" className="rounded-xl bg-rose-50 p-4 text-sm text-red-700"><p>{error}</p>{error.includes('商品不存在') && <Link to="/recommendations" className="mt-3 inline-flex min-h-11 items-center rounded-xl border border-champagne-700 px-4 font-medium text-champagne-700">← 返回選商品</Link>}{error.includes('3 筆') && <Link to="/my-requests" className="mt-3 inline-flex min-h-11 items-center rounded-xl border border-champagne-700 px-4 font-medium text-champagne-700">查看我的看貨需求 →</Link>}</div>}
       <button disabled={busy} className="min-h-14 w-full rounded-2xl bg-champagne-700 text-white disabled:opacity-50">{busy ? '送出中…' : '送出看貨需求'}</button>
-    </form></section>
+    </form>
+    <aside className="mt-6 rounded-2xl border border-champagne-300 bg-white p-5">
+      <h2 className="font-serif text-xl">加入 JEWELFIND LINE</h2>
+      <p className="mt-3 text-sm leading-7 text-ink/65">可進一步回覆與接收看貨通知。送出需求後，請在 LINE 傳送需求編號或商品截圖，方便我們核對並聯繫你。</p>
+      <a href={officialLineUrl} target="_blank" rel="noopener noreferrer" className="mt-4 flex min-h-14 items-center justify-center rounded-xl bg-[#06C755] px-4 font-medium text-white">加入 JEWELFIND LINE ↗</a>
+      <div className="mt-4 flex items-center gap-4"><img src={`${import.meta.env.BASE_URL}assets/line/jewelfind-add-friend.png`} alt="加入 JEWELFIND 官方 LINE 的 QR Code" width={128} height={128} loading="lazy" className="h-32 w-32 shrink-0 rounded-lg bg-white" /><p className="text-sm leading-7 text-ink/60">也可以用手機掃碼<br />加入官方 LINE</p></div>
+    </aside>
+  </section>
 }
 
 export function ViewingSuccessPage() {
