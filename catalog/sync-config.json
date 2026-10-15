@@ -114,78 +114,63 @@
   },
   "imageOverrides": {
     "DR00001-PD520": [
-      "assets/missdiamond/imported/DR00001-PD520.png",
       "assets/missdiamond/band ring/DR00001-PD520.jpg",
       "assets/missdiamond/band ring/DR00001-PD520-2.jpg"
     ],
     "DR00002-PD394": [
-      "assets/missdiamond/imported/DR00002-PD394.jpeg",
       "assets/missdiamond/ring/DR00002-PD394.jpg",
       "assets/missdiamond/ring/DR00002-PD394-2.jpg"
     ],
     "DR00003-DR464L": [
-      "assets/missdiamond/imported/DR00003-DR464L.png",
       "assets/missdiamond/band ring/DR00003-DR464L.jpg",
       "assets/missdiamond/band ring/DR00003-DR464L-2.jpg"
     ],
     "DR00004-LN09": [
-      "assets/missdiamond/imported/DR00004-LN09.jpeg",
       "assets/missdiamond/ring/DR00004-LN09.jpg",
       "assets/missdiamond/ring/DR00004-LN09-2.jpg"
     ],
     "DR00005-DR590": [
-      "assets/missdiamond/imported/DR00005-DR590.png",
       "assets/missdiamond/ring/DR00005-DR590.jpg",
       "assets/missdiamond/ring/DR00005-DR590-2.jpg"
     ],
     "DR00006-DR588": [
-      "assets/missdiamond/imported/DR00006-DR588.png",
       "assets/missdiamond/band ring/DR00006-DR588.jpg",
       "assets/missdiamond/band ring/DR00006-DR588-2.jpg"
     ],
     "DR00007-DSR01": [
-      "assets/missdiamond/imported/DR00007-DSR01.png",
       "assets/missdiamond/band ring/DR00007-DSR01.jpg",
       "assets/missdiamond/band ring/DR00007-DSR01-2.jpg"
     ],
     "DR00008-RG92290": [
-      "assets/missdiamond/imported/DR00008-RG92290.png",
       "assets/missdiamond/band ring/DR00008-RG92290.jpg",
       "assets/missdiamond/band ring/DR00008-RG92290-2.jpg"
     ],
     "DR00009-PD-738": [
-      "assets/missdiamond/imported/DR00009-PD-738.png",
       "assets/missdiamond/band ring/DR00009-DG1200.jpg",
       "assets/missdiamond/band ring/DR00009-DG1200-2.jpg"
     ],
     "DR00010-PD636": [
-      "assets/missdiamond/imported/DR00010-PD636.png",
       "assets/missdiamond/band ring/DR00010-PD636.jpg",
       "assets/missdiamond/band ring/DR00010-PD636-2.jpg"
     ],
     "DR00011-PD668": [
-      "assets/missdiamond/imported/DR00011-PD668.png",
       "assets/missdiamond/band ring/DR00011-PD668.jpg",
       "assets/missdiamond/band ring/DR00011-PD668-2.jpg"
     ],
     "DR00012-PD731": [
-      "assets/missdiamond/imported/DR00012-PD731.png",
       "assets/missdiamond/band ring/DR00012-PD731.jpg",
       "assets/missdiamond/band ring/DR00012-PD731-2.jpg"
     ],
     "DR00013-PD614": [
-      "assets/missdiamond/imported/DR00013-PD614.png",
       "assets/missdiamond/ring/DR00013-PD614.jpg",
       "assets/missdiamond/ring/DR00013-PD614-2.jpg"
     ],
     "DR00014-PD804": [
-      "assets/missdiamond/imported/DR00014-PD804.png",
       "assets/missdiamond/ring/DR00014-PD804.jpg",
       "assets/missdiamond/ring/DR00014-PD804-2.jpg",
       "assets/missdiamond/ring/DR00014-PD804-3.jpg"
     ],
     "DR00015-PD783": [
-      "assets/missdiamond/imported/DR00015-PD783.png",
       "assets/missdiamond/ring/DR00015-PD783.png"
     ],
     "DR00016-P305": [
@@ -276,17 +261,14 @@
       "assets/missdiamond/imported/DR00044.jpeg"
     ],
     "MR00001-PD-796": [
-      "assets/missdiamond/imported/MR00001-PD-796.png",
       "assets/missdiamond/man ring/MR00001-DM00614.jpg",
       "assets/missdiamond/man ring/MR00001-DM00614-2.jpg"
     ],
     "MR00002-PD-812": [
-      "assets/missdiamond/imported/MR00002-PD-812.png",
       "assets/missdiamond/man ring/MR00002-DM00616.jpg",
       "assets/missdiamond/man ring/MR00002-DM00616-2.jpg"
     ],
     "MR00003-PD-407": [
-      "assets/missdiamond/imported/MR00003-PD-407.png",
       "assets/missdiamond/man ring/MR00003-DM00458.jpg",
       "assets/missdiamond/man ring/MR00003-DM00458-2.jpg"
     ],
@@ -297,25 +279,20 @@
       "assets/missdiamond/imported/MR00005-PD418.jpeg"
     ],
     "ER00001-ER149": [
-      "assets/missdiamond/imported/ER00001-ER149.png",
       "assets/missdiamond/earring/ER00001-ER149.jpg",
       "assets/missdiamond/earring/ER00001-ER149-2.jpg"
     ],
     "ER00002-H4": [
-      "assets/missdiamond/imported/ER00002-H4.png",
       "assets/missdiamond/earring/ER00002-H4.jpg",
       "assets/missdiamond/earring/ER00002-H4-2.jpg"
     ],
     "ER00003-H44": [
-      "assets/missdiamond/imported/ER00003-H44.png",
       "assets/missdiamond/earring/ER00003-H44.jpg"
     ],
     "ER00004-H6": [
-      "assets/missdiamond/imported/ER00004-H6.png",
       "assets/missdiamond/earring/ER00004-H6.jpg"
     ],
     "ER00005-PB396": [
-      "assets/missdiamond/imported/ER00005-PB396.jpeg",
       "assets/missdiamond/earring/ER00005-PB396.jpg"
     ],
     "ER00006-PB268": [
@@ -328,67 +305,51 @@
       "assets/missdiamond/imported/ER00008-P336.jpeg"
     ],
     "DP00005-DP331": [
-      "assets/missdiamond/imported/DP00005-DP331.jpeg",
       "assets/missdiamond/pendant/DP00005-DP331.jpg"
     ],
     "DP00006-DP339": [
-      "assets/missdiamond/imported/DP00006-DP339.jpeg",
       "assets/missdiamond/pendant/DP00006-DP339.jpg"
     ],
     "DP00007-DP139": [
-      "assets/missdiamond/imported/DP00007-DP139.jpeg",
       "assets/missdiamond/pendant/DP00007-DP139.jpg"
     ],
     "DP00008-DP220W": [
-      "assets/missdiamond/imported/DP00008-DP220W.jpeg",
       "assets/missdiamond/pendant/DP00008-DP220W.jpg"
     ],
     "DP00009-DP220R": [
-      "assets/missdiamond/imported/DP00009-DP220R.jpeg",
       "assets/missdiamond/pendant/DP00009-DP220R.jpg"
     ],
     "DP00010-DP221W": [
-      "assets/missdiamond/imported/DP00010-DP221W.jpeg",
       "assets/missdiamond/pendant/DP00010-DP221W.jpg"
     ],
     "DP00011-DP221R": [
-      "assets/missdiamond/imported/DP00011-DP221R.png",
       "assets/missdiamond/pendant/DP00011-DP221R.jpg"
     ],
     "DP00012-DP115": [
-      "assets/missdiamond/imported/DP00012-DP115.png",
       "assets/missdiamond/pendant/DP00012-DP115.jpg"
     ],
     "DP00013-DP119": [
-      "assets/missdiamond/imported/DP00013-DP119.png",
       "assets/missdiamond/pendant/DP00013-DP119.jpg"
     ],
     "DP00014-DP132": [
-      "assets/missdiamond/imported/DP00014-DP132.jpeg",
       "assets/missdiamond/pendant/DP00014-DP132.jpg"
     ],
     "DP00015-DP136": [
-      "assets/missdiamond/imported/DP00015-DP136.jpeg",
       "assets/missdiamond/pendant/DP00015-DP136.jpg"
     ],
     "DP00016-DP154R": [
-      "assets/missdiamond/imported/DP00016-DP154R.png",
       "assets/missdiamond/pendant/DP00016-DP154R.jpg"
     ],
     "DP00017-DP155W": [
-      "assets/missdiamond/imported/DP00017-DP155W.jpeg",
       "assets/missdiamond/pendant/DP00017-DP155W.jpg"
     ],
     "DP00018-DP2553": [
-      "assets/missdiamond/imported/DP00018-DP2553.jpeg",
       "assets/missdiamond/pendant/DP00018-DP2553.jpg"
     ],
     "DP00019-DP268": [
-      "assets/missdiamond/imported/DP00019-DP268.png",
       "assets/missdiamond/pendant/DP00019-DP268.jpg"
     ],
     "DP00020-DP57": [
-      "assets/missdiamond/imported/DP00020-DP57.png",
       "assets/missdiamond/pendant/DP00020-DP57.jpg"
     ],
     "DP00021-P292": [
@@ -434,23 +395,20 @@
       "assets/missdiamond/imported/DP00034-PB275.jpeg"
     ],
     "BR00005-BR98": [
-      "assets/missdiamond/imported/BR00005-BR98.png",
       "assets/missdiamond/braclet/BR00005-BR98.jpg"
     ],
     "BR00005-BR102": [
-      "assets/missdiamond/imported/BR00005-BR102.png",
       "assets/missdiamond/braclet/BR00006-BR102.jpg"
     ],
     "BR00007-BR123": [
-      "assets/missdiamond/imported/BR00007-BR123.png",
       "assets/missdiamond/braclet/BR00007-BR123.jpg"
     ],
     "BR00008-BR124": [
-      "assets/missdiamond/imported/BR00008-BR124.png",
       "assets/missdiamond/braclet/BR00008-BR124.jpg"
     ],
     "BR00009-PB225": [
-      "assets/missdiamond/imported/BR00009-PB225.png"
+      "assets/missdiamond/braclet/BR00009-PB225.jpg",
+      "assets/missdiamond/braclet/BR00009-PB225-2.jpg"
     ]
   },
   "skuRenames": {
