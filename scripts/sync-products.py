@@ -4,6 +4,8 @@ Default is dry-run. No network, Excel edits, Git or database operations.
 import argparse
 import copy
 import hashlib
+import importlib.util
+import posixpath
 import json
 import math
 from pathlib import Path
@@ -92,6 +94,44 @@ def read_xlsx(path):
             raise ValueError('沒有有效 SKU，停止同步')
         return result, errors
 
+
+def embedded_images(path, rows):
+    """Resolve Excel value metadata to each row's in-cell photo."""
+    result = {}
+    cleaner_spec = importlib.util.spec_from_file_location('image_metadata', ROOT / 'scripts/sanitize-product-images.py')
+    cleaner = importlib.util.module_from_spec(cleaner_spec)
+    cleaner_spec.loader.exec_module(cleaner)
+    with zipfile.ZipFile(path) as z:
+        metadata = ET.fromstring(z.read('xl/metadata.xml'))
+        value_meta = metadata.find('s:valueMetadata', NS)
+        future = metadata.find("s:futureMetadata[@name='XLRICHVALUE']", NS)
+        rich = list(ET.fromstring(z.read('xl/richData/rdrichvalue.xml')))
+        rich_rels = list(ET.fromstring(z.read('xl/richData/richValueRel.xml')))
+        rels = {r.attrib['Id']: r.attrib['Target'] for r in ET.fromstring(z.read('xl/richData/_rels/richValueRel.xml.rels'))}
+        sheets = ET.fromstring(z.read('xl/workbook.xml')).findall('s:sheets/s:sheet', NS)
+        sheet = next(s for s in sheets if s.attrib['name'] == '商品總表')
+        wb_rels = {r.attrib['Id']: r.attrib['Target'] for r in ET.fromstring(z.read('xl/_rels/workbook.xml.rels'))}
+        target = wb_rels[sheet.attrib['{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id']]
+        target = target.lstrip('/') if target.startswith('/') else 'xl/' + target
+        by_row = {number: row for number, row in rows}
+        for row in ET.fromstring(z.read(target)).findall('s:sheetData/s:row', NS):
+            item = by_row.get(int(row.attrib['r']))
+            if not item: continue
+            cells = [c for c in row.findall('s:c', NS) if 'vm' in c.attrib]
+            if len(cells) != 1: raise ValueError('每件商品須有一張內嵌主圖：' + item['SKU'])
+            meta_index = int(cells[0].attrib['vm']) - 1
+            future_index = int(value_meta[meta_index][0].attrib['v'])
+            rich_index = int(next(e for e in future[future_index].iter() if e.tag.endswith('}rvb')).attrib['i'])
+            rel_index = int(rich[rich_index][0].text)
+            rel_id = rich_rels[rel_index].attrib['{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id']
+            image_path = posixpath.normpath('xl/richData/' + rels[rel_id])
+            extension = Path(image_path).suffix.lower()
+            if extension not in ('.jpeg', '.jpg', '.png'): raise ValueError('Unsupported embedded image')
+            relative = 'assets/missdiamond/imported/' + item['SKU'] + extension
+            raw = z.read(image_path)
+            result[relative] = cleaner.clean_png(raw) if extension == '.png' else cleaner.clean_jpeg(raw)
+    return result
+
 def images_for(row, root, config):
     index = {}
     for p in sorted((root / 'public/assets/missdiamond').rglob('*')):
@@ -160,10 +200,12 @@ def make_product(row, config, root):
         if row[field] in metal_codes: materials.append(metal_codes[row[field]])
     if any('鑽' in (row[f] or '') for f in ('主石', '配鑽')): materials.append('diamond')
     if row['主石'] and '珍珠' in row['主石']: materials.append('pearl')
-    # Gold weight is reserved in source data only, never used to construct display text.
+    # Public content excludes private gold-weight fields.
     specs = '｜'.join(f'{label}：{row[field]}' for field, label in [
         ('檯材質','材質'), ('鍊材質','鍊材質'), ('主石','主石'), ('主石重量','主石重量'),
         ('配鑽','配鑽'), ('配鑽重量','配鑽重量')] if row[field] is not None)
+    if row.get('商品規格'):
+        specs = '\n'.join(line for line in row['商品規格'].splitlines() if '金重' not in line).strip()
     # Keep Excel copy, but do not display lines explicitly disclosing gold weight.
     description = '\n'.join(line for line in (row['商品描述'] or '').splitlines() if '金重' not in line)
     # Known disagreement: row says 18KR but the paragraph says 14K.
@@ -192,8 +234,10 @@ def plan(rows, config, previous, legacy, root):
         sku = row['SKU']; seen.add(sku)
         public, issues, missing = make_product(row, config, root)
         # Only the explicit whitelist enters the snapshot: never cost, trade price, stores or notes.
-        record = {'source': {k: row.get(k) for k in FIELDS}, 'product': public}
-        old = previous.get(sku)
+        record = {'source': {k: row.get(k) for k in ('SKU', '商品名稱', '官網售價')}, 'product': public}
+        prior_sku = next((old_sku for old_sku, new_sku in config.get('skuRenames', {}).items() if new_sku == sku), sku)
+        old = previous.get(sku) or previous.get(prior_sku)
+        if prior_sku != sku: products.pop(prior_sku, None)
         action = 'unchanged' if old == record else 'updated' if old or sku in config['legacyIds'] else 'added'
         entry = {'sku': sku, 'name': row['商品名稱'], 'row': rownum, 'issues': issues}
         if issues:
@@ -214,7 +258,7 @@ def plan(rows, config, previous, legacy, root):
         if row.get('商品描述') and not public['description']:
             report['warnings'].append({'sku': sku, 'message': '商品描述與材質欄位矛盾或含金重，原文保留；頁面暫只顯示結構欄位'})
         products[sku] = record
-    report['retained'] = sorted(set(previous) - seen)
+    report['retained'] = sorted(set(previous) - seen - set(config.get('skuRenames', {})))
     ids = [v['product']['id'] for v in products.values()]
     if len(ids) != len(set(ids)):
         raise ValueError('商品 ID 對照重複，停止同步')
@@ -229,12 +273,14 @@ def render_outputs(snapshot):
     names = {p['id']:p['name'] for p in products if p['available']}
     server = '// Generated from the same SKU snapshot as the frontend. Only available products accept NEW requests.\nexport const productNames: Record<string, string> = ' + dump(names)
     return {'catalog/snapshot.json': dump(snapshot), 'src/configs/products.ts': front,
-            'supabase/functions/_shared/catalog.ts': server}
+            'supabase/functions/_shared/catalog.ts': server,
+            'supabase/functions/submit-viewing/index.ts': re.sub(r'export const productNames: Record<string, string> = \{[\s\S]*?\n\}', lambda match: 'export const productNames: Record<string, string> = ' + dump(names).rstrip(), (ROOT / 'supabase/functions/submit-viewing/index.ts').read_text(), count=1)}
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('excel', type=Path)
     parser.add_argument('--apply', action='store_true')
+    parser.add_argument('--embedded-images', action='store_true')
     parser.add_argument('--report', default='outputs/product-sync/latest.json')
     args = parser.parse_args()
     config = json.loads((ROOT / 'catalog/sync-config.json').read_text(encoding='utf-8'))
@@ -242,6 +288,13 @@ def main():
     previous = json.loads(snapshot_path.read_text(encoding='utf-8')) if snapshot_path.exists() else {}
     legacy = json.loads((ROOT / 'catalog/legacy-products.json').read_text(encoding='utf-8'))
     rows, errors = read_xlsx(args.excel)
+    if args.embedded_images:
+        images = embedded_images(args.excel, rows)
+        if not args.apply: raise ValueError('內嵌圖片匯入需搭配 --apply')
+        for relative, content in images.items():
+            path = ROOT / 'public' / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(content)
     snapshot, report = plan(rows, config, previous, legacy, ROOT)
     report['sourceHash'] = hashlib.sha256(args.excel.read_bytes()).hexdigest()
     report['ignoredExcelErrors'] = errors

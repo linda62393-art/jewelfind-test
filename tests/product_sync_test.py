@@ -74,7 +74,8 @@ class SyncTests(unittest.TestCase):
     def test_private_columns_and_gold_are_not_in_browser_output(self):
         self.row.update({'成本':'PRIVATE_COST','備註':'PRIVATE_NOTE','金重(錢)':'0.65g'})
         snapshot, _ = self.run_plan()
-        self.assertEqual(snapshot['DR001-A']['source']['金重(錢)'], '0.65g')
+        self.assertNotIn('金重(錢)', snapshot['DR001-A']['source'])
+        self.assertNotIn('庫存', snapshot['DR001-A']['source'])
         outputs = sync.render_outputs(snapshot)
         self.assertNotIn('0.65g', outputs['src/configs/products.ts'])
         self.assertNotIn('PRIVATE_', json.dumps(outputs))

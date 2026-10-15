@@ -13,6 +13,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 210000,
     "images": [
+      "assets/missdiamond/imported/BR00005-BR102.png",
       "assets/missdiamond/braclet/BR00006-BR102.jpg"
     ],
     "description": "當陽光落在黃鑽之上，\n那抹金黃色澤總能瞬間吸引目光。\n這款手鍊以天然黃鑽為視覺焦點，搭配環繞四周的白鑽設計，讓中央黃鑽顯得更加耀眼奪目。\n黃鑽象徵希望、財富與正向能量，\n不僅是一件珠寶，更是一種光芒與自信的展現。\n無論是出席重要場合、收藏珍藏，或作為人生重要時刻的紀念，\n都能留下令人難忘的璀璨記憶。",
@@ -21,7 +22,7 @@ const products: JewelryProduct[] = [
       "紀念送禮",
       "輕盈舒適"
     ],
-    "specifications": "材質：14KW｜主石：天然鑽｜主石重量：D:0.36cts｜配鑽：天然鑽｜配鑽重量：YD:12P:0.13cts\nSD46P:1.02cts(0.02)",
+    "specifications": "材質:14K白(底部有墊色)\n主石:天然黃鑽 0.36cts\n黃鑽配石:12顆黃鑽，共0.13cts\n白鑽配石:46顆天然白鑽，共1.02cts\n總鑽重:1.51cts",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -34,8 +35,8 @@ const products: JewelryProduct[] = [
     "chainMetal": null,
     "stock": null,
     "sourceStatus": "寄店家",
-    "available": false,
-    "unavailableReason": "商品資料確認中"
+    "available": true,
+    "unavailableReason": null
   },
   {
     "id": "BR00005-BR98",
@@ -49,6 +50,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 70500,
     "images": [
+      "assets/missdiamond/imported/BR00005-BR98.png",
       "assets/missdiamond/braclet/BR00005-BR98.jpg"
     ],
     "description": "不同於傳統滿鑽手鍊的華麗張揚，\n這款以梯鑽與圓鑽交錯排列，呈現出俐落而細膩的節奏感。\n光線在不同切面間流轉，展現低調卻難以忽視的精緻魅力。\n無論是上班、聚會或正式場合，都能自然融入穿搭之中。\n是一款歷久彌新、不易退流行的經典作品。",
@@ -57,7 +59,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "層次疊戴"
     ],
-    "specifications": "材質：18KW｜鍊材質：18KW｜主石：無｜配鑽：天然鑽｜配鑽重量：6D:0.18cts(0.03)\nTD7D:0.28cts(0.04)",
+    "specifications": "材質:18K白\n配鑽:\n6顆天然圓鑽，共0.18cts（平均約0.03cts）\n7顆天然T鑽，共0.28cts（平均約0.04cts）\n總鑽重:0.46cts",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -70,8 +72,8 @@ const products: JewelryProduct[] = [
     "chainMetal": "18KW",
     "stock": 1,
     "sourceStatus": "寄店家",
-    "available": false,
-    "unavailableReason": "商品資料確認中"
+    "available": true,
+    "unavailableReason": null
   },
   {
     "id": "BR00007-BR123",
@@ -85,6 +87,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 76000,
     "images": [
+      "assets/missdiamond/imported/BR00007-BR123.png",
       "assets/missdiamond/braclet/BR00007-BR123.jpg"
     ],
     "description": "真正耐看的珠寶，\n不是最耀眼，而是每天都想戴。\nAurora Hex 以六角幾何元素結合天然真鑽，\n讓光線在每一顆鑽石間自然流動。\n沒有誇張的設計，\n卻能在舉手投足之間散發細緻光芒。\n它適合陪伴妳上班、旅行、約會，\n也陪妳度過每一個平凡卻珍貴的日常。",
@@ -93,7 +96,7 @@ const products: JewelryProduct[] = [
       "簡約百搭",
       "日常配戴"
     ],
-    "specifications": "材質：18KW｜主石：無｜配鑽：天然鑽｜配鑽重量：24D:0.48cts(0.02)",
+    "specifications": "材質:18K白\n鑽石數量:24顆天然真鑽\n總鑽重:0.48cts 平均0.02cts\n適合場合:日常配戴、上班、約會、聚會、送禮",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -120,6 +123,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 60000,
     "images": [
+      "assets/missdiamond/imported/BR00008-BR124.png",
       "assets/missdiamond/braclet/BR00008-BR124.jpg"
     ],
     "description": "有些珠寶，不需要張揚，就能讓人一眼感受到品味。\n這款手鍊以圓形、方形與欖圓元素巧妙交織，每一顆天然鑽石都像生活中的小亮點，在光線下閃耀著溫柔光芒。\n簡潔卻不單調，優雅卻不浮誇。\n它適合陪伴妳穿梭於工作、生活與旅行之間，讓每一次抬手，都流露出細緻而自信的氣質。",
@@ -128,7 +132,7 @@ const products: JewelryProduct[] = [
       "簡約百搭",
       "氣質搭配"
     ],
-    "specifications": "材質：9K｜主石：無｜配鑽：天然鑽｜配鑽重量：25D:0.50cts(0.02)",
+    "specifications": "材質:9K白\n鑽石數量:25顆天然真鑽\n總鑽重:0.50cts 平均0.02cts\n適合場合:日常配戴、上班、聚餐、約會、送禮",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -157,14 +161,16 @@ const products: JewelryProduct[] = [
       "glamorous"
     ],
     "price": 262200,
-    "images": [],
+    "images": [
+      "assets/missdiamond/imported/BR00009-PB225.png"
+    ],
     "description": "耐看的珠寶，不需要過度張揚。\n這款約1克拉天然鑽石手環，以21顆天然鑽石整齊排列，讓光線隨著每一次手部動作自然流轉，展現細緻而優雅的光芒。\n14K白搭配鏤空結構，不僅降低整體重量，也提升配戴舒適度，讓精品珠寶能真正融入每天的生活。\n無論正式宴會、商務場合，或日常穿搭，都能低調展現成熟質感，是值得長久收藏的經典款式。",
     "featureTags": [
       "日常配戴",
       "層次疊戴",
       "輕盈舒適"
     ],
-    "specifications": "材質：14KW｜配鑽：天然鑽｜配鑽重量：21D:1.21cts(0.05)",
+    "specifications": "材質:14K白\n鑽石數量：21顆天然真鑽\n總重：約1.21cts\n單顆約0.05cts",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -177,8 +183,8 @@ const products: JewelryProduct[] = [
     "chainMetal": null,
     "stock": null,
     "sourceStatus": "寄店家",
-    "available": false,
-    "unavailableReason": "商品資料確認中"
+    "available": true,
+    "unavailableReason": null
   },
   {
     "id": "DP00005-DP331",
@@ -192,6 +198,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 70000,
     "images": [
+      "assets/missdiamond/imported/DP00005-DP331.jpeg",
       "assets/missdiamond/pendant/DP00005-DP331.jpg"
     ],
     "description": "三顆愛心天然鑽石垂墜排列，總重0.12ct，搭配10K白金墜飾與18K白金項鍊，展現優雅柔美的頸間光彩。浪漫而經典，適合作為紀念日與珍藏禮物。",
@@ -200,7 +207,7 @@ const products: JewelryProduct[] = [
       "紀念送禮",
       "愛心設計"
     ],
-    "specifications": "材質：10K｜鍊材質：18KW｜主石：天然鑽｜主石重量：無｜配鑽：天然鑽｜配鑽重量：HRT3D:0.12cts(0.04)",
+    "specifications": "材質:10K白 墜飾\n鍊條材質:18K項鍊\n鑽石形狀:Heart Shape（心形）\n鑽石數量:3顆天然鑽石\n鑽石總重:0.12ct 平均約0.04ct\n適合場合:日常穿搭、約會、紀念日、送禮",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -213,8 +220,8 @@ const products: JewelryProduct[] = [
     "chainMetal": "18KW",
     "stock": 1,
     "sourceStatus": "寄店家",
-    "available": false,
-    "unavailableReason": "商品資料確認中"
+    "available": true,
+    "unavailableReason": null
   },
   {
     "id": "DP00006-DP339",
@@ -228,6 +235,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 55000,
     "images": [
+      "assets/missdiamond/imported/DP00006-DP339.jpeg",
       "assets/missdiamond/pendant/DP00006-DP339.jpg"
     ],
     "description": "四顆馬眼形天然鑽石組成優雅花朵造型，總重0.32ct，\n搭配18K玫瑰金墜飾與18K玫瑰金鍊條，展現細膩火彩與柔美氣質。\n適合日常配戴與紀念。",
@@ -236,7 +244,7 @@ const products: JewelryProduct[] = [
       "氣質搭配",
       "日常配戴"
     ],
-    "specifications": "材質：18KR｜鍊材質：18KR｜主石：天然鑽｜主石重量：無｜配鑽：天然鑽｜配鑽重量：MQ4P:0.32cts(0.08)",
+    "specifications": "材質:18K玫瑰金\n鍊條材質:18K玫瑰金\n鑽石形狀:Marquise (馬眼）\n鑽石數量:4顆\n鑽石總重:0.32ct 平均約0.08ct\n適合場合:日常穿搭、約會、聚會、送禮",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -249,8 +257,8 @@ const products: JewelryProduct[] = [
     "chainMetal": "18KR",
     "stock": 1,
     "sourceStatus": "寄店家",
-    "available": false,
-    "unavailableReason": "商品資料確認中"
+    "available": true,
+    "unavailableReason": null
   },
   {
     "id": "DP00007-DP139",
@@ -263,6 +271,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 25000,
     "images": [
+      "assets/missdiamond/imported/DP00007-DP139.jpeg",
       "assets/missdiamond/pendant/DP00007-DP139.jpg"
     ],
     "description": "三顆天然藍寶石排列於頸間，展現優雅而細膩的藍色光彩。\n搭配14K黃金墜飾與18K黃金鍊條，在簡約設計中展現低調質感，\n適合日常配戴與送禮收藏。",
@@ -271,7 +280,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "輕盈舒適"
     ],
-    "specifications": "材質：14KY｜鍊材質：18KY｜主石：無｜主石重量：無｜配鑽：藍寶｜配鑽重量：3D:0.12cts(0.04)",
+    "specifications": "材質:14K黃\n鍊條材質:18K煌\n主石:天然藍寶石\n主石數量:3顆\n主石總重:0.12ct\n配戴方式:項鍊",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -299,6 +308,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 25000,
     "images": [
+      "assets/missdiamond/imported/DP00008-DP220W.jpeg",
       "assets/missdiamond/pendant/DP00008-DP220W.jpg"
     ],
     "description": "將心形與皇冠元素巧妙融合，主鑽鑲嵌於心型中央，搭配皇冠造型配鑽點綴，展現優雅而浪漫的氣息。\n0.10 克拉天然主鑽成為視覺焦點，搭配五顆配鑽襯托光彩，在低調中展現精緻質感。無論作為紀念日禮物、生日禮物，或送給值得珍惜的自己，都是充滿心意的選擇。",
@@ -307,7 +317,7 @@ const products: JewelryProduct[] = [
       "紀念送禮",
       "愛心設計"
     ],
-    "specifications": "材質：18KW｜鍊材質：18KW｜主石：天然鑽｜主石重量：D:0.10cts｜配鑽：天然鑽｜配鑽重量：5D:0.05cts",
+    "specifications": "材質:18K白\n鍊條材:18K白\n主石:天然鑽石\n主鑽重:0.10 cts\n配鑽數量:5 顆\n配鑽總重:0.05 cts\n總鑽重:0.15 cts\n配戴場合:日常、約會、紀念日、送禮",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -336,6 +346,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 42000,
     "images": [
+      "assets/missdiamond/imported/DP00009-DP220R.jpeg",
       "assets/missdiamond/pendant/DP00009-DP220R.jpg"
     ],
     "description": "將心形與皇冠元素巧妙融合，主鑽鑲嵌於心型中央，搭配皇冠造型配鑽點綴，展現優雅而浪漫的氣息。\n0.10 克拉天然主鑽成為視覺焦點，搭配五顆配鑽襯托光彩，在低調中展現精緻質感。無論作為紀念日禮物、生日禮物，或送給值得珍惜的自己，都是充滿心意的選擇。",
@@ -344,7 +355,7 @@ const products: JewelryProduct[] = [
       "紀念送禮",
       "愛心設計"
     ],
-    "specifications": "材質：18KR｜鍊材質：18KW｜主石：天然鑽｜主石重量：D:0.10cts｜配鑽：天然鑽｜配鑽重量：5D:0.05cts",
+    "specifications": "材質:18K 玫瑰金\n鍊條材:18K 玫瑰金\n主石:天然鑽石\n主鑽重:0.10 cts\n配鑽數量:5 顆\n配鑽總重:0.05 cts\n總鑽重:0.15 cts\n配戴場合:日常、約會、紀念日、送禮",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -357,8 +368,8 @@ const products: JewelryProduct[] = [
     "chainMetal": "18KW",
     "stock": 2,
     "sourceStatus": "寄店家",
-    "available": false,
-    "unavailableReason": "商品資料確認中"
+    "available": true,
+    "unavailableReason": null
   },
   {
     "id": "DP00010-DP221W",
@@ -372,6 +383,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 42000,
     "images": [
+      "assets/missdiamond/imported/DP00010-DP221W.jpeg",
       "assets/missdiamond/pendant/DP00010-DP221W.jpg"
     ],
     "description": "每個人心中，都有一輪屬於自己的月亮。\n星月晨曦鑽石項鍊以溫柔的新月環抱璀璨鑽石，象徵陪伴、守護與希望。中央10分天然鑽石經由放射狀配鑽襯托，散發如星光般耀眼的光芒，而鍊身上的一顆小鑽，更像夜空中最閃耀的一顆星，低調卻令人難忘。\n無論是送給自己，紀念人生的重要時刻；或送給摯愛，傳遞陪伴與祝福，都能成為值得珍藏一生的珠寶。",
@@ -380,7 +392,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "閃耀光澤"
     ],
-    "specifications": "材質：18KW｜鍊材質：18KW｜主石：天然鑽｜主石重量：D:0.10cts｜配鑽：天然鑽｜配鑽重量：SD:1P:0.025cts\nSD:8:0.08cts",
+    "specifications": "材質:18K白（18K含鍊）\n主石:天然鑽石 0.10 ct\n光芒配鑽： 8 顆天然鑽石，共 0.08 ct\n鍊身配鑽： 1 顆天然鑽石，共 0.025 ct\n鍊長： 可自行調16–18吋",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -408,6 +420,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 42000,
     "images": [
+      "assets/missdiamond/imported/DP00011-DP221R.png",
       "assets/missdiamond/pendant/DP00011-DP221R.jpg"
     ],
     "description": "每個人心中，都有一輪屬於自己的月亮。\n星月晨曦鑽石項鍊以溫柔的新月環抱璀璨鑽石，象徵陪伴、守護與希望。中央10分天然鑽石經由放射狀配鑽襯托，散發如星光般耀眼的光芒，而鍊身上的一顆小鑽，更像夜空中最閃耀的一顆星，低調卻令人難忘。\n無論是送給自己，紀念人生的重要時刻；或送給摯愛，傳遞陪伴與祝福，都能成為值得珍藏一生的珠寶。",
@@ -416,7 +429,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "閃耀光澤"
     ],
-    "specifications": "材質：18KR｜鍊材質：18KR｜主石：天然鑽｜主石重量：D:0.10cts｜配鑽：天然鑽｜配鑽重量：SD:1P:0.025cts\nSD:8:0.08cts",
+    "specifications": "材質:18K玫瑰金（18K含鍊）\n主石:天然鑽石 0.10 ct\n光芒配鑽： 8 顆天然鑽石，共 0.08 ct\n鍊身配鑽： 1 顆天然鑽石，共 0.025 ct\n鍊長： 可自行調16–18吋",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -429,8 +442,8 @@ const products: JewelryProduct[] = [
     "chainMetal": "18KR",
     "stock": 1,
     "sourceStatus": "寄店家",
-    "available": false,
-    "unavailableReason": "商品資料確認中"
+    "available": true,
+    "unavailableReason": null
   },
   {
     "id": "DP00012-DP115",
@@ -444,6 +457,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 45000,
     "images": [
+      "assets/missdiamond/imported/DP00012-DP115.png",
       "assets/missdiamond/pendant/DP00012-DP115.jpg"
     ],
     "description": "有些人追求的是更大的克拉數，有些人則更在意整體的配戴效果。\n\n採用放大台設計，透過精準的比例配置，讓 20 分天然鑽石擁有接近 30 分鑽石的視覺存在感，兼顧美感與預算。\n\n沒有過度繁複的裝飾，將焦點留給天然鑽石本身，展現經典耐看的珠寶魅力。無論是送給自己的人生紀念，或作為重要禮物，都能陪伴每一個值得珍藏的時刻。",
@@ -452,7 +466,7 @@ const products: JewelryProduct[] = [
       "俐落風格",
       "閃耀光澤"
     ],
-    "specifications": "材質：18KW｜鍊材質：無｜主石：天然鑽｜主石重量：D:0.20cts",
+    "specifications": "材質: 18K金，不含鍊\n主石: 天然鑽石\n鑽石重量： 0.20 ct\n鑽石等級： D/VS\n鑲嵌方式:鑽石放大片墜檯 四爪設計",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -480,6 +494,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 25000,
     "images": [
+      "assets/missdiamond/imported/DP00013-DP119.png",
       "assets/missdiamond/pendant/DP00013-DP119.jpg"
     ],
     "description": "經典之所以經典，是因為它歷久彌新。\n\n採用最受歡迎的四爪單鑽設計，以18K白金襯托12分天然鑽石，讓光線自然穿透，展現晶瑩剔透的火彩。D色高白等級搭配SI淨度，在價格與品質之間取得理想平衡，是許多人入手天然鑽石珠寶的熱門選擇。\n\n無論日常穿搭、上班、約會或重要聚會，都能為整體造型增添細緻光采。簡潔俐落的設計，也讓它成為送給自己或重要之人的經典禮物。",
@@ -488,7 +503,7 @@ const products: JewelryProduct[] = [
       "簡約百搭",
       "日常配戴"
     ],
-    "specifications": "材質：18KW｜鍊材質：無｜主石：天然鑽｜主石重量：D:0.12cts",
+    "specifications": "材質: 18K白，不含鍊\n主石:天然鑽石\n鑽石重量： 0.12 ct\n鑽石等級： D / SI\n鑲嵌方式:鑽石放大片墜檯 四爪設計",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -515,6 +530,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 23500,
     "images": [
+      "assets/missdiamond/imported/DP00014-DP132.jpeg",
       "assets/missdiamond/pendant/DP00014-DP132.jpg"
     ],
     "description": "愛心，不只是浪漫，更代表著陪伴、守護與珍惜。\n\n將天然鑽石鑲嵌於愛心中央，以簡潔俐落的設計呈現細膩光澤，沒有過多裝飾，讓珠寶自然融入生活。\n\n無論送給自己，提醒自己值得被珍惜；或送給重要的人，都是一份充滿心意且歷久彌新的禮物。",
@@ -523,7 +539,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "愛心設計"
     ],
-    "specifications": "材質：14KW｜鍊材質：無｜主石：天然鑽｜主石重量：D:0.03cts",
+    "specifications": "材質:14K白，不含鍊\n主石:天然鑽石 0.03ct",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -550,6 +566,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 18000,
     "images": [
+      "assets/missdiamond/imported/DP00015-DP136.jpeg",
       "assets/missdiamond/pendant/DP00015-DP136.jpg"
     ],
     "description": "有些珠寶，不需要華麗，就能令人一眼難忘。\n這款 Dancing Diamond 跳動鑽石項鍊，以極簡圓形外框包覆中央10分天然鑽石。當妳走路、呼吸或轉身時，中央鑽石會隨著細微動作自然擺動，讓光線持續折射，散發比一般固定式鑽石更加靈動耀眼的火彩。\n9K白金搭配簡潔流暢的設計，展現現代女性低調、自信且耐看的品味。無論日常穿搭、上班、約會或送禮，都能成為長久陪伴的經典珠寶。",
@@ -558,7 +575,7 @@ const products: JewelryProduct[] = [
       "簡約百搭",
       "日常配戴"
     ],
-    "specifications": "材質：9K｜鍊材質：無｜主石：天然鑽｜主石重量：D:0.10cts",
+    "specifications": "材質:9K白,不含鍊\n主石:天然鑽石 0.10ct\n主石座檯會前後搖動",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -586,6 +603,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 35000,
     "images": [
+      "assets/missdiamond/imported/DP00016-DP154R.png",
       "assets/missdiamond/pendant/DP00016-DP154R.jpg"
     ],
     "description": "有些美，不需要過多裝飾。\n晨曦經典 10分天然鑽石項鍊以最經典的六爪鑲嵌，將10分天然鑽石穩固托起，讓光線能充分進入鑽石，每個角度都散發自然火彩。\n18K玫瑰金溫潤細膩的色澤，讓整體更加柔美優雅，不論單獨佩戴，或與其他項鍊層次搭配，都能展現恰到好處的精緻感。\n它不是最張揚的一件珠寶，卻是最容易陪伴妳走過每一天的一件作品。",
@@ -594,7 +612,7 @@ const products: JewelryProduct[] = [
       "簡約百搭",
       "氣質搭配"
     ],
-    "specifications": "材質：18KR｜鍊材質：18KR｜主石：天然鑽｜主石重量：D:0.10cts",
+    "specifications": "材質:18K玫瑰金(含鍊)\n主石: 天然鑽石 0.10ct\n鑲嵌:六爪鑲嵌\n鍊材:18K玫瑰金項鍊",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -622,6 +640,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 35000,
     "images": [
+      "assets/missdiamond/imported/DP00017-DP155W.jpeg",
       "assets/missdiamond/pendant/DP00017-DP155W.jpg"
     ],
     "description": "有些美，不需要過多裝飾。\n晨曦經典 10分天然鑽石項鍊以最經典的六爪鑲嵌，將10分天然鑽石穩固托起，讓光線能充分進入鑽石，每個角度都散發自然火彩。\n18K白溫潤細膩的色澤，讓整體更加柔美優雅，不論單獨佩戴，或與其他項鍊層次搭配，都能展現恰到好處的精緻感。\n它不是最張揚的一件珠寶，卻是最容易陪伴妳走過每一天的一件作品。",
@@ -630,7 +649,7 @@ const products: JewelryProduct[] = [
       "簡約百搭",
       "氣質搭配"
     ],
-    "specifications": "材質：18KW｜鍊材質：18KW｜主石：天然鑽｜主石重量：D:0.10cts",
+    "specifications": "材質:18K白(含鍊)\n主石: 天然鑽石 0.10ct\n鑲嵌:六爪鑲嵌\n鍊材:18K白項鍊",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -658,6 +677,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 35000,
     "images": [
+      "assets/missdiamond/imported/DP00018-DP2553.jpeg",
       "assets/missdiamond/pendant/DP00018-DP2553.jpg"
     ],
     "description": "愛，不一定需要轟轟烈烈。\n有時，只需要一顆簡單的心，就足以表達最深的情感。\n這款心語光芒 愛心鑽石項鍊，以14顆天然鑽石勾勒出鏤空愛心輪廓，象徵愛與陪伴永遠留存在心中。每一顆鑽石都代表一份真心，細膩排列後形成柔和卻耀眼的光芒。\n18K白金散發純淨光澤，讓整體設計更加耐看，不論是送給摯愛、家人、女兒，或是送給努力生活的自己，都能成為值得珍藏的紀念。\n有些禮物，代表的是一句說不出口的——我一直都在。",
@@ -666,7 +686,7 @@ const products: JewelryProduct[] = [
       "氣質搭配",
       "日常配戴"
     ],
-    "specifications": "材質：18KW｜配鑽：天然鑽｜配鑽重量：14D:0.12cts",
+    "specifications": "材質：18K白\n鑽石總重:14D：0.12cts\n款式:愛心鑽石吊墜",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -694,6 +714,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 25000,
     "images": [
+      "assets/missdiamond/imported/DP00019-DP268.png",
       "assets/missdiamond/pendant/DP00019-DP268.jpg"
     ],
     "description": "有些光芒，不是耀眼，而是細水長流。\n星語流光 五鑽垂墜項鍊以五顆天然鑽石依序排列，如同人生一路累積的美好時刻，也像夜空中連成一線的星光，低調卻始終閃耀。\n垂墜式設計讓項鍊隨著動作自然擺動，增添細緻光澤，同時修飾頸部比例，使整體造型更加優雅修長。\n18K白金搭配極簡設計，沒有多餘裝飾，卻能陪伴妳從日常到重要時刻，成為歷久彌新的經典作品。",
@@ -702,7 +723,7 @@ const products: JewelryProduct[] = [
       "氣質搭配",
       "層次疊戴"
     ],
-    "specifications": "材質：18KW｜鍊材質：18KW｜配鑽：天然鑽｜配鑽重量：5D:0.05cts",
+    "specifications": "材質:18K白\n天然鑽石： 5顆，共0.05cts\n款式：五鑽垂墜式項鍊",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -729,6 +750,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 28500,
     "images": [
+      "assets/missdiamond/imported/DP00020-DP57.png",
       "assets/missdiamond/pendant/DP00020-DP57.jpg"
     ],
     "description": "真正的光芒，不需要刻意炫耀。\n流光擁抱鑽石項鍊以柔和流線包覆著15分天然鑽石，就像一雙溫柔的手，守護著最珍貴的信念與回憶。\n設計沒有多餘的裝飾，而是透過簡潔的線條，讓鑽石自然成為視覺焦點。每一次光線流轉，都散發出內斂而自信的光彩。\n它適合每天陪伴妳，無論是工作、約會或旅行，都能低調地展現品味，讓珠寶成為生活的一部分，而非只屬於特別的日子。",
@@ -737,7 +759,7 @@ const products: JewelryProduct[] = [
       "簡約百搭",
       "氣質搭配"
     ],
-    "specifications": "材質：14KW｜主石：天然鑽｜主石重量：D:0.15cts",
+    "specifications": "材質:14K白,不含鍊\n主石:天然鑽石 0.15cts",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -746,6 +768,496 @@ const products: JewelryProduct[] = [
     "mainStoneWeight": "D:0.15cts",
     "accentStone": null,
     "accentStoneWeight": null,
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00021-P292",
+    "sku": "DP00021-P292",
+    "name": "心綻｜花形光環鑽石墜飾",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 79300,
+    "images": [
+      "assets/missdiamond/imported/DP00021-P292.jpeg"
+    ],
+    "description": "讓心意，在光芒中綻放。\n\n心綻以雙心造型連接花形墜飾，將浪漫細節延伸至中央鑽石。24 分天然主鑽由細緻配鑽環繞，外側花瓣線條保留鏤空空間，讓光環與花形輪廓各自展現層次。\n\n天然鑽石搭配 14K 白的清亮光澤，呈現柔美、明亮的質感。適合喜歡愛心與花形元素的妳，為日常穿搭增添細節，也能作為生日、紀念日或傳遞心意的禮物。",
+    "featureTags": [
+      "花朵造型",
+      "愛心設計",
+      "輕盈舒適"
+    ],
+    "specifications": "材質：14K 白\n主鑽：1 顆天然鑽石，0.24 ct\n配鑽：19 顆天然鑽石，共 0.10 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "天然鑽",
+    "mainStoneWeight": "D:0.24cts",
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "19D:0.10cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00022-PS35",
+    "sku": "DP00022-PS35",
+    "name": "璀璨信念 Faith｜經典十字架鑽石墜飾",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 155822,
+    "images": [
+      "assets/missdiamond/imported/DP00022-PS35.jpeg"
+    ],
+    "description": "讓信念化作光芒，陪伴每一個珍貴時刻。\n以經典十字架為設計靈感，11顆天然鑽石沿著俐落線條細緻排列，呈現均衡而璀璨的視覺效果。\n沒有繁複的裝飾，透過鑽石本身的光彩展現低調而鮮明的存在感。無論單獨配戴或搭配其他項鍊，都能展現優雅且具有個人特色的風格。\n不僅是一件鑽石飾品，更可以是信念、祝福與珍貴回憶的象徵。",
+    "featureTags": [
+      "經典款",
+      "氣質搭配",
+      "日常配戴"
+    ],
+    "specifications": "材質：14K白金\n主鑽:\n配鑽：11顆天然鑽石，共0.95ct (平均約0.08ct)\n鑲嵌方式：爪鑲排列設計\n不含K金項鍊",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "11D:0.95cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00023-P386",
+    "sku": "DP00023-P386",
+    "name": "花映 Fleur｜花漾光環鑽石墜飾",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 76100,
+    "images": [
+      "assets/missdiamond/imported/DP00023-P386.jpeg"
+    ],
+    "description": "讓每一道光芒，都像花朵般悄然綻放。\n以盛開花朵為靈感，將天然鑽石的璀璨與柔美花瓣線條巧妙結合。\n中央0.25克拉主鑽成為視覺焦點，周圍以細緻配鑽勾勒花瓣輪廓，搭配光滑金屬曲線，營造出明亮且富有層次的花漾效果。\n既保有花朵設計的甜美浪漫，也展現鑽石珠寶的精緻質感，適合喜歡優雅、柔美與細節設計的女性。",
+    "featureTags": [
+      "氣質搭配",
+      "花朵造型",
+      "輕盈舒適"
+    ],
+    "specifications": "材質：14K白金\n主鑽：1顆天然鑽石，0.25ct\n配鑽：20顆天然鑽石，共0.11ct\n鑲嵌方式：四爪主鑽鑲嵌＋花瓣排列鑲鑽設計\n不含K金項鍊",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "天然鑽",
+    "mainStoneWeight": "0.25cts",
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "20D:0.11cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00024-P149",
+    "sku": "DP00024-P149",
+    "name": "水漾之心 Éclat｜雙圈垂墜鑽石墜飾",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 94900,
+    "images": [
+      "assets/missdiamond/imported/DP00024-P149.jpeg"
+    ],
+    "description": "如水般溫柔的光，映出優雅而堅定的妳。\n以水滴為靈感，將流動的曲線與鑽石的璀璨巧妙結合。\n中央0.24克拉天然鑽石輕盈垂墜於雙層水滴輪廓之中，隨著身體動作自然搖曳，散發靈動而迷人的光芒。\n內圈細緻排鑽與外圈光滑金屬線條相互映襯，呈現豐富卻不繁複的層次美感。\n無論日常穿搭或重要場合，都能展現女性柔美、優雅且自信的魅力。",
+    "featureTags": [
+      "氣質搭配",
+      "輕盈舒適",
+      "細緻鑲嵌"
+    ],
+    "specifications": "材質：14K白金\n主鑽：1顆天然鑽石，0.24ct\n配鑽：40顆天然鑽石，共0.21ct\n鑲嵌方式：四爪主鑽鑲嵌＋微鑲排鑽設計\n不含K金項鍊",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "天然鑽",
+    "mainStoneWeight": "0.24cts",
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "40D:0.21cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00025-P424",
+    "sku": "DP00025-P424",
+    "name": "心語 Heart Whisper｜雙層愛心鑽石墜飾",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 67300,
+    "images": [
+      "assets/missdiamond/imported/DP00025-P424.jpeg"
+    ],
+    "description": "將心意化作光芒，讓愛在每一刻閃耀。\n\n以象徵愛與陪伴的心形輪廓為靈感，將天然鑽石的璀璨融入柔美曲線之中。\n\n中央0.25克拉天然主鑽成為視覺焦點，內層以20顆細緻配鑽勾勒愛心輪廓，搭配外圈簡潔流暢的金屬線條，展現雙層交織的浪漫美感。\n\n不過度繁複的設計，讓愛心造型保有輕盈與精緻感。無論作為送給重要之人的心意，或是犒賞自己的珍貴禮物，都能傳遞溫柔而真摯的情感。",
+    "featureTags": [
+      "經典款",
+      "氣質搭配",
+      "愛心設計"
+    ],
+    "specifications": "材質：14K白金\n主鑽：1顆天然鑽石，0.25ct\n配鑽：20顆天然鑽石，共0.08ct\n鑲嵌方式：四爪主鑽鑲嵌＋愛心環繞排鑽設計\n不含K金項鍊",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "天然鑽",
+    "mainStoneWeight": "0.25cts",
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "20D:0.08cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00026-P517",
+    "sku": "DP00026-P517",
+    "name": "星漾之舞 Stella｜流光花旋鑽石墜飾",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 84200,
+    "images": [
+      "assets/missdiamond/imported/DP00026-P517.jpeg"
+    ],
+    "description": "讓光芒隨心旋轉，綻放屬於自己的美麗。\n以花瓣旋舞的姿態為靈感，將柔美曲線與天然鑽石的璀璨巧妙融合。\n中央0.24克拉天然主鑽輕盈懸掛於交錯的花瓣線條之中，隨著身體動作自然搖曳，讓光芒呈現不同角度的變化。\n18顆細緻配鑽沿著流線型花瓣排列，搭配拋光14K白金曲面，形成明亮與柔和交錯的視覺層次。\n不同於傳統單鑽墜飾，這款以立體花旋造型展現獨特的設計美感，適合喜歡精緻珠寶、又希望擁有個人風格的女性。",
+    "featureTags": [
+      "氣質搭配",
+      "花朵造型",
+      "立體層次"
+    ],
+    "specifications": "材質：14K白金\n主鑽：1顆天然鑽石，0.24ct\n配鑽：18顆天然鑽石，共0.10ct\n鑲嵌方式：四爪主鑽鑲嵌＋弧形排鑽設計\n商品備註：本商品僅含鑽石墜飾，不含K金項鍊",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "天然鑽",
+    "mainStoneWeight": "0.24cts",
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "18D:0.10cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00027-P329",
+    "sku": "DP00027-P329",
+    "name": "心動旋律 Heart Melody｜流線雙心鑽石墜飾",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 81900,
+    "images": [
+      "assets/missdiamond/imported/DP00027-P329.jpeg"
+    ],
+    "description": "讓心的光芒，陪伴妳走過每一個重要時刻。\n以愛心為靈感，將流動的線條與天然鑽石的璀璨巧妙融合。\n中央0.24克拉天然主鑽成為視覺焦點，雙心曲線相互交織，象徵兩顆心的靠近與陪伴。\n13顆細緻配鑽沿著弧形輪廓排列，與拋光14K白金相互映襯，展現輕盈、優雅且富有層次的設計美感。\n不同於傳統對稱愛心墜飾，這款透過不對稱的流線造型，呈現更具現代感的浪漫風格。\n無論是送給重要的人，或是獎勵努力生活的自己，都是一份值得珍藏的心意。",
+    "featureTags": [
+      "愛心設計",
+      "細緻鑲嵌",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K白金\n主鑽：1顆天然鑽石，0.24ct\n配鑽：13顆天然鑽石，共0.10ct\n鑲嵌方式：四爪主鑽鑲嵌＋弧形排鑽設計\n商品備註：本商品僅含鑽石墜飾，不含K金項鍊。",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "天然鑽",
+    "mainStoneWeight": "0.24cts",
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "13D:0.10cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00028-P394",
+    "sku": "DP00028-P394",
+    "name": "心語相依 Love Embrace｜流線雙心鑽石墜飾",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 73600,
+    "images": [
+      "assets/missdiamond/imported/DP00028-P394.jpeg"
+    ],
+    "description": "兩顆心的距離，是彼此珍惜與陪伴的溫度。\n以雙心相依為靈感，將流動的曲線與天然鑽石的璀璨巧妙融合。中央0.24克拉天然主鑽，靜靜綻放於交織的愛心線條之中，象徵被珍惜、守護與陪伴的美好情感。\n15顆細緻配鑽沿著外側心形輪廓排列，搭配拋光14K白金，呈現明亮與柔和相互映襯的層次美感。\n不同於傳統對稱愛心墜飾，這款透過大小交錯的雙心設計，讓浪漫多了一份俐落與現代感。\n無論是送給重要的人，或是獎勵努力生活的自己，都是一份值得珍藏的心意。",
+    "featureTags": [
+      "愛心設計",
+      "細緻鑲嵌",
+      "天然鑽石"
+    ],
+    "specifications": "材質：14K白金\n主鑽：1顆天然鑽石，0.24ct\n配鑽：15顆天然鑽石，共0.10ct\n鑲嵌方式：爪鑲主鑽＋弧形排鑽設計\n商品備註：本商品僅含鑽石墜飾，不含K金項鍊。",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "天然鑽",
+    "mainStoneWeight": "0.24cts",
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "15D:0.10cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00029-P506",
+    "sku": "DP00029-P506",
+    "name": "心戀之舞 Heart Dance｜雙心垂墜鑽石墜飾",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 75100,
+    "images": [
+      "assets/missdiamond/imported/DP00029-P506.jpeg"
+    ],
+    "description": "讓心隨光而動，把每一份愛化作閃耀的陪伴。\n以雙心交織為靈感，將愛心的浪漫與天然鑽石的璀璨巧妙融合。\n上方不對稱的雙心線條相互環繞，象徵兩顆心的靠近與依偎。22顆細緻天然配鑽沿著心形輪廓排列，與拋光14K白金相互映襯，呈現柔美而富有層次的光澤。\n下方0.23克拉天然主鑽以垂墜方式呈現，隨著日常動作輕輕搖曳，讓鑽石在不同角度展現迷人光彩。\n既有愛心造型的浪漫，也有流線設計的現代感，適合喜歡精緻珠寶、又希望展現個人風格的女性。\n不論是送給珍惜的人，或是紀念自己生命中的重要時刻，都能讓這份心意成為值得珍藏的回憶。",
+    "featureTags": [
+      "愛心設計",
+      "閃耀光澤",
+      "天然鑽石"
+    ],
+    "specifications": "材質：14K白金\n主鑽：1顆天然鑽石，0.23ct\n配鑽：22顆天然鑽石，共0.13ct\n鑲嵌方式：爪鑲主鑽＋愛心弧形排鑽設計\n商品備註：本商品僅含鑽石墜飾，不含K金項鍊。",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "天然鑽",
+    "mainStoneWeight": "0.23cts",
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "22D:0.13cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00030-PS469",
+    "sku": "DP00030-PS469",
+    "name": "璀璨之冠 Crown Éclat｜雙排水滴造型墜飾",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 167500,
+    "images": [
+      "assets/missdiamond/imported/DP00030-PS469.jpeg"
+    ],
+    "description": "讓每一道光芒匯聚，綻放屬於妳的璀璨時刻。\n以優雅水滴為靈感，將天然鑽石的璀璨與細膩的曲線巧妙融合，呈現華麗而富有層次的珠寶設計。\n82顆天然鑽石沿著雙層水滴輪廓細緻排列，中央以群鑽聚集的方式形成明亮焦點，讓多顆鑽石相互映襯，展現豐富的光影變化。\n上方花形鑽飾增添柔美氣息，搭配雙層鏤空設計，使整體即使擁有豐富鑲鑽，仍保有線條的通透感。\n這不只是一款鑽石墜飾，更是一件能展現個人氣質與存在感的珠寶。\n無論是重要場合、值得紀念的時刻，或是想為自己增添一份精緻華麗，都能讓這份光芒成為穿搭中的亮點。",
+    "featureTags": [
+      "氣質搭配",
+      "細緻鑲嵌",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K白金\n主鑽：無獨立主鑽\n配鑽：82顆天然鑽石，共0.94ct\n鑲嵌方式：爪鑲群鑽＋雙層水滴排鑽設計\n商品備註：本商品僅含鑽石墜飾，不含K金項鍊",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "82D:0.94cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00031-P440",
+    "sku": "DP00031-P440",
+    "name": "心圓之戀 Circle of Love｜圓滿愛心鑽石墜飾",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 82200,
+    "images": [
+      "assets/missdiamond/imported/DP00031-P440.jpeg"
+    ],
+    "description": "以圓滿守護真心，讓每一份愛都閃耀如初。\n圓形象徵圓滿與永恆，愛心則代表珍惜與陪伴。兩種經典元素相互結合，將美好的情感融入精緻的珠寶設計之中。\n中央0.24克拉天然主鑽成為視覺焦點，細緻的愛心鑽圈輕輕環繞，彷彿將珍貴的心意收藏其中。\n24顆天然配鑽沿著心形輪廓與墜頭細緻排列，搭配光滑的14K白金圓環，讓整體在簡潔與閃耀之間取得優雅平衡。\n圓形鏤空設計保有輕盈感，愛心造型則增添浪漫氣息，讓這款墜飾不僅適合日常配戴，也能成為重要時刻的紀念。\n無論是送給珍惜的人，或是為自己留下值得紀念的時光，都能讓這份光芒陪伴每一天。",
+    "featureTags": [
+      "愛心設計",
+      "細緻鑲嵌",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K白金\n主鑽：1顆天然鑽石，0.24ct\n配鑽：24顆天然鑽石，共0.15ct\n鑲嵌方式：爪鑲主鑽＋愛心弧形排鑽設計\n商品備註：本商品僅含鑽石墜飾，不含K金項鍊。",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "天然鑽",
+    "mainStoneWeight": "D:0.24cts",
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "24D:0.15cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00032-P448",
+    "sku": "DP00032-P448",
+    "name": "星環之舞 Celestial Dance｜雙環垂墜鑽石墜飾",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 73900,
+    "images": [
+      "assets/missdiamond/imported/DP00032-P448.jpeg"
+    ],
+    "description": "讓光芒在圓環之間流轉，舞出屬於自己的璀璨節奏。\n以相互交織的圓環為靈感，將圓滿、連結與流動的意象融入珠寶設計之中。\n流暢的14K白金曲線交錯環繞，勾勒出富有立體感的雙環輪廓，象徵生命中不同時刻的相遇與連結。\n中央0.24克拉天然主鑽，以花形爪鑲方式呈現，輕盈懸掛於圓環中央，隨著配戴動作自然搖曳，讓鑽石在不同角度展現細緻光芒。\n16顆天然配鑽沿著圓環局部排列，與光滑拋光金屬相互映襯，營造出簡潔卻不單調的視覺層次。\n不同於傳統單鑽墜飾，這款透過交錯圓環與活動式主鑽的結合，展現優雅、現代且富有設計感的珠寶風格。\n無論是日常穿搭、重要聚會，或是為人生中的特別時刻留下紀念，都能讓這份光芒陪伴每一天。",
+    "featureTags": [
+      "氣質搭配",
+      "輕盈舒適",
+      "天然鑽石"
+    ],
+    "specifications": "材質：14K白金\n主鑽：1顆天然鑽石，0.24ct\n配鑽：16顆天然鑽石，共0.07ct\n鑲嵌方式：爪鑲主鑽＋弧形排鑽設計\n商品備註：本商品僅含鑽石墜飾，不含K金項鍊。",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "天然鑽",
+    "mainStoneWeight": "D:0.24cts",
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "16D:0.07cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00033-PB327",
+    "sku": "DP00033-PB327",
+    "name": "微笑弧光 Smile Éclat｜微笑曲線鑽石項鍊",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 148100,
+    "images": [
+      "assets/missdiamond/imported/DP00033-PB327.jpeg"
+    ],
+    "description": "讓每一道光芒，都成為妳微笑的理由。\n以微笑的弧度為靈感，將生活中的溫柔與自信，化作一條閃耀的鑽石曲線。\n19顆天然鑽石沿著柔和的弧形線條排列，總重0.70克拉，讓璀璨光芒自然延伸，呈現如微笑般輕盈優雅的輪廓。\n14K白金鍊身搭配精緻鑲鑽設計，讓項鍊在簡潔中展現細膩質感。\n沒有繁複的造型，也不需要誇張的裝飾，僅以一條恰到好處的鑽石弧線，襯托女性自然、自信且從容的魅力。\n無論是日常上班、約會聚餐，或是重要場合，都能為穿搭增添細緻光彩。\n這不只是一條鑽石項鍊，更像是一份送給自己的提醒——每一天，都值得帶著微笑閃耀。",
+    "featureTags": [
+      "簡約百搭",
+      "氣質搭配",
+      "日常配戴"
+    ],
+    "specifications": "材質：14K白金\n主鑽：無獨立主鑽\n配鑽：19顆天然鑽石，共0.70ct（平均約0.037ct）\n鑲嵌方式：爪鑲排列＋弧形微笑線條設計\n商品備註：本商品為鑽石項鍊，含K金鍊身。",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "19D:0.70cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DP00034-PB275",
+    "sku": "DP00034-PB275",
+    "name": "微笑弧光 Smile Éclat｜經典微笑鑽石項鍊（精緻款）",
+    "category": "necklace",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 74300,
+    "images": [
+      "assets/missdiamond/imported/DP00034-PB275.jpeg"
+    ],
+    "description": "微微上揚的弧度，是每天最溫柔的光芒。\n以微笑為靈感，將幸福與自信化作一道細緻的鑽石曲線。\n20顆天然鑽石沿著柔和弧形排列，總重0.25克拉，讓光芒隨著頸部線條自然延伸，展現輕盈而優雅的視覺效果。\n14K白金鍊身搭配精緻的鑽石排列，沒有繁複的裝飾，也不需要誇張的造型，就能呈現恰到好處的閃耀感。\n比起華麗的大鑽項鍊，這款更著重細膩、簡潔與日常配戴的舒適視覺。\n無論搭配襯衫、針織上衣、洋裝或休閒服飾，都能自然融入穿搭，讓日常生活多一份精緻光彩。\n不需要特別的日子，也值得讓自己閃閃發亮。",
+    "featureTags": [
+      "經典款",
+      "簡約百搭",
+      "氣質搭配"
+    ],
+    "specifications": "材質：14K白金\n主鑽：無獨立主鑽\n配鑽：20顆天然鑽石，共0.25ct（平均約0.01ct）\n鑲嵌方式：爪鑲排列＋弧形微笑線條設計\n商品備註：本商品為完整鑽石項鍊，含14K白金鍊身",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "20D:0.25cts",
     "metal": "14KW",
     "chainMetal": null,
     "stock": 1,
@@ -767,6 +1279,7 @@ const products: JewelryProduct[] = [
     ],
     "price": 557600,
     "images": [
+      "assets/missdiamond/imported/DR00001-PD520.png",
       "assets/missdiamond/band ring/DR00001-PD520.jpg",
       "assets/missdiamond/band ring/DR00001-PD520-2.jpg"
     ],
@@ -776,7 +1289,7 @@ const products: JewelryProduct[] = [
       "寬版設計",
       "細緻鑲嵌"
     ],
-    "specifications": "材質：14KW｜鍊材質：10K｜主石：無｜主石重量：無｜配鑽：天然鑽｜配鑽重量：15D:2.78cts(0.18)\n8D:0.06cts",
+    "specifications": "材質:14K白\n鑽石數量：15顆天然鑽石\n鑽石總重：2.78ct 平均(0.18)\n配鑽數量/總重:8D:0.06cts\n款式：滿天星寬版線戒\n配戴場合：日常穿搭、聚會、紀念禮物",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -806,6 +1319,7 @@ const products: JewelryProduct[] = [
     ],
     "price": 93600,
     "images": [
+      "assets/missdiamond/imported/DR00002-PD394.jpeg",
       "assets/missdiamond/ring/DR00002-PD394.jpg",
       "assets/missdiamond/ring/DR00002-PD394-2.jpg"
     ],
@@ -815,7 +1329,7 @@ const products: JewelryProduct[] = [
       "層次疊戴",
       "細緻鑲嵌"
     ],
-    "specifications": "材質：14KW｜鍊材質：10K｜主石：無｜主石重量：無｜配鑽：天然鑽｜配鑽重量：34D:0.51cts(0.01)",
+    "specifications": "材質:14K白\n鑽石數量：34顆天然鑽石\n鑽石總重：0.51ct\n款式：雙星設計\n配戴場合：日常穿搭、聚會、紀念禮物",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -846,6 +1360,7 @@ const products: JewelryProduct[] = [
     ],
     "price": 40000,
     "images": [
+      "assets/missdiamond/imported/DR00003-DR464L.png",
       "assets/missdiamond/band ring/DR00003-DR464L.jpg",
       "assets/missdiamond/band ring/DR00003-DR464L-2.jpg"
     ],
@@ -855,7 +1370,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "層次疊戴"
     ],
-    "specifications": "材質：18KR｜鍊材質：10K｜主石：無｜主石重量：無｜配鑽：天然鑽｜配鑽重量：13D:0.14cts",
+    "specifications": "材質:18K玫瑰金\n鑽石數量：13顆天然鑽石\n鑽石總重：0.14ct\n款式：線戒系列\n配戴方式：單戴／疊戴",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -885,6 +1400,7 @@ const products: JewelryProduct[] = [
     ],
     "price": 55000,
     "images": [
+      "assets/missdiamond/imported/DR00004-LN09.jpeg",
       "assets/missdiamond/ring/DR00004-LN09.jpg",
       "assets/missdiamond/ring/DR00004-LN09-2.jpg"
     ],
@@ -894,7 +1410,7 @@ const products: JewelryProduct[] = [
       "氣質搭配",
       "日常配戴"
     ],
-    "specifications": "材質：9K｜鍊材質：10K｜主石：天然鑽｜主石重量：無｜配鑽：天然鑽｜配鑽重量：D:0.10cts",
+    "specifications": "材質:9K白\n主石:天然鑽石\n鑽石重量:0.10ct\n款式：流線設計戒指\n配戴場合：日常穿搭、約會、紀念禮物",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -922,6 +1438,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 98000,
     "images": [
+      "assets/missdiamond/imported/DR00005-DR590.png",
       "assets/missdiamond/ring/DR00005-DR590.jpg",
       "assets/missdiamond/ring/DR00005-DR590-2.jpg"
     ],
@@ -931,7 +1448,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "紀念送禮"
     ],
-    "specifications": "材質：18KR｜鍊材質：10K｜主石：無｜主石重量：無｜配鑽：天然鑽｜配鑽重量：MQ4P:0.34cts(0.085)",
+    "specifications": "材質:18K玫瑰金\n主石形狀:Marquise（馬眼）\n鑽石數量:4顆\n鑽石總重:0.34ct 平均約0.085ct\n配戴方式:單戴／疊戴\n適合場合:日常穿搭、聚會、紀念禮物",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -958,6 +1475,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 85000,
     "images": [
+      "assets/missdiamond/imported/DR00006-DR588.png",
       "assets/missdiamond/band ring/DR00006-DR588.jpg",
       "assets/missdiamond/band ring/DR00006-DR588-2.jpg"
     ],
@@ -967,7 +1485,7 @@ const products: JewelryProduct[] = [
       "愛心設計",
       "輕盈舒適"
     ],
-    "specifications": "材質：10K｜主石：無｜主石重量：無｜配鑽：天然鑽｜配鑽重量：HRT3D:0.24cts(0.08)",
+    "specifications": "材質:10K白\n主石形狀:Heart(心形）\n主石數量:3顆\n鑽石總重:約024ct 平均:0.08cts\n配戴方式:單戴／疊戴\n適合場合:日常穿搭、紀念禮物",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -997,6 +1515,7 @@ const products: JewelryProduct[] = [
     ],
     "price": 20000,
     "images": [
+      "assets/missdiamond/imported/DR00007-DSR01.png",
       "assets/missdiamond/band ring/DR00007-DSR01.jpg",
       "assets/missdiamond/band ring/DR00007-DSR01-2.jpg"
     ],
@@ -1006,7 +1525,7 @@ const products: JewelryProduct[] = [
       "層次疊戴",
       "輕盈舒適"
     ],
-    "specifications": "材質：14KW｜主石：無｜主石重量：無｜配鑽：天然鑽｜配鑽重量：15D:0.10cts",
+    "specifications": "材質:14KW\n主石:天然鑽石\n主石數量:15顆\n主石總重:0.10ct\n戒圍:國際圍 #11",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1020,7 +1539,7 @@ const products: JewelryProduct[] = [
     "stock": 1,
     "sourceStatus": "售出",
     "available": false,
-    "unavailableReason": "已售出"
+    "unavailableReason": "目前暫不提供看貨媒合"
   },
   {
     "id": "DR00008-RG92290",
@@ -1034,6 +1553,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 33000,
     "images": [
+      "assets/missdiamond/imported/DR00008-RG92290.png",
       "assets/missdiamond/band ring/DR00008-RG92290.jpg",
       "assets/missdiamond/band ring/DR00008-RG92290-2.jpg"
     ],
@@ -1043,7 +1563,7 @@ const products: JewelryProduct[] = [
       "簡約百搭",
       "日常配戴"
     ],
-    "specifications": "材質：18KW｜主石：無｜主石重量：無｜配鑽：天然鑽｜配鑽重量：13D:0.15cts",
+    "specifications": "材質:18K白\n主石:天然鑽石\n鑽石數量:13顆\n總鑽重:0.15 cts\n適合場合:日常、上班、約會、送禮",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1061,7 +1581,7 @@ const products: JewelryProduct[] = [
   },
   {
     "id": "DR00009-DG1200",
-    "sku": "DR00009-DG1200",
+    "sku": "DR00009-PD-738",
     "name": "璀璨鋪鑽寬版戒指",
     "category": "ring",
     "materials": [
@@ -1070,6 +1590,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 302300,
     "images": [
+      "assets/missdiamond/imported/DR00009-PD-738.png",
       "assets/missdiamond/band ring/DR00009-DG1200.jpg",
       "assets/missdiamond/band ring/DR00009-DG1200-2.jpg"
     ],
@@ -1079,7 +1600,7 @@ const products: JewelryProduct[] = [
       "寬版設計",
       "細緻鑲嵌"
     ],
-    "specifications": "材質：14KW｜主石：無｜主石重量：無｜配鑽：天然鑽｜配鑽重量：65D:1.60cts(0.024)",
+    "specifications": "材質:14K白\n主石:天然鑽石\n鑽石數量:65 顆\n總鑽重:1.60 cts 平均(0.024)\n配戴場合:日常、聚會、宴會、送禮",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1109,6 +1630,7 @@ const products: JewelryProduct[] = [
     ],
     "price": 102900,
     "images": [
+      "assets/missdiamond/imported/DR00010-PD636.png",
       "assets/missdiamond/band ring/DR00010-PD636.jpg",
       "assets/missdiamond/band ring/DR00010-PD636-2.jpg"
     ],
@@ -1118,7 +1640,7 @@ const products: JewelryProduct[] = [
       "氣質搭配",
       "日常配戴"
     ],
-    "specifications": "材質：14KW｜主石：無｜配鑽：天然鑽｜配鑽重量：9D:0.43cts(0.047)",
+    "specifications": "鑽石排鑽\n材質： 14K白\n主石： 天然鑽石 9 顆\n總重：約 0.43 ct（每顆約0.04 ct）",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1145,6 +1667,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 34900,
     "images": [
+      "assets/missdiamond/imported/DR00011-PD668.png",
       "assets/missdiamond/band ring/DR00011-PD668.jpg",
       "assets/missdiamond/band ring/DR00011-PD668-2.jpg"
     ],
@@ -1154,7 +1677,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "層次疊戴"
     ],
-    "specifications": "材質：14KW｜配鑽：天然鑽｜配鑽重量：11D:0.11cts",
+    "specifications": "材質：14K白\n主鑽：天然鑽石11 顆約0.10 ct\n戒圍： #11（其他戒圍可訂製）\n配戴方式：日常配戴、疊戴皆適合",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1181,6 +1704,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 134200,
     "images": [
+      "assets/missdiamond/imported/DR00012-PD731.png",
       "assets/missdiamond/band ring/DR00012-PD731.jpg",
       "assets/missdiamond/band ring/DR00012-PD731-2.jpg"
     ],
@@ -1190,7 +1714,7 @@ const products: JewelryProduct[] = [
       "層次疊戴",
       "輕盈舒適"
     ],
-    "specifications": "材質：14KW｜配鑽：天然鑽｜配鑽重量：39D:0.56cts",
+    "specifications": "材質：14K白\n天然真鑽：39顆，共0.56cts\n款式：三排鑲嵌鑽戒\n配戴方式：單戴、主戒配戴",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1217,6 +1741,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 144100,
     "images": [
+      "assets/missdiamond/imported/DR00013-PD614.png",
       "assets/missdiamond/ring/DR00013-PD614.jpg",
       "assets/missdiamond/ring/DR00013-PD614-2.jpg"
     ],
@@ -1226,7 +1751,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "輕盈舒適"
     ],
-    "specifications": "材質：14KW｜主石：天然鑽｜主石重量：D:0.30cts｜配鑽：天然鑽｜配鑽重量：12D:0.20cts",
+    "specifications": "材質：14K白\n主鑽：天然鑽石 0.30cts（E Color）無證書\n配鑽：12顆天然鑽石，共0.20cts\n總鑽重：約0.50cts",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1256,6 +1781,7 @@ const products: JewelryProduct[] = [
     ],
     "price": 72700,
     "images": [
+      "assets/missdiamond/imported/DR00014-PD804.png",
       "assets/missdiamond/ring/DR00014-PD804.jpg",
       "assets/missdiamond/ring/DR00014-PD804-2.jpg",
       "assets/missdiamond/ring/DR00014-PD804-3.jpg"
@@ -1266,7 +1792,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "細緻鑲嵌"
     ],
-    "specifications": "材質：14KW｜配鑽：天然鑽｜配鑽重量：34D:0.15cts",
+    "specifications": "材質:14K白\n主鑽台：適用 0.30～0.50ct 天然鑽石\n配鑽：34顆天然鑽石，共0.15ct\n鑲嵌方式：Halo 光環鑲嵌\n空檯報價 無主石",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1293,6 +1819,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 114100,
     "images": [
+      "assets/missdiamond/imported/DR00015-PD783.png",
       "assets/missdiamond/ring/DR00015-PD783.png"
     ],
     "description": "主鑽 0.33 克拉，搭配戒臂 22 顆小鑽、共 0.14 克拉，細緻排列於兩側，讓主鑽視覺更集中、同時增加整體閃耀感。戒台採 14K 金製作，戒臂線條纖細俐落，保留經典單鑽戒的乾淨比例，又比一般素面單鑽多一點精緻感。\n\n六爪鑲嵌讓主鑽輪廓完整呈現，從正面看有明顯聚焦效果；細版戒腳則讓整體不顯厚重，適合日常配戴，也很適合作為求婚戒、紀念戒或送給自己的第一只鑽戒。",
@@ -1301,7 +1828,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "紀念送禮"
     ],
-    "specifications": "材質：14KW｜主石：天然鑽｜主石重量：D:0.30cts｜配鑽：天然鑽｜配鑽重量：22D:0.14cts",
+    "specifications": "材質：14K白\n主鑽：0.33ct 天然鑽石\n配鑽：22顆天然鑽石，共0.14ct\n鑲嵌方式：六爪鑲嵌＋戒臂配鑽",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1320,17 +1847,23 @@ const products: JewelryProduct[] = [
   {
     "id": "DR00016-P305",
     "sku": "DR00016-P305",
-    "name": "DR00016-P305",
+    "name": "花映 Fleur｜花形光環鑽戒",
     "category": "ring",
     "materials": [
       "diamond"
     ],
     "styleTags": [],
     "price": 123900,
-    "images": [],
-    "description": "",
-    "featureTags": [],
-    "specifications": "材質：14KW｜主石：天然鑽｜主石重量：D:0.30cts｜配鑽：天然鑽｜配鑽重量：22D:0.21cts",
+    "images": [
+      "assets/missdiamond/imported/DR00016-P305.jpeg"
+    ],
+    "description": "以一顆 30分、E 色主鑽為中心，花形細鑽光環如綻放的花朵，輕輕簇擁每一道光。兩側細鑽戒臂延續閃耀，讓整枚戒指在細膩與華麗之間取得恰好的平衡。\n\n無論作為求婚的心意、紀念日的禮物，或送給自己的獎勵，「花映」都能替值得珍藏的時刻，留下溫柔而明亮的印記。",
+    "featureTags": [
+      "經典款",
+      "氣質搭配",
+      "花朵造型"
+    ],
+    "specifications": "材質：14K 白\n主鑽：0.30 ct，E 色，無證書\n配鑽：22 顆天然鑽石，共 0.20 ct\n鑲嵌方式：爪鑲",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1343,8 +1876,987 @@ const products: JewelryProduct[] = [
     "chainMetal": null,
     "stock": 1,
     "sourceStatus": "寄店家",
-    "available": false,
-    "unavailableReason": "商品資料確認中"
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00017-PD837",
+    "sku": "DR00017-PD837",
+    "name": "流光｜六爪鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 139300,
+    "images": [
+      "assets/missdiamond/imported/DR00017-PD837.jpeg"
+    ],
+    "description": "一顆 33 分、E 色主鑽，以經典六爪鑲嵌呈現明亮光芒。兩側戒臂透過不同的扭轉角度向主鑽延伸，搭配細鑽排列，勾勒出如光流動般的線條。\n\n「流光」將巧思藏在細節裡，無論是紀念一段關係，或為自己留下值得珍藏的時刻，都能以簡潔而有個性的姿態，陪妳閃耀。",
+    "featureTags": [
+      "經典款",
+      "簡約百搭",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K 白\n主鑽：0.33 ct，E 色，無證書\n配鑽：18 顆天然鑽石，共 0.14 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "天然鑽",
+    "mainStoneWeight": "D:0.33cts",
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "18D:0.14cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00018-PD773",
+    "sku": "DR00018-PD773",
+    "name": "星繫｜半圈排鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 82400,
+    "images": [
+      "assets/missdiamond/imported/DR00018-PD773.jpeg"
+    ],
+    "description": "如星光一顆顆相繫，15 顆鑽石沿著 14K 白金戒圈排列，在指間勾勒出細緻的閃耀弧線。\n\n「星繫」以簡潔的半圈排鑽設計，留下恰好的光芒。單戴時優雅俐落，疊戴時增添層次，適合作為紀念日的心意，也適合送給每天努力生活的自己。",
+    "featureTags": [
+      "經典款",
+      "簡約百搭",
+      "氣質搭配"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：15 顆天然鑽石，共 0.39 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "無",
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "15D:0.39cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00019-PD774",
+    "sku": "DR00019-PD774",
+    "name": "微光｜纖細排鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 41500,
+    "images": [
+      "assets/missdiamond/imported/DR00019-PD774.jpeg"
+    ],
+    "description": "將細小的光芒，收藏在每天的日常裡。\n\n「微光」以 20 顆天然鑽石，沿著纖細的 14K 白戒圈排列，讓簡潔線條多了一份明亮。沒有突出的主石，整體輕巧秀氣，單戴時低調優雅，疊戴時則為指間添上細緻層次。\n\n作為送給自己的小小獎勵，或紀念日的一份心意，都恰到好處。",
+    "featureTags": [
+      "簡約百搭",
+      "氣質搭配",
+      "層次疊戴"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：20 顆天然鑽石，共 0.15 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "20D:0.15cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 4,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00020-PD775",
+    "sku": "DR00020-PD775",
+    "name": "星序｜經典排鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 58100,
+    "images": [
+      "assets/missdiamond/imported/DR00020-PD775.jpeg"
+    ],
+    "description": "如星光依序排列，將值得珍藏的時刻，串成指間的一道光。\n\n「星序」以 16 顆天然鑽石搭配 14K 白，沿著戒圈勾勒明亮弧線。簡潔的排鑽設計沒有突出的單顆主石，讓每一顆鑽石共同展現細膩光芒。\n\n單戴時優雅俐落，疊戴時更添層次，適合作為紀念日的心意，也適合送給喜歡經典風格的自己。",
+    "featureTags": [
+      "簡約百搭",
+      "氣質搭配",
+      "層次疊戴"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：16 顆天然鑽石，共 0.25 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "16D:0.25cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 3,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00021-PD821",
+    "sku": "DR00021-PD821",
+    "name": "漣光｜波浪排鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 59600,
+    "images": [
+      "assets/missdiamond/imported/DR00021-PD821.jpeg"
+    ],
+    "description": "光芒沿著曲線流動，如微風輕拂水面，留下細細漣漪。\n\n「漣光」以 14K 白金勾勒波浪輪廓，25 顆天然鑽石隨著高低起伏排列，讓簡潔的排鑽戒多了一份靈動與柔美。\n\n適合喜歡細節、又不想過於華麗的妳。無論單獨配戴，或搭配其他戒指，都能為日常穿搭添上一道有韻律的光。",
+    "featureTags": [
+      "簡約百搭",
+      "層次疊戴",
+      "俐落風格"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：25 顆天然鑽石，共 0.23 ct\n鑲嵌方式：爪鑲\n(此款有較低的K金材質，可供報價)",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "25D:0.23cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 3,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00022-PD824",
+    "sku": "DR00022-PD824",
+    "name": "映雙｜雙排鑽石戒指",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 88900,
+    "images": [
+      "assets/missdiamond/imported/DR00022-PD824.jpeg"
+    ],
+    "description": "兩道光芒，並肩映照。\n\n映雙以雙排天然鑽石勾勒整齊而細緻的線條，搭配 14K 白的清亮光澤，在舉手投足間展現柔和閃耀。中央的細窄間隔，讓雙排設計多了一份層次，也保留俐落的視覺節奏。\n\n適合喜歡經典排鑽，又希望戒指多一點存在感的妳。從日常到值得紀念的時刻，讓指間的光替妳留下心意。",
+    "featureTags": [
+      "氣質搭配",
+      "日常配戴",
+      "俐落風格"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：36 顆天然鑽石，共 0.35 ct\n鑲嵌方式：爪鑲\n(此款有較低的K金材質，可供報價)",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "36D:0.35cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 2,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00023-PD645",
+    "sku": "DR00023-PD645",
+    "name": "織光｜蕾絲鏤空鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 163300,
+    "images": [
+      "assets/missdiamond/imported/DR00023-PD645.jpeg"
+    ],
+    "description": "將光芒織成蕾絲，留在指間。\n\n織光以交錯的環形線條勾勒鏤空戒面，85 顆天然鑽石沿著輪廓細緻排列，在 14K 白的清亮光澤中，映出豐富層次。\n\n寬版設計帶來醒目的存在感，透空花紋則保留柔美與輕盈。適合喜歡精緻細節、希望一只戒指就能成為穿搭焦點的妳，為日常或重要場合添上一份優雅。",
+    "featureTags": [
+      "輕盈舒適",
+      "寬版設計",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：85 顆天然鑽石，共 0.67 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "85D:0.67cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00024-PD654",
+    "sku": "DR00024-PD654",
+    "name": "心耀｜心形滿鑽戒指",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 143100,
+    "images": [
+      "assets/missdiamond/imported/DR00024-PD654.jpeg"
+    ],
+    "description": "把心意，化成指間的光。\n\n心耀以天然鑽石鋪陳飽滿的心形戒面，搭配兩側延伸的排鑽與 14K 白的清亮光澤，讓浪漫輪廓在舉手投足間閃耀。\n\n甜美之中帶著華麗感，適合喜歡鮮明造型、願意讓珠寶表達心情的妳。無論是送給珍愛的人，或為自己留下紀念，都讓這顆閃耀的心承載一份心意。",
+    "featureTags": [
+      "紀念送禮",
+      "愛心設計",
+      "細緻鑲嵌"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：55 顆天然鑽石，共 0.65 ct(0.01)\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "55D:0.65cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00025-PD652",
+    "sku": "DR00025-PD652",
+    "name": "縈光｜交織鏤空鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 187800,
+    "images": [
+      "assets/missdiamond/imported/DR00025-PD652.jpeg"
+    ],
+    "description": "讓光沿著曲線，縈繞指間。\n\n縈光以連續交織的迴環線條勾勒寬版戒面，天然鑽石順著弧線排列，在 14K 白的清亮光澤中，展現細緻而豐富的層次。\n\n鏤空留白與閃耀鑽石相互映襯，既有醒目的存在感，也帶著柔美的韻律。適合喜歡設計細節、希望以一件珠寶展現個人風格的妳。",
+    "featureTags": [
+      "輕盈舒適",
+      "寬版設計",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：92 顆天然鑽石，共 0.78 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "92D:0.78cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00026-PD697",
+    "sku": "DR00026-PD697",
+    "name": "舞光｜交叉鏤空鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 218100,
+    "images": [
+      "assets/missdiamond/imported/DR00026-PD697.jpeg"
+    ],
+    "description": "讓光芒隨著曲線，在指間起舞。\n\n舞光以交錯的鑽石弧線展開寬版戒面，中央聚鑽凝聚目光，兩側曲線則向外延伸，呈現如緞帶交繞般的柔美姿態。\n\n天然鑽石的閃耀與 14K 白的清亮光澤相互映襯，鏤空設計保留空間與層次。適合喜歡華麗細節、又重視造型線條的妳，為聚會、晚宴或值得紀念的時刻增添光彩。",
+    "featureTags": [
+      "輕盈舒適",
+      "寬版設計",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：73 顆天然鑽石，共 1.03 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "73D:1.03cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00027-PD699",
+    "sku": "DR00027-PD699",
+    "name": "星環｜聚鑽鏤空鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 238800,
+    "images": [
+      "assets/missdiamond/imported/DR00027-PD699.jpeg"
+    ],
+    "description": "讓細緻星光，環繞指間。\n\n星環以中央花形聚鑽凝聚目光，交繞的鑽石弧線向外舒展，搭配兩側小巧環圈，呈現柔美而富有層次的輪廓。\n\n天然鑽石與 14K 白的清亮光澤相互映襯，在寬版戒面上交織出華麗光芒。適合喜歡鮮明設計、重視珠寶細節的妳，單戴便能為穿搭添上優雅焦點。",
+    "featureTags": [
+      "輕盈舒適",
+      "寬版設計",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：101 顆天然鑽石，共 1.05 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "101D:1.05cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00028-PD702",
+    "sku": "DR00028-PD702",
+    "name": "光軌｜多層交織鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 257700,
+    "images": [
+      "assets/missdiamond/imported/DR00028-PD702.jpeg"
+    ],
+    "description": "讓交錯的光芒，描繪妳的風格。\n\n光軌以多道鑽石曲線交織出寬版戒面，中央花形聚鑽凝聚目光，外圍弧線則向兩側舒展，呈現流暢而富有張力的造型。\n\n天然鑽石與 14K 白的清亮光澤相互映襯，鏤空結構讓每一道線條清楚展現。適合喜歡華麗光芒、重視珠寶設計的妳，為簡潔穿搭添上醒目的指間焦點。",
+    "featureTags": [
+      "寬版設計",
+      "天然鑽石"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：97 顆天然鑽石，共 1.23 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "97D:1.23cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00029-PD454",
+    "sku": "DR00029-PD454",
+    "name": "璀序｜三排鑽石戒指",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 292600,
+    "images": [
+      "assets/missdiamond/imported/DR00029-PD454.jpeg"
+    ],
+    "description": "將璀璨光芒，排列成指間的風景。\n\n璀序以三排天然鑽石鋪陳飽滿戒面，錯落排列的圓鑽帶來豐富層次，搭配 14K 白的俐落輪廓，展現經典而大方的氣質。\n\n不需繁複花紋，鑽石本身便是焦點。適合喜歡整齊線條、偏愛明亮光澤的妳，單戴就能為日常穿搭或重要場合增添一份華麗感。",
+    "featureTags": [
+      "經典款",
+      "氣質搭配",
+      "俐落風格"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：25 顆天然鑽石，共 1.57 ct(0.06ct)\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "25D:1.57cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00030-PD751",
+    "sku": "DR00030-PD751",
+    "name": "恆序｜簡約單排鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 95900,
+    "images": [
+      "assets/missdiamond/imported/DR00030-PD751.jpeg"
+    ],
+    "description": "將細緻光芒，融入每一天。\n\n恆序以單排天然鑽石勾勒戒圈，搭配兩側俐落的金屬邊框，在 14K 白的清亮光澤中，展現簡潔而耐看的氣質。\n\n不需繁複造型，整齊線條與細微閃耀便能為指間增添精緻感。適合日常佩戴，也適合作為紀念戒，留下屬於妳的心意。",
+    "featureTags": [
+      "簡約百搭",
+      "俐落風格",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：40 顆天然鑽石，共 0.37 ct\n鑲嵌方式：槽鑲\n戒圍：8 號\n為整圈鑽石，恕無法改圍",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "40D:0.37cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00031-PD755",
+    "sku": "DR00031-PD755",
+    "name": "恆序｜簡約單排鑽戒II",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 120300,
+    "images": [
+      "assets/missdiamond/imported/DR00031-PD755.jpeg"
+    ],
+    "description": "將細緻光芒，融入每一天。\n\n恆序以單排天然鑽石勾勒戒圈，搭配兩側俐落的金屬邊框，在 14K 白的清亮光澤中，展現簡潔而耐看的氣質。\n\n不需繁複造型，整齊線條與細微閃耀便能為指間增添精緻感。適合日常佩戴，也適合作為紀念戒，留下屬於妳的心意。",
+    "featureTags": [
+      "簡約百搭",
+      "俐落風格",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：40 顆天然鑽石，共 0.50 ct\n鑲嵌方式：槽鑲\n戒圍：12號\n為整圈鑽石，恕無法改圍",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "40D:0.50cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00032-PD732",
+    "sku": "DR00032-PD732",
+    "name": "映澄｜雙排鑽石戒指",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 110300,
+    "images": [
+      "assets/missdiamond/imported/DR00032-PD732.jpeg"
+    ],
+    "description": "讓並肩的光芒，映照日常的美好。\n\n映澄以兩列天然鑽石勾勒整齊的戒面，雙排之間的細緻留白，讓光芒與線條各自清晰，也增添柔和的層次。\n\n22 顆天然鑽石與 14K 白的清亮光澤相互映襯，搭配簡潔的戒圈輪廓，呈現耐看的優雅。無論搭配日常襯衫、針織衫或聚會洋裝，都能為指間添上一份恰好的亮點。",
+    "featureTags": [
+      "簡約百搭",
+      "俐落風格",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：22 顆天然鑽石，共 0.56 ct(0.025ct)\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "22D:0.56cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00033-PD737",
+    "sku": "DR00033-PD737",
+    "name": "澄序｜七鑽槽鑲戒指",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 79100,
+    "images": [
+      "assets/missdiamond/imported/DR00033-PD737.jpeg"
+    ],
+    "description": "把光芒，安放在簡單的秩序裡。\n\n澄序以 7 顆天然鑽石排列出明亮的單排戒面，槽鑲兩側的金屬線條收攏光芒，讓整體造型顯得俐落、沉穩。\n\n14K 白的清亮光澤與鑽石相互映襯，光滑戒圈延續簡潔輪廓。無論搭配日常服裝或正式穿著，都能在指間留下恰到好處的質感，適合欣賞細節、偏愛經典設計的妳。",
+    "featureTags": [
+      "俐落風格",
+      "閃耀光澤",
+      "天然鑽石"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：7 顆天然鑽石，共 0.33 ct(0.045ct)\n鑲嵌方式：槽鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "7D:0.33cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00034-PD742",
+    "sku": "DR00034-PD742",
+    "name": "弦光｜線條單排鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 68200,
+    "images": [
+      "assets/missdiamond/imported/DR00034-PD742.jpeg"
+    ],
+    "description": "讓細緻的光，沿著指間輕輕延伸。\n\n弦光以 10 顆天然鑽石勾勒單排戒面，兩側金屬線條如弦般延展，細槽則為簡潔輪廓添上一層變化。\n\n天然鑽石的閃耀與 14K 白的清亮光澤相互映襯，搭配光滑戒身，呈現柔和而俐落的質感。無論是日常襯衫、針織穿搭，或稍正式的聚會服裝，都能以細緻光芒陪伴妳。",
+    "featureTags": [
+      "簡約百搭",
+      "俐落風格",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：10顆天然鑽石，共 0.24 ct(0.02ct)\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "10D:0.24cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00035-PD532",
+    "sku": "DR00035-PD532",
+    "name": "繫光｜無限交織鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 64500,
+    "images": [
+      "assets/missdiamond/imported/DR00035-PD532.jpeg"
+    ],
+    "description": "讓相繫的光芒，在指間延續。\n\n繫光以交錯的鑽石曲線描繪無限符號般的輪廓，兩側弧線於中央相遇，像一份溫柔相繫的心意。鏤空留白讓光芒之間保有呼吸的空間，呈現輕盈而細緻的層次。\n\n31 顆天然鑽石與 14K 白的清亮光澤相互映襯，為日常穿搭增添柔和亮點。適合喜歡曲線設計的妳，也適合作為紀念情感、友誼或送給自己的心意之選。",
+    "featureTags": [
+      "輕盈舒適",
+      "俐落風格",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：31 顆天然鑽石，共 0.20 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "31D:0.20cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00036-PD696",
+    "sku": "DR00036-PD696",
+    "name": "摯光｜緞帶交織鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 218200,
+    "images": [
+      "assets/missdiamond/imported/DR00036-PD696.jpeg"
+    ],
+    "description": "將流動的光，挽成指間的風景。\n\n綰光以多道鑽石曲線交織出寬版戒面，如緞帶般迴旋、相遇，再向兩側延伸。上下環繞的弧線與中央斜向線條相互呼應，讓目光隨著光芒遊走。\n\n97 顆天然鑽石與 14K 白的清亮光澤相互映襯，鏤空留白則讓華麗造型保有輕盈感。適合喜歡鮮明設計、柔美線條的妳，為聚會、晚宴或日常的俐落穿搭增添光彩。",
+    "featureTags": [
+      "氣質搭配",
+      "輕盈舒適",
+      "寬版設計"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：97 顆天然鑽石，共 0.85 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "97D:0.85cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00037-PD465",
+    "sku": "DR00037-PD465",
+    "name": "映承｜五鑽經典戒指",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 114500,
+    "images": [
+      "assets/missdiamond/imported/DR00037-PD465.jpeg"
+    ],
+    "description": "讓每一道光芒，承接值得珍藏的日常。\n\n映承以 5 顆天然鑽石並列成排，每顆鑽石保有清楚的輪廓，也在相鄰排列間彼此映照。柔和的戒面弧度搭配簡潔戒身，呈現耐看的優雅。\n\n天然鑽石總重 0.50 ct，與 14K 白的清亮光澤相互映襯。適合喜歡經典排鑽、又希望看見每顆鑽石細節的妳，無論作為日常配件或紀念心意，都能留下明亮的陪伴。",
+    "featureTags": [
+      "經典款",
+      "閃耀光澤",
+      "天然鑽石"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：5 顆天然鑽石，共 0.50 ct（ 0.10 ct）\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "5D:0.50cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00038-PD567",
+    "sku": "DR00038-PD567",
+    "name": "拾光｜十鑽單排戒指",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 69200,
+    "images": [
+      "assets/missdiamond/imported/DR00038-PD567.jpeg"
+    ],
+    "description": "拾起日常裡，值得珍藏的光。\n\n拾光以 10 顆天然鑽石串起明亮的單排戒面，每顆鑽石保有清楚的輪廓，順著戒圈弧度延伸，呈現柔和而有秩序的美感。\n\n天然鑽石總重 0.35 ct，搭配 14K 白的清亮光澤與纖巧戒身，為日常穿搭添上一份細緻亮點。適合喜歡經典排鑽、欣賞簡潔線條的妳，也能作為紀念某段時光的心意之選。",
+    "featureTags": [
+      "經典款",
+      "閃耀光澤",
+      "天然鑽石"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：10 顆天然鑽石，共 0.35 ct（ 0.035 ct）\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "10D:0.35cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00039-PD526",
+    "sku": "DR00039-PD526",
+    "name": "映雙｜雙排鑽石戒指",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 67900,
+    "images": [
+      "assets/missdiamond/imported/DR00039-PD526.jpeg"
+    ],
+    "description": "讓兩道光芒，並肩映照日常。\n\n映雙以雙排天然鑽石勾勒整齊的戒面，中央細槽分出清楚的層次，讓細緻光芒沿著指間弧度延伸。\n\n34 顆天然鑽石與 14K 白的清亮光澤相互映襯，搭配簡潔的素面戒身，呈現柔和而俐落的風格。無論搭配襯衫、針織衫或聚會洋裝，都能為穿搭添上一份恰好的光彩。",
+    "featureTags": [
+      "簡約百搭",
+      "俐落風格",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：34 顆天然鑽石，共 0.23 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "34D:0.23cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00040-PD822",
+    "sku": "DR00040-PD822",
+    "name": "翎光｜V 形排鑽戒指",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 56200,
+    "images": [
+      "assets/missdiamond/imported/DR00040-PD822.jpeg"
+    ],
+    "description": "讓光芒，在指間輕輕轉折。\n\n翎光以俐落的 V 形勾勒戒面，兩側弧線向中央相遇，如羽翼般展開細緻光彩。21 顆天然鑽石沿著輪廓排列，為簡潔造型添上柔和的閃耀。\n\n14K 白的清亮光澤與纖巧戒身相互映襯，呈現耐看而帶有個性的風格。適合喜歡細戒、又希望多一點線條變化的妳，為日常穿搭留下輕盈亮點。",
+    "featureTags": [
+      "氣質搭配",
+      "輕盈舒適",
+      "俐落風格"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：21 顆天然鑽石，共 0.21 ct（ 0.01 ct ）\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "21D:0.21cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00041-PD490",
+    "sku": "DR00041-PD490",
+    "name": "映盛｜五鑽華彩戒指",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 205300,
+    "images": [
+      "assets/missdiamond/imported/DR00041-PD490.jpeg"
+    ],
+    "description": "讓並肩的光芒，盛放於指間。\n\n映盛以 5 顆天然鑽石展開經典排鑽戒面，每顆鑽石保有鮮明輪廓，沿著柔和弧度彼此映照。細緻鑲座與側面紋理，讓簡潔造型多了一份值得細看的層次。\n\n天然鑽石總重 0.92 ct，與 14K 白的清亮光澤相互映襯，呈現優雅而醒目的質感。適合喜歡經典款式、也希望鑽石具有存在感的妳，為日常穿搭或重要時刻添上光彩。",
+    "featureTags": [
+      "經典款",
+      "閃耀光澤",
+      "天然鑽石"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：5 顆天然鑽石，共 0.92 ct（ 0.18 ct）\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "5D:0.92cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00042-PD694",
+    "sku": "DR00042-PD694",
+    "name": "迴舞｜不對稱迴環鑽戒",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 150100,
+    "images": [
+      "assets/missdiamond/imported/DR00042-PD694.jpeg"
+    ],
+    "description": "讓光芒迴旋，舞出自己的姿態。\n\n迴舞以大小不同的迴環勾勒不對稱輪廓，斜向鑽石曲線在中央交會，再向兩側舒展。流動線條與鏤空留白相互搭配，呈現如緞帶迴旋般的柔美層次。\n\n58 顆天然鑽石與 14K 白的清亮光澤相互映襯，讓每一道弧線都成為值得細看的細節。適合喜歡個性造型、欣賞不對稱設計的妳，搭配簡潔服裝便能展現指間焦點。",
+    "featureTags": [
+      "輕盈舒適",
+      "閃耀光澤",
+      "天然鑽石"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：58 顆天然鑽石，共 0.66 ct(約 0.01 ct）\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "58D:0.66cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00043-PD690",
+    "sku": "DR00043-PD690",
+    "name": "晨露｜十一鑽單排戒指",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 61600,
+    "images": [
+      "assets/missdiamond/imported/DR00043-PD690.jpeg"
+    ],
+    "description": "像晨間露珠，將微光輕輕留在指間。\n\n晨露以 11 顆天然鑽石串起細緻的單排戒面，順著戒圈弧度延伸，如露珠般點綴柔和光芒。弧形鑲座勾勒每顆鑽石的輪廓，讓簡潔排列多了一份柔美細節。\n\n總重 0.28 ct 的天然鑽石搭配白 K 金的清亮色澤，呈現秀氣、耐看的質感。適合喜歡細緻珠寶的妳，為日常穿搭添上一點光彩，也為值得紀念的時刻留下心意。",
+    "featureTags": [
+      "日常配戴",
+      "輕盈舒適",
+      "閃耀光澤"
+    ],
+    "specifications": "商品規格\n\n材質：白 K 金（約 5K）\n主鑽：\n配鑽：11 顆天然鑽石，共 0.28 ct（約 0.025 ct）\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "11D:0.28cts",
+    "metal": "白k金",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "DR00044",
+    "sku": "DR00044",
+    "name": "映采｜五鑽單排戒指",
+    "category": "ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 41300,
+    "images": [
+      "assets/missdiamond/imported/DR00044.jpeg"
+    ],
+    "description": "將五點光芒，串成值得珍藏的心意。\n\n映采以 5 顆天然鑽石勾勒單排戒面，每顆鑽石保有鮮明輪廓，沿戒圈弧度相互映襯。柔和的鑲座線條與俐落的素面戒身，讓光芒在簡潔造型中自然展開。\n\n天然鑽石總重 0.48 ct，搭配白 K 金的清亮色澤，呈現細緻而有份量的美感。適合喜歡經典排鑽、希望鑽石清楚可見的妳，也適合作為紀念日禮物，或送給自己的心意之選。",
+    "featureTags": [
+      "經典款",
+      "日常配戴",
+      "紀念送禮"
+    ],
+    "specifications": "材質：白 K 金（約 5K）\n主鑽：\n配鑽：5 顆天然鑽石，共 0.48 ct（ 0.09 ct）\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "5D:0.48cts",
+    "metal": "白k金",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
   },
   {
     "id": "e-01",
@@ -1361,6 +2873,7 @@ const products: JewelryProduct[] = [
     ],
     "price": 85000,
     "images": [
+      "assets/missdiamond/imported/ER00001-ER149.png",
       "assets/missdiamond/earring/ER00001-ER149.jpg",
       "assets/missdiamond/earring/ER00001-ER149-2.jpg"
     ],
@@ -1370,7 +2883,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "紀念送禮"
     ],
-    "specifications": "材質：18KR｜鍊材質：10K｜主石：天然鑽｜主石重量：無｜配鑽：天然鑽｜配鑽重量：MQ8P:0.68cts(0.085)",
+    "specifications": "材質：18K玫瑰金\n耳針：18K 玫瑰金   耳束：18K玫瑰金\n鑽石形狀：Marquise（馬眼）\n鑽石數量：8顆\n鑽石總重：0.68ct\n配戴方式：耳針式",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1401,6 +2914,7 @@ const products: JewelryProduct[] = [
     ],
     "price": 28000,
     "images": [
+      "assets/missdiamond/imported/ER00002-H4.png",
       "assets/missdiamond/earring/ER00002-H4.jpg",
       "assets/missdiamond/earring/ER00002-H4-2.jpg"
     ],
@@ -1410,7 +2924,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "俐落風格"
     ],
-    "specifications": "材質：18KW｜主石：無｜主石重量：無｜配鑽：天然鑽｜配鑽重量：2D:0.03cts",
+    "specifications": "材質:18K 白\n天然鑽石：2顆\n總重： 0.03 ct\n配戴方式： 扣式耳圈\n可用於耳骨耳環",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1437,6 +2951,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 35000,
     "images": [
+      "assets/missdiamond/imported/ER00003-H44.png",
       "assets/missdiamond/earring/ER00003-H44.jpg"
     ],
     "description": "真正經典的珠寶，不會因流行而改變。\nClassic Brilliance 以俐落的四爪設計，讓光線能充分進入鑽石，展現自然璀璨的火彩。白K金細緻光澤與天然鑽石相互襯托，不論單獨佩戴或與其他耳飾層次搭配，都能散發優雅魅力。\n從第一副天然鑽石耳環，到陪伴多年的日常珠寶，它都值得收藏。",
@@ -1445,7 +2960,7 @@ const products: JewelryProduct[] = [
       "簡約百搭",
       "日常配戴"
     ],
-    "specifications": "材質：14KW｜主石：無｜配鑽：天然鑽｜配鑽重量：2D:0.16cts(0.08)",
+    "specifications": "材質：14KW\n天然鑽石： 2顆\n總鑽重： 0.16 ct（每顆約0.08 ct）\n鑲嵌方式： 四爪鑲嵌\n經典不敗款",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1473,6 +2988,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 25000,
     "images": [
+      "assets/missdiamond/imported/ER00004-H6.png",
       "assets/missdiamond/earring/ER00004-H6.jpg"
     ],
     "description": "有些美，不需要張揚。\nTiny Spark 系列以最純粹的設計，讓天然鑽石成為每日陪伴的小亮點。纖細耳圈搭配輕盈鑽飾，不論是上班、約會或日常生活，都能自在配戴。\n是一款能陪伴妳許久、越戴越耐看的經典日常珠寶。",
@@ -1481,7 +2997,7 @@ const products: JewelryProduct[] = [
       "日常配戴",
       "俐落風格"
     ],
-    "specifications": "材質：18KR｜主石：無｜配鑽：天然鑽｜配鑽重量：2D:0.03cts",
+    "specifications": "材質:18K玫瑰金\n天然鑽石：2顆\n總重： 0.03 ct\n配戴方式： 扣式耳圈\n可用於耳骨耳環",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1508,6 +3024,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 238300,
     "images": [
+      "assets/missdiamond/imported/ER00005-PB396.jpeg",
       "assets/missdiamond/earring/ER00005-PB396.jpg"
     ],
     "description": "愛心，是最經典也最耐看的珠寶元素。\n\n這款耳環以約1.5克拉天然鑽石密鑲打造，讓整個愛心輪廓綻放細膩而均勻的光澤；背面則採鏤空愛心設計，不僅減輕重量，也讓光線更容易穿透鑽石，使火光更加明亮。\n\n隨著走動微微擺動，每一次轉身都散發柔和而耀眼的光芒。無論作為紀念日禮物、生日贈禮，或犒賞自己的收藏，都能陪伴妳很長的時間。",
@@ -1516,7 +3033,7 @@ const products: JewelryProduct[] = [
       "愛心設計",
       "輕盈舒適"
     ],
-    "specifications": "材質：14KW｜配鑽：天然鑽｜配鑽重量：68D:1.50cts(0.02)",
+    "specifications": "材質:14K白\n鑽石數量：68顆天然鑽石\n總鑽重：約1.50cts\n耳環款式：勾式耳環",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1533,19 +3050,122 @@ const products: JewelryProduct[] = [
     "unavailableReason": null
   },
   {
+    "id": "ER00006-PB268",
+    "sku": "ER00006-PB268",
+    "name": "花凝｜花簇光環鑽石耳環",
+    "category": "earrings",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 99500,
+    "images": [
+      "assets/missdiamond/imported/ER00006-PB268.jpeg"
+    ],
+    "description": "將綻放的光芒，輕輕凝聚於耳畔。\n\n花凝以每顆 10 分的天然主鑽作為中心，周圍 8 顆配鑽如花瓣般環繞，形成飽滿而細緻的花簇輪廓。圓形鑽石彼此映襯，讓光芒在轉動之間展現不同層次。\n\n一對共鑲嵌 18 顆天然鑽石，總重 0.53 ct，搭配 14K 白的清亮光澤，為臉龐添上明亮點綴。適合喜歡花形細節、又欣賞經典耳針款式的妳，也能作為生日、紀念日或送給自己的心意之選。",
+    "featureTags": [
+      "經典款",
+      "日常配戴",
+      "花朵造型"
+    ],
+    "specifications": "材質：14K 白\n主鑽：2 顆天然鑽石，共 0.20 ct（每顆 0.10 ct）\n配鑽：16 顆天然鑽石，共 0.33 ct（平均每顆約 0.02ct）\n鑲嵌方式：爪鑲\n商品單位：一對（以上鑽石顆數與重量皆為一對合計）",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "天然鑽",
+    "mainStoneWeight": "2D:0.20cts(0.10ct)",
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "16D:0.33cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "ER00007-PB303",
+    "sku": "ER00007-PB303",
+    "name": "初耀｜經典四爪鑽石耳環",
+    "category": "earrings",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 49100,
+    "images": [
+      "assets/missdiamond/imported/ER00007-PB303.jpeg"
+    ],
+    "description": "用一點光，點亮每一天。\n\n初耀以每顆 10 分的天然鑽石，搭配簡潔四爪鑲座，將光芒凝聚於耳畔。沒有繁複裝飾，圓形鑽石與俐落金屬線條便能呈現清雅、耐看的美感。\n\n14K 白的清亮光澤襯托天然鑽石，為日常穿搭增添細緻亮點。無論搭配襯衫、休閒服裝或正式穿著，都能自然融入，也適合作為第一對鑽石耳環，紀念屬於自己的美好時刻。",
+    "featureTags": [
+      "經典款",
+      "日常配戴",
+      "俐落風格"
+    ],
+    "specifications": "材質：14K 白\n主鑽：2 顆天然鑽石，共 0.20 ct（每顆 0.10 ct）\n配鑽：無\n鑲嵌方式：四爪鑲\n商品單位：一對（以上鑽石顆數與重量皆為一對合計）",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": "天然鑽",
+    "mainStoneWeight": "2D:0.20cts(0.10ct)",
+    "accentStone": null,
+    "accentStoneWeight": null,
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "ER00008-P336",
+    "sku": "ER00008-P336",
+    "name": "環曦｜單排鑽石耳圈",
+    "category": "earrings",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 56300,
+    "images": [
+      "assets/missdiamond/imported/ER00008-P336.jpeg"
+    ],
+    "description": "讓日常的光芒，沿著弧線延續。\n\n環曦以細緻天然鑽石勾勒耳圈前側，將點點光芒串成柔和弧線。簡潔的圓形輪廓與素面金屬相互映襯，呈現清雅而有細節的美感。\n\n一對共鑲嵌 24 顆天然鑽石，總重 0.17 ct，搭配 14K 白的清亮光澤，為耳畔添上細緻亮點。適合喜歡經典耳圈、希望日常穿搭多一點光彩的妳，從休閒服裝到俐落襯衫都能自然搭配。",
+    "featureTags": [
+      "經典款",
+      "俐落風格",
+      "閃耀光澤"
+    ],
+    "specifications": "材質：14K 白\n主鑽：\n配鑽：24 顆天然鑽石，共 0.17 ct\n鑲嵌方式：爪鑲\n商品單位：一對（以上鑽石顆數與重量皆為一對合計）",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "24D:0.17cts",
+    "metal": "14KW",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
     "id": "m-01",
-    "sku": "MR00001-DM00614",
+    "sku": "MR00001-PD-796",
     "name": "Royal Crown 鑽石男戒",
     "category": "mens-ring",
     "materials": [
       "diamond"
     ],
-    "styleTags": [
-      "neutral",
-      "minimal"
-    ],
+    "styleTags": [],
     "price": 253800,
     "images": [
+      "assets/missdiamond/imported/MR00001-PD-796.png",
       "assets/missdiamond/man ring/MR00001-DM00614.jpg",
       "assets/missdiamond/man ring/MR00001-DM00614-2.jpg"
     ],
@@ -1555,7 +3175,7 @@ const products: JewelryProduct[] = [
       "寬版設計",
       "立體層次"
     ],
-    "specifications": "材質：白k金｜主石：無｜主石重量：無｜配鑽：天然鑽｜配鑽重量：81D:1.27cts(0.015)",
+    "specifications": "材質:白K金(5K)\n主石:天然鑽石\n鑽石數量:81顆\n總鑽重:1.27 cts 平均( 0.015) \n配戴場合:商務、宴會、收藏、送禮",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1566,25 +3186,23 @@ const products: JewelryProduct[] = [
     "accentStoneWeight": "81D:1.27cts(0.015)",
     "metal": "白k金",
     "chainMetal": null,
-    "stock": null,
+    "stock": 1,
     "sourceStatus": "寄店家",
     "available": true,
     "unavailableReason": null
   },
   {
     "id": "m-02",
-    "sku": "MR00002-DM00616",
+    "sku": "MR00002-PD-812",
     "name": "Imperial Crown 皇家鋒芒男戒",
     "category": "mens-ring",
     "materials": [
       "diamond"
     ],
-    "styleTags": [
-      "bold",
-      "designer"
-    ],
+    "styleTags": [],
     "price": 536100,
     "images": [
+      "assets/missdiamond/imported/MR00002-PD-812.png",
       "assets/missdiamond/man ring/MR00002-DM00616.jpg",
       "assets/missdiamond/man ring/MR00002-DM00616-2.jpg"
     ],
@@ -1594,7 +3212,7 @@ const products: JewelryProduct[] = [
       "立體層次",
       "細緻鑲嵌"
     ],
-    "specifications": "材質：白k金｜主石：無｜主石重量：無｜配鑽：天然鑽｜配鑽重量：125D:2.38cts(0.019)",
+    "specifications": "材質：白K金(5K)\n主石：天然鑽石\n鑽石數量：125顆\n總重：2.38cts 平均(0.019)\n款式：寬版豪華男戒",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1605,14 +3223,14 @@ const products: JewelryProduct[] = [
     "accentStoneWeight": "125D:2.38cts(0.019)",
     "metal": "白k金",
     "chainMetal": null,
-    "stock": null,
+    "stock": 0,
     "sourceStatus": "歸還",
     "available": false,
     "unavailableReason": "目前暫不提供看貨媒合"
   },
   {
     "id": "MR00003-DM00458",
-    "sku": "MR00003-DM00458",
+    "sku": "MR00003-PD-407",
     "name": "王者80分鑽石男戒",
     "category": "mens-ring",
     "materials": [
@@ -1621,6 +3239,7 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 189300,
     "images": [
+      "assets/missdiamond/imported/MR00003-PD-407.png",
       "assets/missdiamond/man ring/MR00003-DM00458.jpg",
       "assets/missdiamond/man ring/MR00003-DM00458-2.jpg"
     ],
@@ -1630,7 +3249,7 @@ const products: JewelryProduct[] = [
       "輕盈舒適",
       "俐落風格"
     ],
-    "specifications": "材質：白k金｜配鑽：天然鑽｜配鑽重量：33D:0.80cts",
+    "specifications": "材質：白K金(5K)\n主石：天然鑽石\n鑽石數量：33顆\n總重：0.80cts \n款式:寬版男戒\n配戴方式：主戒、紀念戒、收藏戒",
     "availableLocations": [
       "台北市",
       "新北市"
@@ -1641,7 +3260,77 @@ const products: JewelryProduct[] = [
     "accentStoneWeight": "33D:0.80cts",
     "metal": "白k金",
     "chainMetal": null,
-    "stock": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "MR00004-PD685",
+    "sku": "MR00004-PD685",
+    "name": "曜城｜方形層次滿鑽戒指",
+    "category": "mens-ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 303800,
+    "images": [
+      "assets/missdiamond/imported/MR00004-PD685.jpeg"
+    ],
+    "description": "以俐落線條，築起指間的光芒。\n\n曜城以方形框線層層圍繞中央聚鑽，如建築般勾勒有秩序的輪廓。圓形鑽石的閃耀與幾何線條交會，讓寬版戒面兼具華麗光彩與結構美感。\n\n133 顆天然鑽石總重 1.55 ct，從中央戒面延伸至兩側戒肩，搭配白 K 金的清亮色澤，展現豐富層次。適合喜歡寬版珠寶、重視造型份量的你，為簡潔穿搭增添醒目焦點，也為重要場合留下鮮明印象。",
+    "featureTags": [
+      "幾何線條",
+      "俐落風格",
+      "寬版設計"
+    ],
+    "specifications": "材質：白 K 金（約 5K）\n主鑽：\n配鑽：133 顆天然鑽石，共 1.55 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "133D:1.55cts",
+    "metal": "白k金",
+    "chainMetal": null,
+    "stock": 1,
+    "sourceStatus": "寄店家",
+    "available": true,
+    "unavailableReason": null
+  },
+  {
+    "id": "MR00005-PD418",
+    "sku": "MR00005-PD418",
+    "name": "曜衡｜方框聚鑽男戒",
+    "category": "mens-ring",
+    "materials": [
+      "diamond"
+    ],
+    "styleTags": [],
+    "price": 322800,
+    "images": [
+      "assets/missdiamond/imported/MR00005-PD418.jpeg"
+    ],
+    "description": "以方正輪廓，展現從容而鮮明的個人風格。\n\n曜衡將圓形聚鑽置於層疊方框之中，四周排鑽沿直線延伸，形成均衡、有秩序的戒面。拋光金屬框線清楚劃分各層細節，讓鑽石光芒與立體結構相互襯托。\n\n81 顆天然鑽石總重 1.62 ct，搭配白 K 金的清亮色澤與寬版戒身，從正面到戒肩皆有值得欣賞的細節。適合喜歡厚實男戒、重視幾何線條與珠寶份量的你，單戴即可成為穿搭焦點，也能作為紀念重要里程碑的心意之選。",
+    "featureTags": [
+      "幾何線條",
+      "俐落風格",
+      "寬版設計"
+    ],
+    "specifications": "材質：白 K 金（約 5K）\n主鑽：\n配鑽：81 顆天然鑽石，共 1.62 ct\n鑲嵌方式：爪鑲",
+    "availableLocations": [
+      "台北市",
+      "新北市"
+    ],
+    "mainStone": null,
+    "mainStoneWeight": null,
+    "accentStone": "天然鑽",
+    "accentStoneWeight": "81D:1.62cts",
+    "metal": "白k金",
+    "chainMetal": null,
+    "stock": 1,
     "sourceStatus": "寄店家",
     "available": true,
     "unavailableReason": null
