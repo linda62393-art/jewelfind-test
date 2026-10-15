@@ -13,7 +13,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 210000,
     "images": [
-      "assets/missdiamond/imported/BR00005-BR102.png",
       "assets/missdiamond/braclet/BR00006-BR102.jpg"
     ],
     "description": "當陽光落在黃鑽之上，\n那抹金黃色澤總能瞬間吸引目光。\n這款手鍊以天然黃鑽為視覺焦點，搭配環繞四周的白鑽設計，讓中央黃鑽顯得更加耀眼奪目。\n黃鑽象徵希望、財富與正向能量，\n不僅是一件珠寶，更是一種光芒與自信的展現。\n無論是出席重要場合、收藏珍藏，或作為人生重要時刻的紀念，\n都能留下令人難忘的璀璨記憶。",
@@ -50,7 +49,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 70500,
     "images": [
-      "assets/missdiamond/imported/BR00005-BR98.png",
       "assets/missdiamond/braclet/BR00005-BR98.jpg"
     ],
     "description": "不同於傳統滿鑽手鍊的華麗張揚，\n這款以梯鑽與圓鑽交錯排列，呈現出俐落而細膩的節奏感。\n光線在不同切面間流轉，展現低調卻難以忽視的精緻魅力。\n無論是上班、聚會或正式場合，都能自然融入穿搭之中。\n是一款歷久彌新、不易退流行的經典作品。",
@@ -87,7 +85,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 76000,
     "images": [
-      "assets/missdiamond/imported/BR00007-BR123.png",
       "assets/missdiamond/braclet/BR00007-BR123.jpg"
     ],
     "description": "真正耐看的珠寶，\n不是最耀眼，而是每天都想戴。\nAurora Hex 以六角幾何元素結合天然真鑽，\n讓光線在每一顆鑽石間自然流動。\n沒有誇張的設計，\n卻能在舉手投足之間散發細緻光芒。\n它適合陪伴妳上班、旅行、約會，\n也陪妳度過每一個平凡卻珍貴的日常。",
@@ -123,7 +120,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 60000,
     "images": [
-      "assets/missdiamond/imported/BR00008-BR124.png",
       "assets/missdiamond/braclet/BR00008-BR124.jpg"
     ],
     "description": "有些珠寶，不需要張揚，就能讓人一眼感受到品味。\n這款手鍊以圓形、方形與欖圓元素巧妙交織，每一顆天然鑽石都像生活中的小亮點，在光線下閃耀著溫柔光芒。\n簡潔卻不單調，優雅卻不浮誇。\n它適合陪伴妳穿梭於工作、生活與旅行之間，讓每一次抬手，都流露出細緻而自信的氣質。",
@@ -162,7 +158,8 @@ const products: JewelryProduct[] = [
     ],
     "price": 262200,
     "images": [
-      "assets/missdiamond/imported/BR00009-PB225.png"
+      "assets/missdiamond/braclet/BR00009-PB225.jpg",
+      "assets/missdiamond/braclet/BR00009-PB225-2.jpg"
     ],
     "description": "耐看的珠寶，不需要過度張揚。\n這款約1克拉天然鑽石手環，以21顆天然鑽石整齊排列，讓光線隨著每一次手部動作自然流轉，展現細緻而優雅的光芒。\n14K白搭配鏤空結構，不僅降低整體重量，也提升配戴舒適度，讓精品珠寶能真正融入每天的生活。\n無論正式宴會、商務場合，或日常穿搭，都能低調展現成熟質感，是值得長久收藏的經典款式。",
     "featureTags": [
@@ -198,7 +195,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 70000,
     "images": [
-      "assets/missdiamond/imported/DP00005-DP331.jpeg",
       "assets/missdiamond/pendant/DP00005-DP331.jpg"
     ],
     "description": "三顆愛心天然鑽石垂墜排列，總重0.12ct，搭配10K白金墜飾與18K白金項鍊，展現優雅柔美的頸間光彩。浪漫而經典，適合作為紀念日與珍藏禮物。",
@@ -235,7 +231,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 55000,
     "images": [
-      "assets/missdiamond/imported/DP00006-DP339.jpeg",
       "assets/missdiamond/pendant/DP00006-DP339.jpg"
     ],
     "description": "四顆馬眼形天然鑽石組成優雅花朵造型，總重0.32ct，\n搭配18K玫瑰金墜飾與18K玫瑰金鍊條，展現細膩火彩與柔美氣質。\n適合日常配戴與紀念。",
@@ -271,7 +266,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 25000,
     "images": [
-      "assets/missdiamond/imported/DP00007-DP139.jpeg",
       "assets/missdiamond/pendant/DP00007-DP139.jpg"
     ],
     "description": "三顆天然藍寶石排列於頸間，展現優雅而細膩的藍色光彩。\n搭配14K黃金墜飾與18K黃金鍊條，在簡約設計中展現低調質感，\n適合日常配戴與送禮收藏。",
@@ -308,7 +302,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 25000,
     "images": [
-      "assets/missdiamond/imported/DP00008-DP220W.jpeg",
       "assets/missdiamond/pendant/DP00008-DP220W.jpg"
     ],
     "description": "將心形與皇冠元素巧妙融合，主鑽鑲嵌於心型中央，搭配皇冠造型配鑽點綴，展現優雅而浪漫的氣息。\n0.10 克拉天然主鑽成為視覺焦點，搭配五顆配鑽襯托光彩，在低調中展現精緻質感。無論作為紀念日禮物、生日禮物，或送給值得珍惜的自己，都是充滿心意的選擇。",
@@ -346,7 +339,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 42000,
     "images": [
-      "assets/missdiamond/imported/DP00009-DP220R.jpeg",
       "assets/missdiamond/pendant/DP00009-DP220R.jpg"
     ],
     "description": "將心形與皇冠元素巧妙融合，主鑽鑲嵌於心型中央，搭配皇冠造型配鑽點綴，展現優雅而浪漫的氣息。\n0.10 克拉天然主鑽成為視覺焦點，搭配五顆配鑽襯托光彩，在低調中展現精緻質感。無論作為紀念日禮物、生日禮物，或送給值得珍惜的自己，都是充滿心意的選擇。",
@@ -383,7 +375,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 42000,
     "images": [
-      "assets/missdiamond/imported/DP00010-DP221W.jpeg",
       "assets/missdiamond/pendant/DP00010-DP221W.jpg"
     ],
     "description": "每個人心中，都有一輪屬於自己的月亮。\n星月晨曦鑽石項鍊以溫柔的新月環抱璀璨鑽石，象徵陪伴、守護與希望。中央10分天然鑽石經由放射狀配鑽襯托，散發如星光般耀眼的光芒，而鍊身上的一顆小鑽，更像夜空中最閃耀的一顆星，低調卻令人難忘。\n無論是送給自己，紀念人生的重要時刻；或送給摯愛，傳遞陪伴與祝福，都能成為值得珍藏一生的珠寶。",
@@ -420,7 +411,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 42000,
     "images": [
-      "assets/missdiamond/imported/DP00011-DP221R.png",
       "assets/missdiamond/pendant/DP00011-DP221R.jpg"
     ],
     "description": "每個人心中，都有一輪屬於自己的月亮。\n星月晨曦鑽石項鍊以溫柔的新月環抱璀璨鑽石，象徵陪伴、守護與希望。中央10分天然鑽石經由放射狀配鑽襯托，散發如星光般耀眼的光芒，而鍊身上的一顆小鑽，更像夜空中最閃耀的一顆星，低調卻令人難忘。\n無論是送給自己，紀念人生的重要時刻；或送給摯愛，傳遞陪伴與祝福，都能成為值得珍藏一生的珠寶。",
@@ -457,7 +447,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 45000,
     "images": [
-      "assets/missdiamond/imported/DP00012-DP115.png",
       "assets/missdiamond/pendant/DP00012-DP115.jpg"
     ],
     "description": "有些人追求的是更大的克拉數，有些人則更在意整體的配戴效果。\n\n採用放大台設計，透過精準的比例配置，讓 20 分天然鑽石擁有接近 30 分鑽石的視覺存在感，兼顧美感與預算。\n\n沒有過度繁複的裝飾，將焦點留給天然鑽石本身，展現經典耐看的珠寶魅力。無論是送給自己的人生紀念，或作為重要禮物，都能陪伴每一個值得珍藏的時刻。",
@@ -494,7 +483,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 25000,
     "images": [
-      "assets/missdiamond/imported/DP00013-DP119.png",
       "assets/missdiamond/pendant/DP00013-DP119.jpg"
     ],
     "description": "經典之所以經典，是因為它歷久彌新。\n\n採用最受歡迎的四爪單鑽設計，以18K白金襯托12分天然鑽石，讓光線自然穿透，展現晶瑩剔透的火彩。D色高白等級搭配SI淨度，在價格與品質之間取得理想平衡，是許多人入手天然鑽石珠寶的熱門選擇。\n\n無論日常穿搭、上班、約會或重要聚會，都能為整體造型增添細緻光采。簡潔俐落的設計，也讓它成為送給自己或重要之人的經典禮物。",
@@ -530,7 +518,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 23500,
     "images": [
-      "assets/missdiamond/imported/DP00014-DP132.jpeg",
       "assets/missdiamond/pendant/DP00014-DP132.jpg"
     ],
     "description": "愛心，不只是浪漫，更代表著陪伴、守護與珍惜。\n\n將天然鑽石鑲嵌於愛心中央，以簡潔俐落的設計呈現細膩光澤，沒有過多裝飾，讓珠寶自然融入生活。\n\n無論送給自己，提醒自己值得被珍惜；或送給重要的人，都是一份充滿心意且歷久彌新的禮物。",
@@ -566,7 +553,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 18000,
     "images": [
-      "assets/missdiamond/imported/DP00015-DP136.jpeg",
       "assets/missdiamond/pendant/DP00015-DP136.jpg"
     ],
     "description": "有些珠寶，不需要華麗，就能令人一眼難忘。\n這款 Dancing Diamond 跳動鑽石項鍊，以極簡圓形外框包覆中央10分天然鑽石。當妳走路、呼吸或轉身時，中央鑽石會隨著細微動作自然擺動，讓光線持續折射，散發比一般固定式鑽石更加靈動耀眼的火彩。\n9K白金搭配簡潔流暢的設計，展現現代女性低調、自信且耐看的品味。無論日常穿搭、上班、約會或送禮，都能成為長久陪伴的經典珠寶。",
@@ -603,7 +589,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 35000,
     "images": [
-      "assets/missdiamond/imported/DP00016-DP154R.png",
       "assets/missdiamond/pendant/DP00016-DP154R.jpg"
     ],
     "description": "有些美，不需要過多裝飾。\n晨曦經典 10分天然鑽石項鍊以最經典的六爪鑲嵌，將10分天然鑽石穩固托起，讓光線能充分進入鑽石，每個角度都散發自然火彩。\n18K玫瑰金溫潤細膩的色澤，讓整體更加柔美優雅，不論單獨佩戴，或與其他項鍊層次搭配，都能展現恰到好處的精緻感。\n它不是最張揚的一件珠寶，卻是最容易陪伴妳走過每一天的一件作品。",
@@ -640,7 +625,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 35000,
     "images": [
-      "assets/missdiamond/imported/DP00017-DP155W.jpeg",
       "assets/missdiamond/pendant/DP00017-DP155W.jpg"
     ],
     "description": "有些美，不需要過多裝飾。\n晨曦經典 10分天然鑽石項鍊以最經典的六爪鑲嵌，將10分天然鑽石穩固托起，讓光線能充分進入鑽石，每個角度都散發自然火彩。\n18K白溫潤細膩的色澤，讓整體更加柔美優雅，不論單獨佩戴，或與其他項鍊層次搭配，都能展現恰到好處的精緻感。\n它不是最張揚的一件珠寶，卻是最容易陪伴妳走過每一天的一件作品。",
@@ -677,7 +661,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 35000,
     "images": [
-      "assets/missdiamond/imported/DP00018-DP2553.jpeg",
       "assets/missdiamond/pendant/DP00018-DP2553.jpg"
     ],
     "description": "愛，不一定需要轟轟烈烈。\n有時，只需要一顆簡單的心，就足以表達最深的情感。\n這款心語光芒 愛心鑽石項鍊，以14顆天然鑽石勾勒出鏤空愛心輪廓，象徵愛與陪伴永遠留存在心中。每一顆鑽石都代表一份真心，細膩排列後形成柔和卻耀眼的光芒。\n18K白金散發純淨光澤，讓整體設計更加耐看，不論是送給摯愛、家人、女兒，或是送給努力生活的自己，都能成為值得珍藏的紀念。\n有些禮物，代表的是一句說不出口的——我一直都在。",
@@ -714,7 +697,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 25000,
     "images": [
-      "assets/missdiamond/imported/DP00019-DP268.png",
       "assets/missdiamond/pendant/DP00019-DP268.jpg"
     ],
     "description": "有些光芒，不是耀眼，而是細水長流。\n星語流光 五鑽垂墜項鍊以五顆天然鑽石依序排列，如同人生一路累積的美好時刻，也像夜空中連成一線的星光，低調卻始終閃耀。\n垂墜式設計讓項鍊隨著動作自然擺動，增添細緻光澤，同時修飾頸部比例，使整體造型更加優雅修長。\n18K白金搭配極簡設計，沒有多餘裝飾，卻能陪伴妳從日常到重要時刻，成為歷久彌新的經典作品。",
@@ -750,7 +732,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 28500,
     "images": [
-      "assets/missdiamond/imported/DP00020-DP57.png",
       "assets/missdiamond/pendant/DP00020-DP57.jpg"
     ],
     "description": "真正的光芒，不需要刻意炫耀。\n流光擁抱鑽石項鍊以柔和流線包覆著15分天然鑽石，就像一雙溫柔的手，守護著最珍貴的信念與回憶。\n設計沒有多餘的裝飾，而是透過簡潔的線條，讓鑽石自然成為視覺焦點。每一次光線流轉，都散發出內斂而自信的光彩。\n它適合每天陪伴妳，無論是工作、約會或旅行，都能低調地展現品味，讓珠寶成為生活的一部分，而非只屬於特別的日子。",
@@ -1279,7 +1260,6 @@ const products: JewelryProduct[] = [
     ],
     "price": 557600,
     "images": [
-      "assets/missdiamond/imported/DR00001-PD520.png",
       "assets/missdiamond/band ring/DR00001-PD520.jpg",
       "assets/missdiamond/band ring/DR00001-PD520-2.jpg"
     ],
@@ -1319,7 +1299,6 @@ const products: JewelryProduct[] = [
     ],
     "price": 93600,
     "images": [
-      "assets/missdiamond/imported/DR00002-PD394.jpeg",
       "assets/missdiamond/ring/DR00002-PD394.jpg",
       "assets/missdiamond/ring/DR00002-PD394-2.jpg"
     ],
@@ -1360,7 +1339,6 @@ const products: JewelryProduct[] = [
     ],
     "price": 40000,
     "images": [
-      "assets/missdiamond/imported/DR00003-DR464L.png",
       "assets/missdiamond/band ring/DR00003-DR464L.jpg",
       "assets/missdiamond/band ring/DR00003-DR464L-2.jpg"
     ],
@@ -1400,7 +1378,6 @@ const products: JewelryProduct[] = [
     ],
     "price": 55000,
     "images": [
-      "assets/missdiamond/imported/DR00004-LN09.jpeg",
       "assets/missdiamond/ring/DR00004-LN09.jpg",
       "assets/missdiamond/ring/DR00004-LN09-2.jpg"
     ],
@@ -1438,7 +1415,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 98000,
     "images": [
-      "assets/missdiamond/imported/DR00005-DR590.png",
       "assets/missdiamond/ring/DR00005-DR590.jpg",
       "assets/missdiamond/ring/DR00005-DR590-2.jpg"
     ],
@@ -1475,7 +1451,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 85000,
     "images": [
-      "assets/missdiamond/imported/DR00006-DR588.png",
       "assets/missdiamond/band ring/DR00006-DR588.jpg",
       "assets/missdiamond/band ring/DR00006-DR588-2.jpg"
     ],
@@ -1515,7 +1490,6 @@ const products: JewelryProduct[] = [
     ],
     "price": 20000,
     "images": [
-      "assets/missdiamond/imported/DR00007-DSR01.png",
       "assets/missdiamond/band ring/DR00007-DSR01.jpg",
       "assets/missdiamond/band ring/DR00007-DSR01-2.jpg"
     ],
@@ -1553,7 +1527,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 33000,
     "images": [
-      "assets/missdiamond/imported/DR00008-RG92290.png",
       "assets/missdiamond/band ring/DR00008-RG92290.jpg",
       "assets/missdiamond/band ring/DR00008-RG92290-2.jpg"
     ],
@@ -1590,7 +1563,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 302300,
     "images": [
-      "assets/missdiamond/imported/DR00009-PD-738.png",
       "assets/missdiamond/band ring/DR00009-DG1200.jpg",
       "assets/missdiamond/band ring/DR00009-DG1200-2.jpg"
     ],
@@ -1630,7 +1602,6 @@ const products: JewelryProduct[] = [
     ],
     "price": 102900,
     "images": [
-      "assets/missdiamond/imported/DR00010-PD636.png",
       "assets/missdiamond/band ring/DR00010-PD636.jpg",
       "assets/missdiamond/band ring/DR00010-PD636-2.jpg"
     ],
@@ -1667,7 +1638,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 34900,
     "images": [
-      "assets/missdiamond/imported/DR00011-PD668.png",
       "assets/missdiamond/band ring/DR00011-PD668.jpg",
       "assets/missdiamond/band ring/DR00011-PD668-2.jpg"
     ],
@@ -1704,7 +1674,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 134200,
     "images": [
-      "assets/missdiamond/imported/DR00012-PD731.png",
       "assets/missdiamond/band ring/DR00012-PD731.jpg",
       "assets/missdiamond/band ring/DR00012-PD731-2.jpg"
     ],
@@ -1741,7 +1710,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 144100,
     "images": [
-      "assets/missdiamond/imported/DR00013-PD614.png",
       "assets/missdiamond/ring/DR00013-PD614.jpg",
       "assets/missdiamond/ring/DR00013-PD614-2.jpg"
     ],
@@ -1781,7 +1749,6 @@ const products: JewelryProduct[] = [
     ],
     "price": 72700,
     "images": [
-      "assets/missdiamond/imported/DR00014-PD804.png",
       "assets/missdiamond/ring/DR00014-PD804.jpg",
       "assets/missdiamond/ring/DR00014-PD804-2.jpg",
       "assets/missdiamond/ring/DR00014-PD804-3.jpg"
@@ -1819,7 +1786,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 114100,
     "images": [
-      "assets/missdiamond/imported/DR00015-PD783.png",
       "assets/missdiamond/ring/DR00015-PD783.png"
     ],
     "description": "主鑽 0.33 克拉，搭配戒臂 22 顆小鑽、共 0.14 克拉，細緻排列於兩側，讓主鑽視覺更集中、同時增加整體閃耀感。戒台採 14K 金製作，戒臂線條纖細俐落，保留經典單鑽戒的乾淨比例，又比一般素面單鑽多一點精緻感。\n\n六爪鑲嵌讓主鑽輪廓完整呈現，從正面看有明顯聚焦效果；細版戒腳則讓整體不顯厚重，適合日常配戴，也很適合作為求婚戒、紀念戒或送給自己的第一只鑽戒。",
@@ -2873,7 +2839,6 @@ const products: JewelryProduct[] = [
     ],
     "price": 85000,
     "images": [
-      "assets/missdiamond/imported/ER00001-ER149.png",
       "assets/missdiamond/earring/ER00001-ER149.jpg",
       "assets/missdiamond/earring/ER00001-ER149-2.jpg"
     ],
@@ -2914,7 +2879,6 @@ const products: JewelryProduct[] = [
     ],
     "price": 28000,
     "images": [
-      "assets/missdiamond/imported/ER00002-H4.png",
       "assets/missdiamond/earring/ER00002-H4.jpg",
       "assets/missdiamond/earring/ER00002-H4-2.jpg"
     ],
@@ -2951,7 +2915,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 35000,
     "images": [
-      "assets/missdiamond/imported/ER00003-H44.png",
       "assets/missdiamond/earring/ER00003-H44.jpg"
     ],
     "description": "真正經典的珠寶，不會因流行而改變。\nClassic Brilliance 以俐落的四爪設計，讓光線能充分進入鑽石，展現自然璀璨的火彩。白K金細緻光澤與天然鑽石相互襯托，不論單獨佩戴或與其他耳飾層次搭配，都能散發優雅魅力。\n從第一副天然鑽石耳環，到陪伴多年的日常珠寶，它都值得收藏。",
@@ -2988,7 +2951,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 25000,
     "images": [
-      "assets/missdiamond/imported/ER00004-H6.png",
       "assets/missdiamond/earring/ER00004-H6.jpg"
     ],
     "description": "有些美，不需要張揚。\nTiny Spark 系列以最純粹的設計，讓天然鑽石成為每日陪伴的小亮點。纖細耳圈搭配輕盈鑽飾，不論是上班、約會或日常生活，都能自在配戴。\n是一款能陪伴妳許久、越戴越耐看的經典日常珠寶。",
@@ -3024,7 +2986,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 238300,
     "images": [
-      "assets/missdiamond/imported/ER00005-PB396.jpeg",
       "assets/missdiamond/earring/ER00005-PB396.jpg"
     ],
     "description": "愛心，是最經典也最耐看的珠寶元素。\n\n這款耳環以約1.5克拉天然鑽石密鑲打造，讓整個愛心輪廓綻放細膩而均勻的光澤；背面則採鏤空愛心設計，不僅減輕重量，也讓光線更容易穿透鑽石，使火光更加明亮。\n\n隨著走動微微擺動，每一次轉身都散發柔和而耀眼的光芒。無論作為紀念日禮物、生日贈禮，或犒賞自己的收藏，都能陪伴妳很長的時間。",
@@ -3165,7 +3126,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 253800,
     "images": [
-      "assets/missdiamond/imported/MR00001-PD-796.png",
       "assets/missdiamond/man ring/MR00001-DM00614.jpg",
       "assets/missdiamond/man ring/MR00001-DM00614-2.jpg"
     ],
@@ -3202,7 +3162,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 536100,
     "images": [
-      "assets/missdiamond/imported/MR00002-PD-812.png",
       "assets/missdiamond/man ring/MR00002-DM00616.jpg",
       "assets/missdiamond/man ring/MR00002-DM00616-2.jpg"
     ],
@@ -3239,7 +3198,6 @@ const products: JewelryProduct[] = [
     "styleTags": [],
     "price": 189300,
     "images": [
-      "assets/missdiamond/imported/MR00003-PD-407.png",
       "assets/missdiamond/man ring/MR00003-DM00458.jpg",
       "assets/missdiamond/man ring/MR00003-DM00458-2.jpg"
     ],

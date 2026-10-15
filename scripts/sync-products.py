@@ -127,6 +127,8 @@ def embedded_images(path, rows):
             image_path = posixpath.normpath('xl/richData/' + rels[rel_id])
             extension = Path(image_path).suffix.lower()
             if extension not in ('.jpeg', '.jpg', '.png'): raise ValueError('Unsupported embedded image')
+            # Excel PNGs are owner-only reference composites, never public assets.
+            if extension == '.png': continue
             relative = 'assets/missdiamond/imported/' + item['SKU'] + extension
             raw = z.read(image_path)
             result[relative] = cleaner.clean_png(raw) if extension == '.png' else cleaner.clean_jpeg(raw)
