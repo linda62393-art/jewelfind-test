@@ -12,16 +12,44 @@
     "DR00001-PD520": "c-01",
     "DR00003-DR464L": "c-02",
     "DR00007-DSR01": "c-03",
-    "DR00010-PD636": "c-04"
+    "DR00010-PD636": "c-04",
+    "BR00005-BR102": "BR00005-BR102",
+    "BR00005-BR98": "BR00005-BR98",
+    "BR00007-BR123": "BR00007-BR123",
+    "BR00008-BR124": "BR00008-BR124",
+    "DP00005-DP331": "DP00005-DP331",
+    "DP00006-DP339": "DP00006-DP339",
+    "DP00007-DP139": "DP00007-DP139",
+    "DP00008-DP220W": "DP00008-DP220W",
+    "DP00009-DP220R": "DP00009-DP220R",
+    "DP00010-DP221W": "DP00010-DP221W",
+    "DP00011-DP221R": "DP00011-DP221R",
+    "DP00012-DP115": "DP00012-DP115",
+    "DP00013-DP119": "DP00013-DP119",
+    "DP00014-DP132": "DP00014-DP132",
+    "DP00015-DP136": "DP00015-DP136",
+    "DP00016-DP154R": "DP00016-DP154R",
+    "DP00017-DP155W": "DP00017-DP155W",
+    "DP00018-DP2553": "DP00018-DP2553",
+    "DP00019-DP268": "DP00019-DP268",
+    "DP00020-DP57": "DP00020-DP57",
+    "DR00005-DR590": "DR00005-DR590",
+    "DR00006-DR588": "DR00006-DR588",
+    "DR00008-RG92290": "DR00008-RG92290",
+    "DR00009-PD-738": "DR00009-DG1200",
+    "DR00011-PD668": "DR00011-PD668",
+    "DR00012-PD731": "DR00012-PD731",
+    "DR00013-PD614": "DR00013-PD614",
+    "DR00015-PD783": "DR00015-PD783",
+    "DR00016-P305": "DR00016-P305",
+    "ER00003-H44": "ER00003-H44",
+    "ER00004-H6": "ER00004-H6",
+    "ER00005-PB396": "ER00005-PB396",
+    "MR00001-PD-796": "m-01",
+    "MR00002-PD-812": "m-02",
+    "MR00003-PD-407": "MR00003-DM00458"
   },
-  "pendingMappings": {
-    "DP00005-DP331": "n-01 同時使用兩個 SKU 照片，等待確認舊 ID 歸屬",
-    "DP00006-DP339": "n-01 同時使用兩個 SKU 照片，等待確認舊 ID 歸屬",
-    "DP00009-DP220R": "n-02 同時使用兩個 SKU 照片，等待確認舊 ID 歸屬",
-    "DP00011-DP221R": "n-02 同時使用兩個 SKU 照片，等待確認舊 ID 歸屬",
-    "BR00005-BR98": "b-01 混圖，等待確認舊 ID 歸屬",
-    "BR00005-BR102": "b-01 混圖，且 SKU 與圖片 BR00006-BR102 編號不同"
-  },
+  "pendingMappings": {},
   "categories": {
     "DR": "ring",
     "MR": "mens-ring",
@@ -84,5 +112,351 @@
       "refined"
     ]
   },
-  "imageOverrides": {}
+  "imageOverrides": {
+    "DR00001-PD520": [
+      "assets/missdiamond/imported/DR00001-PD520.png",
+      "assets/missdiamond/band ring/DR00001-PD520.jpg",
+      "assets/missdiamond/band ring/DR00001-PD520-2.jpg"
+    ],
+    "DR00002-PD394": [
+      "assets/missdiamond/imported/DR00002-PD394.jpeg",
+      "assets/missdiamond/ring/DR00002-PD394.jpg",
+      "assets/missdiamond/ring/DR00002-PD394-2.jpg"
+    ],
+    "DR00003-DR464L": [
+      "assets/missdiamond/imported/DR00003-DR464L.png",
+      "assets/missdiamond/band ring/DR00003-DR464L.jpg",
+      "assets/missdiamond/band ring/DR00003-DR464L-2.jpg"
+    ],
+    "DR00004-LN09": [
+      "assets/missdiamond/imported/DR00004-LN09.jpeg",
+      "assets/missdiamond/ring/DR00004-LN09.jpg",
+      "assets/missdiamond/ring/DR00004-LN09-2.jpg"
+    ],
+    "DR00005-DR590": [
+      "assets/missdiamond/imported/DR00005-DR590.png",
+      "assets/missdiamond/ring/DR00005-DR590.jpg",
+      "assets/missdiamond/ring/DR00005-DR590-2.jpg"
+    ],
+    "DR00006-DR588": [
+      "assets/missdiamond/imported/DR00006-DR588.png",
+      "assets/missdiamond/band ring/DR00006-DR588.jpg",
+      "assets/missdiamond/band ring/DR00006-DR588-2.jpg"
+    ],
+    "DR00007-DSR01": [
+      "assets/missdiamond/imported/DR00007-DSR01.png",
+      "assets/missdiamond/band ring/DR00007-DSR01.jpg",
+      "assets/missdiamond/band ring/DR00007-DSR01-2.jpg"
+    ],
+    "DR00008-RG92290": [
+      "assets/missdiamond/imported/DR00008-RG92290.png",
+      "assets/missdiamond/band ring/DR00008-RG92290.jpg",
+      "assets/missdiamond/band ring/DR00008-RG92290-2.jpg"
+    ],
+    "DR00009-PD-738": [
+      "assets/missdiamond/imported/DR00009-PD-738.png",
+      "assets/missdiamond/band ring/DR00009-DG1200.jpg",
+      "assets/missdiamond/band ring/DR00009-DG1200-2.jpg"
+    ],
+    "DR00010-PD636": [
+      "assets/missdiamond/imported/DR00010-PD636.png",
+      "assets/missdiamond/band ring/DR00010-PD636.jpg",
+      "assets/missdiamond/band ring/DR00010-PD636-2.jpg"
+    ],
+    "DR00011-PD668": [
+      "assets/missdiamond/imported/DR00011-PD668.png",
+      "assets/missdiamond/band ring/DR00011-PD668.jpg",
+      "assets/missdiamond/band ring/DR00011-PD668-2.jpg"
+    ],
+    "DR00012-PD731": [
+      "assets/missdiamond/imported/DR00012-PD731.png",
+      "assets/missdiamond/band ring/DR00012-PD731.jpg",
+      "assets/missdiamond/band ring/DR00012-PD731-2.jpg"
+    ],
+    "DR00013-PD614": [
+      "assets/missdiamond/imported/DR00013-PD614.png",
+      "assets/missdiamond/ring/DR00013-PD614.jpg",
+      "assets/missdiamond/ring/DR00013-PD614-2.jpg"
+    ],
+    "DR00014-PD804": [
+      "assets/missdiamond/imported/DR00014-PD804.png",
+      "assets/missdiamond/ring/DR00014-PD804.jpg",
+      "assets/missdiamond/ring/DR00014-PD804-2.jpg",
+      "assets/missdiamond/ring/DR00014-PD804-3.jpg"
+    ],
+    "DR00015-PD783": [
+      "assets/missdiamond/imported/DR00015-PD783.png",
+      "assets/missdiamond/ring/DR00015-PD783.png"
+    ],
+    "DR00016-P305": [
+      "assets/missdiamond/imported/DR00016-P305.jpeg"
+    ],
+    "DR00017-PD837": [
+      "assets/missdiamond/imported/DR00017-PD837.jpeg"
+    ],
+    "DR00018-PD773": [
+      "assets/missdiamond/imported/DR00018-PD773.jpeg"
+    ],
+    "DR00019-PD774": [
+      "assets/missdiamond/imported/DR00019-PD774.jpeg"
+    ],
+    "DR00020-PD775": [
+      "assets/missdiamond/imported/DR00020-PD775.jpeg"
+    ],
+    "DR00021-PD821": [
+      "assets/missdiamond/imported/DR00021-PD821.jpeg"
+    ],
+    "DR00022-PD824": [
+      "assets/missdiamond/imported/DR00022-PD824.jpeg"
+    ],
+    "DR00023-PD645": [
+      "assets/missdiamond/imported/DR00023-PD645.jpeg"
+    ],
+    "DR00024-PD654": [
+      "assets/missdiamond/imported/DR00024-PD654.jpeg"
+    ],
+    "DR00025-PD652": [
+      "assets/missdiamond/imported/DR00025-PD652.jpeg"
+    ],
+    "DR00026-PD697": [
+      "assets/missdiamond/imported/DR00026-PD697.jpeg"
+    ],
+    "DR00027-PD699": [
+      "assets/missdiamond/imported/DR00027-PD699.jpeg"
+    ],
+    "DR00028-PD702": [
+      "assets/missdiamond/imported/DR00028-PD702.jpeg"
+    ],
+    "DR00029-PD454": [
+      "assets/missdiamond/imported/DR00029-PD454.jpeg"
+    ],
+    "DR00030-PD751": [
+      "assets/missdiamond/imported/DR00030-PD751.jpeg"
+    ],
+    "DR00031-PD755": [
+      "assets/missdiamond/imported/DR00031-PD755.jpeg"
+    ],
+    "DR00032-PD732": [
+      "assets/missdiamond/imported/DR00032-PD732.jpeg"
+    ],
+    "DR00033-PD737": [
+      "assets/missdiamond/imported/DR00033-PD737.jpeg"
+    ],
+    "DR00034-PD742": [
+      "assets/missdiamond/imported/DR00034-PD742.jpeg"
+    ],
+    "DR00035-PD532": [
+      "assets/missdiamond/imported/DR00035-PD532.jpeg"
+    ],
+    "DR00036-PD696": [
+      "assets/missdiamond/imported/DR00036-PD696.jpeg"
+    ],
+    "DR00037-PD465": [
+      "assets/missdiamond/imported/DR00037-PD465.jpeg"
+    ],
+    "DR00038-PD567": [
+      "assets/missdiamond/imported/DR00038-PD567.jpeg"
+    ],
+    "DR00039-PD526": [
+      "assets/missdiamond/imported/DR00039-PD526.jpeg"
+    ],
+    "DR00040-PD822": [
+      "assets/missdiamond/imported/DR00040-PD822.jpeg"
+    ],
+    "DR00041-PD490": [
+      "assets/missdiamond/imported/DR00041-PD490.jpeg"
+    ],
+    "DR00042-PD694": [
+      "assets/missdiamond/imported/DR00042-PD694.jpeg"
+    ],
+    "DR00043-PD690": [
+      "assets/missdiamond/imported/DR00043-PD690.jpeg"
+    ],
+    "DR00044": [
+      "assets/missdiamond/imported/DR00044.jpeg"
+    ],
+    "MR00001-PD-796": [
+      "assets/missdiamond/imported/MR00001-PD-796.png",
+      "assets/missdiamond/man ring/MR00001-DM00614.jpg",
+      "assets/missdiamond/man ring/MR00001-DM00614-2.jpg"
+    ],
+    "MR00002-PD-812": [
+      "assets/missdiamond/imported/MR00002-PD-812.png",
+      "assets/missdiamond/man ring/MR00002-DM00616.jpg",
+      "assets/missdiamond/man ring/MR00002-DM00616-2.jpg"
+    ],
+    "MR00003-PD-407": [
+      "assets/missdiamond/imported/MR00003-PD-407.png",
+      "assets/missdiamond/man ring/MR00003-DM00458.jpg",
+      "assets/missdiamond/man ring/MR00003-DM00458-2.jpg"
+    ],
+    "MR00004-PD685": [
+      "assets/missdiamond/imported/MR00004-PD685.jpeg"
+    ],
+    "MR00005-PD418": [
+      "assets/missdiamond/imported/MR00005-PD418.jpeg"
+    ],
+    "ER00001-ER149": [
+      "assets/missdiamond/imported/ER00001-ER149.png",
+      "assets/missdiamond/earring/ER00001-ER149.jpg",
+      "assets/missdiamond/earring/ER00001-ER149-2.jpg"
+    ],
+    "ER00002-H4": [
+      "assets/missdiamond/imported/ER00002-H4.png",
+      "assets/missdiamond/earring/ER00002-H4.jpg",
+      "assets/missdiamond/earring/ER00002-H4-2.jpg"
+    ],
+    "ER00003-H44": [
+      "assets/missdiamond/imported/ER00003-H44.png",
+      "assets/missdiamond/earring/ER00003-H44.jpg"
+    ],
+    "ER00004-H6": [
+      "assets/missdiamond/imported/ER00004-H6.png",
+      "assets/missdiamond/earring/ER00004-H6.jpg"
+    ],
+    "ER00005-PB396": [
+      "assets/missdiamond/imported/ER00005-PB396.jpeg",
+      "assets/missdiamond/earring/ER00005-PB396.jpg"
+    ],
+    "ER00006-PB268": [
+      "assets/missdiamond/imported/ER00006-PB268.jpeg"
+    ],
+    "ER00007-PB303": [
+      "assets/missdiamond/imported/ER00007-PB303.jpeg"
+    ],
+    "ER00008-P336": [
+      "assets/missdiamond/imported/ER00008-P336.jpeg"
+    ],
+    "DP00005-DP331": [
+      "assets/missdiamond/imported/DP00005-DP331.jpeg",
+      "assets/missdiamond/pendant/DP00005-DP331.jpg"
+    ],
+    "DP00006-DP339": [
+      "assets/missdiamond/imported/DP00006-DP339.jpeg",
+      "assets/missdiamond/pendant/DP00006-DP339.jpg"
+    ],
+    "DP00007-DP139": [
+      "assets/missdiamond/imported/DP00007-DP139.jpeg",
+      "assets/missdiamond/pendant/DP00007-DP139.jpg"
+    ],
+    "DP00008-DP220W": [
+      "assets/missdiamond/imported/DP00008-DP220W.jpeg",
+      "assets/missdiamond/pendant/DP00008-DP220W.jpg"
+    ],
+    "DP00009-DP220R": [
+      "assets/missdiamond/imported/DP00009-DP220R.jpeg",
+      "assets/missdiamond/pendant/DP00009-DP220R.jpg"
+    ],
+    "DP00010-DP221W": [
+      "assets/missdiamond/imported/DP00010-DP221W.jpeg",
+      "assets/missdiamond/pendant/DP00010-DP221W.jpg"
+    ],
+    "DP00011-DP221R": [
+      "assets/missdiamond/imported/DP00011-DP221R.png",
+      "assets/missdiamond/pendant/DP00011-DP221R.jpg"
+    ],
+    "DP00012-DP115": [
+      "assets/missdiamond/imported/DP00012-DP115.png",
+      "assets/missdiamond/pendant/DP00012-DP115.jpg"
+    ],
+    "DP00013-DP119": [
+      "assets/missdiamond/imported/DP00013-DP119.png",
+      "assets/missdiamond/pendant/DP00013-DP119.jpg"
+    ],
+    "DP00014-DP132": [
+      "assets/missdiamond/imported/DP00014-DP132.jpeg",
+      "assets/missdiamond/pendant/DP00014-DP132.jpg"
+    ],
+    "DP00015-DP136": [
+      "assets/missdiamond/imported/DP00015-DP136.jpeg",
+      "assets/missdiamond/pendant/DP00015-DP136.jpg"
+    ],
+    "DP00016-DP154R": [
+      "assets/missdiamond/imported/DP00016-DP154R.png",
+      "assets/missdiamond/pendant/DP00016-DP154R.jpg"
+    ],
+    "DP00017-DP155W": [
+      "assets/missdiamond/imported/DP00017-DP155W.jpeg",
+      "assets/missdiamond/pendant/DP00017-DP155W.jpg"
+    ],
+    "DP00018-DP2553": [
+      "assets/missdiamond/imported/DP00018-DP2553.jpeg",
+      "assets/missdiamond/pendant/DP00018-DP2553.jpg"
+    ],
+    "DP00019-DP268": [
+      "assets/missdiamond/imported/DP00019-DP268.png",
+      "assets/missdiamond/pendant/DP00019-DP268.jpg"
+    ],
+    "DP00020-DP57": [
+      "assets/missdiamond/imported/DP00020-DP57.png",
+      "assets/missdiamond/pendant/DP00020-DP57.jpg"
+    ],
+    "DP00021-P292": [
+      "assets/missdiamond/imported/DP00021-P292.jpeg"
+    ],
+    "DP00022-PS35": [
+      "assets/missdiamond/imported/DP00022-PS35.jpeg"
+    ],
+    "DP00023-P386": [
+      "assets/missdiamond/imported/DP00023-P386.jpeg"
+    ],
+    "DP00024-P149": [
+      "assets/missdiamond/imported/DP00024-P149.jpeg"
+    ],
+    "DP00025-P424": [
+      "assets/missdiamond/imported/DP00025-P424.jpeg"
+    ],
+    "DP00026-P517": [
+      "assets/missdiamond/imported/DP00026-P517.jpeg"
+    ],
+    "DP00027-P329": [
+      "assets/missdiamond/imported/DP00027-P329.jpeg"
+    ],
+    "DP00028-P394": [
+      "assets/missdiamond/imported/DP00028-P394.jpeg"
+    ],
+    "DP00029-P506": [
+      "assets/missdiamond/imported/DP00029-P506.jpeg"
+    ],
+    "DP00030-PS469": [
+      "assets/missdiamond/imported/DP00030-PS469.jpeg"
+    ],
+    "DP00031-P440": [
+      "assets/missdiamond/imported/DP00031-P440.jpeg"
+    ],
+    "DP00032-P448": [
+      "assets/missdiamond/imported/DP00032-P448.jpeg"
+    ],
+    "DP00033-PB327": [
+      "assets/missdiamond/imported/DP00033-PB327.jpeg"
+    ],
+    "DP00034-PB275": [
+      "assets/missdiamond/imported/DP00034-PB275.jpeg"
+    ],
+    "BR00005-BR98": [
+      "assets/missdiamond/imported/BR00005-BR98.png",
+      "assets/missdiamond/braclet/BR00005-BR98.jpg"
+    ],
+    "BR00005-BR102": [
+      "assets/missdiamond/imported/BR00005-BR102.png",
+      "assets/missdiamond/braclet/BR00006-BR102.jpg"
+    ],
+    "BR00007-BR123": [
+      "assets/missdiamond/imported/BR00007-BR123.png",
+      "assets/missdiamond/braclet/BR00007-BR123.jpg"
+    ],
+    "BR00008-BR124": [
+      "assets/missdiamond/imported/BR00008-BR124.png",
+      "assets/missdiamond/braclet/BR00008-BR124.jpg"
+    ],
+    "BR00009-PB225": [
+      "assets/missdiamond/imported/BR00009-PB225.png"
+    ]
+  },
+  "skuRenames": {
+    "DR00009-DG1200": "DR00009-PD-738",
+    "MR00001-DM00614": "MR00001-PD-796",
+    "MR00002-DM00616": "MR00002-PD-812",
+    "MR00003-DM00458": "MR00003-PD-407"
+  }
 }
